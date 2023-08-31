@@ -1,0 +1,13 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.scrollContainer {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  max-height: 500px;
+
+  @include mq("phone-wide") {
+    max-height: 85vh;
+  }
+}

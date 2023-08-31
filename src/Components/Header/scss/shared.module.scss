@@ -1,0 +1,39 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+// Mobile first implications
+
+.preEvent {
+  &.headerLogo {
+    img {
+      @include mq("tablet") {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.headerLogo {
+  img {
+    @include fixBlur;
+    height: 35px;
+    cursor: pointer;
+
+    @include mq("desktop") {
+      height: 50px;
+    }
+
+    @include mq("desktop-wide") {
+      height: 60px; // https://github.com/Klowd/onlineeventpro-aapa21-ui/pull/115/files: src/Components/Header/scss/shared.module.scss
+    }
+  }
+}
+
+.searchIcon {
+  @include headerControlItem;
+  position: relative;
+  margin-top: 15px;
+
+  @include mq("desktop") {
+    margin-top: 0;
+  }
+}

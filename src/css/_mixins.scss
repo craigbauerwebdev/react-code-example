@@ -1,0 +1,562 @@
+// // https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@mixin mq($size, $type: min, $typeOf: width) {
+  @if map_has_key($breakpoints, $size) {
+    $size: map_get($breakpoints, $size);
+
+    @if $type==max {
+      $size: $size - 1px;
+    }
+
+    @media only screen and (#{$type}-#{$typeOf}: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin buttonBase {
+  font-size: 15px;
+  font-family: $title-text-font;
+  text-align: center;
+  line-height: 20px;
+  padding: 15px 30px;
+}
+
+@mixin midpointAlign {
+  @include mq("midpoint", max) {
+    margin-top: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+@mixin primaryButton($bgFill: $primary-color, $color: $brand-white) {
+  @include buttonBase();
+
+  background-color: $bgFill;
+  border: 1px solid $bgFill;
+  color: $color;
+  transition: border 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+  outline-offset: -2px;
+
+  &:hover {
+    background-color: $color;
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+    border: 1px solid $bgFill;
+    color: $bgFill;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bgFill;
+    color: $color;
+    outline: 2px solid $brand-black;
+  }
+
+  &:active,
+  &.active {
+    border-color: $bgFill;
+    color: $bgFill;
+    background-color: $color;
+  }
+}
+
+@mixin secondaryButton($bgFill: $secondary-color, $color: $brand-black) {
+  @include buttonBase();
+
+  background-color: $bgFill;
+  border: 1px solid $bgFill;
+  color: $color;
+  transition: border 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+    border: 1px solid $bgFill;
+  }
+
+  &:focus {
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+    border: 1px solid $color;
+  }
+
+  &:disabled {
+    color: rgba($bgFill, 0.33);
+  }
+}
+
+@mixin alternateButton(
+  $bgFill: $brand-white,
+  $hoverBgFill: $brand-grey-3,
+  $color: $brand-black
+) {
+  @include buttonBase();
+
+  background-color: $bgFill;
+  border: 1px solid $color;
+  color: $color;
+  transition: border 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+
+  &:hover {
+    background-color: $hoverBgFill;
+    border: 1px solid $bgFill;
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+  }
+
+  &:disabled {
+    color: rgba($hoverBgFill, 0.33);
+  }
+}
+
+@mixin alternateButtonAlt {
+  @include buttonBase();
+
+  color: $primary-color;
+  transition: border 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+
+  &:hover {
+    color: $brand-white;
+    background: $primary-color;
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+  }
+
+  &:focus {
+    color: $brand-white;
+    background: $primary-color;
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-color: $brand-black;
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+  }
+}
+
+@mixin mainPageSetting(
+  $marginTop: 60px,
+  $marginBottom: 60px,
+  $paddingLeftRight: 30px
+) {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  max-width: $maxBaseWidth;
+  flex-direction: column;
+  flex: 1 1;
+  overflow: hidden;
+  margin: $marginTop auto $marginBottom auto;
+  padding: 0 $paddingLeftRight;
+  min-height: $bodyMinHeight;
+}
+
+@mixin gridFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin gridTitle {
+  font-family: $title-text-font;
+  font-size: 34px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 1.16;
+  text-align: center;
+  color: $primary-color;
+
+  @include mq("tablet") {
+    font-size: 68px;
+  }
+}
+
+@mixin smallCard {
+  box-sizing: border-box;
+  background: $brand-off-white;
+  max-width: 280px;
+  min-height: 280px;
+  width: 100%;
+  flex-flow: column;
+  margin: 10px 1%;
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+  align-content: center;
+
+  @include mq("tablet") {
+    max-width: 310px;
+    min-height: 310px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-family: $title-text-font;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .dateTime,
+  .sessionMeta {
+    font-family: $title-text-font;
+    font-size: 15px;
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .dateTime {
+    color: $brand-gray;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .sessionMeta {
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+
+@mixin imgButton {
+  border: none;
+  background: transparent;
+  padding: 5px;
+
+  &:focus {
+    background-color: $brand-white-3;
+  }
+
+  img {
+    height: 20px;
+    display: block;
+  }
+}
+
+@mixin smallCardSubSession {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 20px 10px;
+  min-height: 140px;
+  border-radius: 4px;
+  margin: 10px 0;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  @include mq("phablet") {
+    padding: 30px 30px 15px;
+  }
+
+  @include mq("midpoint") {
+    margin: 1% 0;
+    width: 49%;
+  }
+
+  h2 {
+    font-family: $title-text-font;
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.19;
+    text-align: left;
+    color: $primary-color;
+    width: 100%;
+
+    @include mq("phablet") {
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-family: $title-text-font;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: $secondary-color;
+
+    @include mq("phablet") {
+      font-size: 14px;
+    }
+  }
+}
+
+@mixin iframeWrapper {
+  display: flex;
+  width: 80%;
+  min-width: 300px;
+  min-height: 645px;
+  align-items: center;
+  margin: auto;
+
+  &.matchmaking {
+    max-width: 1000px;
+  }
+}
+
+@mixin singleSpeakerContainer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq("tablet") {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  iframe {
+    margin-top: 50px;
+    height: 450px;
+  }
+}
+
+@mixin socialIcons(
+  $bgFill: $brand-black,
+  $size: 35px,
+  $hover: $brand-light-grey
+) {
+  background: $bgFill;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  transition: background 0.3s ease-in-out;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    background: $hover;
+  }
+}
+
+@mixin inputSettings {
+  border: solid 1px rgba($brand-gray, 0.1);
+  outline: none;
+  font-size: 18px;
+  font-family: $title-text-font;
+  color: $brand-gray;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+@mixin clickCardSetting {
+  border: 1px solid $brand-black;
+  border-radius: 5px;
+  background: rgba($brand-black, 0.02);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.33);
+    background-color: $brand-white-2;
+  }
+
+  &:focus {
+    outline-color: $brand-black;
+  }
+}
+
+@mixin scrollBar {
+  scrollbar-width: thin; //Firefox only
+
+  &::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba($brand-black, 0); /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($primary-color, 0.8); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 2px solid $brand-white;
+  }
+}
+
+@mixin headerControlItem {
+  transition: background 0.3s, color 0.3s;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1380px) {
+    width: 42px;
+    height: 42px;
+  }
+
+  path {
+    transition: fill 0.3s, stroke 0.3s;
+    fill: $primary-color;
+    stroke: $primary-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $brand-black;
+    path {
+      fill: $primary-color;
+      stroke: $primary-color;
+    }
+  }
+
+  &:hover {
+    path {
+      fill: $brand-white;
+      stroke: $primary-color;
+    }
+  }
+
+  &:active {
+    background-color: $primary-color;
+    path {
+      fill: $brand-white;
+      stroke: $brand-white;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    background: none;
+
+    path {
+      fill: rgba(0, 102, 178, 0.33);
+      stroke: rgba(0, 102, 178, 0.33);
+    }
+  }
+}
+
+@mixin fixBlur {
+  image-rendering: -webkit-optimize-contrast; // Chrome MacOS
+  transform: translateZ(0);
+  will-change: transform; /// Windows
+}
+
+@mixin leftArrowColorAndFill {
+      &:focus {
+      svg {
+        path {
+          fill: $brand-black;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $brand-grey-2;
+      }
+    }
+}
+
+@mixin rightArrowColorAndFill {
+      &:focus {
+      svg {
+        path {
+          fill: $brand-black;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $brand-grey-2;
+      }
+    }
+}
+
+@mixin leftArrowColorAndFill {
+      &:focus {
+      svg {
+        path {
+          fill: $brand-black;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $brand-grey-2;
+      }
+    }
+}
+
+@mixin rightArrowTransparent {
+    &:focus {
+      svg {
+        path {
+          fill: none;
+          stroke:rgba($brand-black, 1);
+        }
+      }
+    }
+
+    svg {
+      path {
+             fill: none;
+        stroke:rgba($brand-grey-2, 1);
+      }
+    }
+}
+
+@mixin leftArrowTransparent {
+    &:focus {
+      svg {
+        path {
+          fill: none;
+          stroke:rgba($brand-black, 1);
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: none;
+        stroke:rgba($brand-grey-2, 1);
+      }
+    }
+}
+
+@mixin speakerList {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-flow: column;
+  margin-top: 50px;
+}

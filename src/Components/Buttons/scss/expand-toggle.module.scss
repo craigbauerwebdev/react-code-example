@@ -1,0 +1,98 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.imgButton {
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+
+  &.sessionTab {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: 30px;
+
+    @include mq("tablet") {
+      align-self: baseline;
+    }
+
+    .holder {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+
+  &.profileTab {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: 30px;
+    padding: 12px 5px !important;
+
+    @include mq("tablet") {
+      align-self: baseline;
+    }
+
+    .holder {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+
+  &.faq {
+    .holder {
+      display: block;
+    }
+  }
+}
+
+.hLine {
+  position: absolute;
+  width: 100%;
+  background: $primary-color;
+  height: 3px;
+  left: 50%;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: opacity 0.3s $expandEase;
+}
+
+.vLine {
+  position: absolute;
+  width: 3px;
+  border-radius: 10px;
+  background: $primary-color;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.holder {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  transform: rotate(0deg);
+  transition: transform 0.3s $expandEase;
+
+  &.open {
+    transform: rotate(90deg);
+
+    .hLine {
+      opacity: 0;
+    }
+  }
+}

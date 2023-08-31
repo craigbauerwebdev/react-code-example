@@ -1,0 +1,131 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.cardWrapper {
+  background-color: $mobile-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  color: $brand-grey-2;
+  width: 100%;
+  padding: 15px 0px 15px 10px;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    @include mq("phablet") {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  @include mq("midpoint") {
+    background-color: $brand-white;
+    justify-content: flex-start;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+
+  &:hover:not(.active) {
+    background-color: $brand-grey-3;
+  }
+}
+
+.active {
+  background-color: $primary-color;
+  color: $brand-white;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $title-text-font;
+  display: none;
+  margin-top: 5px;
+
+  @include mq("midpoint") {
+    display: block;
+  }
+}
+
+.image {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-right: 20px;
+
+  svg path,
+  svg g {
+    fill: $brand-grey-2;
+  }
+
+  @include mq("midpoint") {
+    display: block;
+  }
+}
+
+.imageActive {
+  svg path,
+  svg g {
+    fill: $brand-white;
+  }
+}
+
+.mobileImage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  svg path,
+  svg g {
+    fill: $brand-white;
+  }
+
+  span {
+    display: none;
+    margin-top: 0.5rem;
+    color: $brand-white;
+    font-weight: 400;
+
+    @include mq("phablet") {
+      display: block;
+      font-size: 1rem;
+    }
+  }
+
+  @include mq("midpoint") {
+    display: none;
+  }
+}
+
+.nested {
+  @include mq("midpoint") {
+    padding-left: 10px;
+  }
+}
+
+.noHover {
+  display: none;
+
+  @include mq("midpoint") {
+    display: flex;
+  }
+
+  &:hover,
+  &:hover:not(.active) {
+    background-color: $brand-white;
+  }
+}

@@ -1,0 +1,68 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.styledPreviewGroup {
+  margin-bottom: 2.5rem;
+}
+
+.styledWrapper {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 65rem;
+  height: auto;
+  padding: 0 30px;
+
+  > * {
+    flex-basis: auto;
+  }
+
+  @include mq("midpoint") {
+    flex-direction: row;
+    padding: 2rem 0 2rem;
+
+    > * {
+      flex-basis: 50%;
+    }
+
+    @include mq("tableH", min, height) {
+      padding: 2.5rem 0 6rem 0;
+    }
+  }
+}
+
+.styledAudioGroup {
+  padding: 2rem 0 2rem 0;
+  border-right: unset;
+
+  @include mq("midpoint") {
+    padding: 0 3rem 0 0;
+    border-right: 0.125rem solid $brand-white-5;
+  }
+}
+
+.styledVideoGroup {
+  padding: 0;
+
+  @include mq("midpoint") {
+    padding: 0 0 0 3rem;
+  }
+
+  div video {
+    width: auto;
+    height: auto;
+    max-height: 240px;
+  }
+}
+
+.styledInputGroup {
+  margin-bottom: 1.5rem;
+}

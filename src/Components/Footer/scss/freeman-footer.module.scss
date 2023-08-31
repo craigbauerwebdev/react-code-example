@@ -1,0 +1,100 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.freemanFooter {
+  background-color: $brand-black;
+}
+
+.freemanFooterContainer {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1325px;
+  padding: 25px 20px;
+  background-color: $brand-black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  &.freemanFooterContainerChatbotPadding {
+    @include mq("tablet") {
+      padding-right: 70px;
+    }
+  }
+
+  @include mq("tablet") {
+    flex-flow: row;
+    text-align: left;
+  }
+}
+
+.freemanFooterCopyright {
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-family: $title-text-font, sans-serif;
+    color: $brand-white;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.45;
+    margin: 0;
+    display: block;
+  }
+}
+
+.freemanFooterLinks {
+  margin: 0 10px;
+  text-align: center;
+  color: $brand-white;
+
+  @include mq("tablet") {
+    text-align: right;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+
+    li {
+      position: relative;
+
+      @include mq("phone-wide") {
+        &:not(:last-of-type) {
+          padding-right: 28px;
+
+          &::after {
+            position: absolute;
+            top: -8px;
+            right: 11px;
+            display: block;
+            content: ".";
+            font-size: 20px;
+          }
+        }
+      }
+
+      a {
+        font-family: $title-text-font, sans-serif;
+        color: $brand-white;
+        font-size: 11px;
+        line-height: 16px;
+        text-decoration: underline;
+
+        @include mq("tablet") {
+          &:not(:last-of-type)::after {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    @include mq("phone-wide") {
+      flex-flow: row;
+    }
+  }
+}

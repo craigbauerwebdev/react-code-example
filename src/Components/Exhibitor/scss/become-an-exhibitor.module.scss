@@ -1,0 +1,10 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.loaderHolder {
+  min-height: $bodyMinHeight;
+}
+
+.iframeWrapper {
+  @include iframeWrapper;
+}

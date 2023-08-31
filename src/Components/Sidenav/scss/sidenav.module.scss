@@ -1,0 +1,18 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sideBar {
+  background-color: $mobile-blue;
+  flex-basis: 50px;
+  flex-shrink: 0;
+
+  @include mq("phablet") {
+    flex-basis: 113px;
+  }
+
+  @include mq("midpoint") {
+    background-color: $brand-white-2;
+    margin-right: 32px;
+    flex-basis: 300px;
+  }
+}

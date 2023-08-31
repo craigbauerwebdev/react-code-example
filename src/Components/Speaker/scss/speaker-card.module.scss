@@ -1,0 +1,164 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.speakerContainer {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin: 20px 0;
+  align-items: flex-start;
+  color: $primary-color;
+  font-family: $title-text-font;
+  transition: color 0.2s;
+
+  @include mq("phablet") {
+    margin: 20px 40px 20px 0;
+  }
+
+  img {
+    height: 200px;
+    width: auto;
+  }
+
+  h2 {
+    margin: 7px 0 13px 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+
+    @include mq("phone-wide") {
+      font-size: 17px;
+    }
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: none;
+
+    @include mq("tablet") {
+      font-size: 14px;
+    }
+
+    @include mq("midpoint") {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+  .speakerDescription {
+    margin: 20px 0;
+  }
+}
+
+.doubleColumnSpeakers {
+    max-width: 200px;
+}
+
+.holder {
+  position: relative;
+}
+
+.attendeeButton {
+  @include primaryButton();
+
+  margin: auto;
+  display: block;
+  width: 120px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+
+  @include mq("laptop") {
+    width: 180px;
+  }
+
+  &:focus {
+    border-color: $brand-white;
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+
+.wherebyHolder {
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    color: $brand-black;
+  }
+}
+
+.holderFavorites {
+  position: absolute;
+  left: 130px;
+  top: 0;
+}
+
+.speakerWherebyImage {
+  min-width: auto;
+  height: 160px;
+  width: 160px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 90px;
+  }
+}
+
+.speakerImage {
+  min-width: auto;
+  height: 200px;
+  width: 160px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.presentationFiles {
+  margin: 0 0 30px 0;
+
+  li {
+    margin: 0 0 15px 0;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      display: block;
+      margin-left: 15px;
+    }
+
+    img {
+      width: 32px;
+      display: block;
+      height: 32px;
+      margin-bottom: 0px !important;
+    }
+  }
+}
+
+.wherebyContainer {
+  margin-left: 20px;
+}

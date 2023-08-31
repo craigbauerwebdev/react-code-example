@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25.127" viewBox="0 0 26 25.127">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="prefix__Facebook" transform="translate(-.1 .5)">
+        <path id="prefix__Rectangle_6" d="M0 0H24.94V24.94H0z" class="prefix__cls-1" data-name="Rectangle 6" transform="translate(.1 -.313)"/>
+        <path id="prefix__Rectangle_7" d="M0 0H24.94V24.94H0z" class="prefix__cls-1" data-name="Rectangle 7" transform="translate(.692 -.5)"/>
+        <path id="prefix__Path_18" d="M32.549 17.224h2.556V14.2H32.58a3.539 3.539 0 0 0-3.523 3.523v1.5H27v3.024h2.026v8.043h3.024v-8.047h2.525l.5-3.024H32.05v-1.5a.492.492 0 0 1 .499-.495z" data-name="Path 18" transform="translate(-18.514 -10.117)" style="fill:#fff"/>
+        <path id="prefix__Rectangle_8" d="M0 0H24.94V24.94H0z" class="prefix__cls-1" data-name="Rectangle 8" transform="translate(1.16 -.375)"/>
+        <path id="prefix__Rectangle_9" d="M0 0H24.94V24.94H0z" class="prefix__cls-1" data-name="Rectangle 9" transform="translate(.973 -.313)"/>
+        <path id="prefix__Rectangle_10" d="M0 0H24.94V24.94H0z" class="prefix__cls-1" data-name="Rectangle 10" transform="translate(.225 -.313)"/>
+    </g>
+</svg>

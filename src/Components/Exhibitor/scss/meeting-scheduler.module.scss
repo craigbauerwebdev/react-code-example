@@ -1,0 +1,314 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.meetingScheduler {
+  hr {
+    width: 100%;
+  }
+
+  p {
+    color: gray;
+  }
+
+  button {
+    svg {
+      margin-right: 5px;
+
+      path {
+        fill: $brand-grey-2;
+      }
+    }
+  }
+}
+
+.meetingTypeButton {
+  @include primaryButton();
+
+  margin: 5px;
+  flex: 1 1 0px;
+  text-transform: uppercase;
+
+  text {
+    color: $brand-light-grey;
+  }
+
+  span {
+    svg {
+      path {
+        fill: $brand-white;
+      }
+    }
+  }
+
+  &.active {
+    background: $brand-white;
+
+    span {
+      color: $primary-color;
+
+      svg path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &:not(:focus) {
+    &:hover {
+      span {
+        color: $primary-color;
+
+        svg {
+          path {
+            fill: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq("phone", max) {
+    padding: 15px 10px;
+  }
+}
+
+.scheduleMeetingSubmitButton {
+  @include primaryButton();
+
+  color: $brand-white;
+  font-weight: bold;
+}
+
+.cancelButton {
+  @include alternateButton();
+  color: $brand-gray-2;
+}
+
+.availableTimesButton {
+  @include alternateButton();
+
+  color: $brand-light-grey;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $brand-white;
+  }
+}
+
+.fieldsetWrapper {
+  max-width: 1100px;
+}
+
+.k-form-fieldset {
+  max-width: 1100px;
+}
+
+.main {
+  max-width: 640px;
+  width: 100%;
+}
+.avatar {
+  margin-right: 5px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.flexContainerRow {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin-left: 6px;
+
+  .timezoneSelect {
+    width: 44%;
+  }
+
+  .select {
+    width: 40%;
+  }
+}
+
+.Select-control {
+  border: none;
+}
+
+.Select-placeholder {
+  color: $primary-color;
+}
+
+.scheduleMeetingContainer {
+  @include primaryButton;
+
+  margin-top: 20px;
+  display: flex;
+  max-width: 100%;
+  justify-content: flex-end;
+
+  .timezoneSelect {
+    width: 44%;
+  }
+}
+
+.select {
+  border: 0;
+}
+
+.icon {
+  fill: $brand-white;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  margin: 0 0 20px;
+
+  @include mq("phablet") {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  [class*="k-widget"] {
+    width: 100%;
+  }
+}
+
+.DateTimePicker {
+  width: 43%;
+
+  @include mq("tablet", "max") {
+    margin-right: 0.2em;
+  }
+}
+
+.timezoneSelect {
+  width: 45%;
+  margin-left: 80px;
+}
+
+.buttonCenteredIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+
+  svg {
+    width: 16px;
+  }
+}
+
+.availableTimesButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $brand-gray;
+  width: 100%;
+}
+
+.buttonInlineIcon {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  color: $brand-white;
+
+  p {
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  > button > span &:hover {
+    color: $brand-white;
+    background-color: $primary-color;
+  }
+}
+
+.meetingTypeText {
+  color: $primary-color;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  svg {
+    width: 16px;
+    margin-right: 5px;
+
+    path {
+      stroke: $primary-color;
+      fill: $primary-color;
+    }
+  }
+}
+
+.meetingDuration {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.bottomButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  button {
+    margin: 5px;
+  }
+}
+
+.btn-secondary {
+  color: $brand-light-grey;
+
+  &.active {
+    background-color: $primary-color;
+    color: $brand-white;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $brand-white;
+  }
+}
+
+.k-dropdown .k-dropdown-wrap {
+  background-color: $brand-white !important; // TODO: is this needed
+}
+
+.miniTitle {
+  color: $brand-gray;
+  font-size: 11px;
+}
+
+.dateInput {
+  padding: 5px;
+  border: 1px solid $brand-black;
+  border-radius: 0.38rem;
+}
+
+.duration {
+  width: 200px;
+}
+
+.dateLabel {
+  display: block;
+
+  @include mq("tablet", "max") {
+    margin-bottom: 1.5em;
+  }
+}

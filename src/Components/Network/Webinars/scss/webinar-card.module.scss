@@ -1,0 +1,111 @@
+@import "../../../../css/core";
+
+.cardWrapper {
+  height: 120px;
+  border-left: 2px solid $primary-color;
+  background-color: $brand-white-2;
+  margin-bottom: 10px;
+}
+
+.innards {
+  padding: 0 15px;
+}
+
+.activeCard {
+  background-color: $light-blue;
+  color: $primary-color;
+}
+
+.cardHeader {
+  color: $primary-color;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.cardTitle {
+  white-space: nowrap;
+  padding: 0 10px 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+
+  @include mq("tablet-wide") {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+
+.companyName {
+  color: $brand-grey-2;
+  margin-right: 10px;
+}
+
+.cardDescription {
+  font-size: 12px;
+  color: $brand-grey-2;
+  padding: 0;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.joinButton {
+  @include primaryButton();
+
+  box-sizing: border-box;
+  width: 58px;
+  height: 28px;
+  padding: 0px 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.addButton {
+  display: flex;
+  color: $brand-grey-6;
+  font-size: 16px;
+  border: none;
+  background: none;
+  align-items: center;
+
+  img {
+    width: 12px;
+    height: 12px;
+    margin: 10% 0px;
+  }
+}
+
+.btnText {
+  padding-left: 8px;
+}
+
+.removeButton {
+  display: flex;
+  color: $primary-color;
+  font-size: 16px;
+  border: none;
+  background: none;
+
+  img {
+    width: 12px;
+    height: 12px;
+    margin: auto;
+  }
+}
+
+.viewButton {
+  @include alternateButton();
+
+  box-sizing: border-box;
+  border: 1px solid $primary-color;
+  background-color: $brand-white-2;
+  width: 58px;
+  height: 28px;
+  padding: 0px 12px;
+  font-size: 12px;
+  color: $primary-color;
+  text-align: center;
+}

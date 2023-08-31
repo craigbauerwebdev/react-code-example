@@ -1,0 +1,63 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../../css/core";
+@import "../../Network/scss/networking-pages-mixins";
+
+.title {
+  @include networkingPageTitles;
+
+  @include mq("tablet") {
+    font-size: 60px;
+  }
+}
+
+.postersListHolder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > div,
+  > a {
+    @include clickCardSetting;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 1%;
+    padding: 30px;
+    min-height: 150px;
+
+    @include mq("phablet") {
+      width: 45%;
+    }
+
+    @include mq("tablet") {
+      width: 30%;
+    }
+
+    @include mq("midpoint") {
+      width: 23%;
+      padding: 45px 30px;
+    }
+  }
+
+  &.home {
+    > div,
+    > a {
+      @include mq("tablet") {
+        width: 45%;
+      }
+
+      @include mq("midpoint") {
+        width: 23%;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.noPosters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

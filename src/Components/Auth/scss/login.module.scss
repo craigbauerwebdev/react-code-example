@@ -1,0 +1,23 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.loginWrapper {
+  @include mainPageSetting;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: none;
+  margin: 0;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   $primary-color,
+  //   $secondary-color
+  // );
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  justify-content: center;
+  background-position: center;
+}

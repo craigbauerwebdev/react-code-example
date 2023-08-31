@@ -1,0 +1,23 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.favoritesList {
+  @include basePageSetting;
+}
+
+.favoritesListHeaderWrapper {
+  @include accountPageHeaderSectionGrid;
+}
+
+.favoritesListHeader {
+  @include accountPageInnerHeaderDisplay;
+}
+
+.innerHeader {
+  @include basePageFonts;
+}
+
+.filterWrapper {
+  @include accountPageFilters;
+}

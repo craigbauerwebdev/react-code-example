@@ -1,0 +1,32 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.mainContainer {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.closeIcon {
+  float: right;
+  padding-left: 40px;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    fill: $brand-light-grey;
+  }
+}
+
+.okayButton {
+  @include primaryButton;
+}

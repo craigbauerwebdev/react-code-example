@@ -1,0 +1,191 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.iframeContFreeman {
+  position: fixed;
+  width: 100%;
+  height: 556px;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  transition-duration: 1s;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-family: sans-serif;
+  z-index: 1001;
+
+  @include mq("phone-wide") {
+    width: 85%;
+    height: 474px;
+    bottom: 130px;
+    left: auto;
+    transform: translateX(0);
+    right: 3%;
+  }
+
+  @include mq("tablet-small") {
+    height: 556px;
+    width: 350px;
+    bottom: 5px;
+  }
+
+  &.hideFreeman {
+    bottom: -900px;
+
+    @include mq("tablet-small") {
+      bottom: -700px;
+    }
+  }
+}
+
+.fluentChat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fluentChatAppMainContainer {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: hsla(330, 2.17%, 18.04%, 1);
+  position: relative;
+  height: 530px;
+  max-height: 100%;
+  min-height: 240px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.35);
+
+  @include mq("tablet-small") {
+    margin-bottom: 18px;
+  }
+}
+
+.fluentAppBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-color;
+
+  &.no-header {
+    display: none;
+  }
+}
+
+.fluentBackgroundHeader {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+
+  img {
+    margin: 0 auto;
+    display: block;
+    width: 78%;
+  }
+}
+
+.chatWrap {
+  box-sizing: border-box;
+  height: 445px;
+  width: 334px;
+  margin: 0 auto;
+  background-color: $brand-white;
+  border: 5px solid $brand-white;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom: 0;
+
+  iframe {
+    position: absolute;
+    max-height: 422px;
+    height: 100%;
+    width: 320px;
+    margin: 0 auto;
+    border-radius: 12px 12px 0 0;
+    border: 0;
+
+    &.noSponsor {
+      max-height: 445px;
+    }
+  }
+}
+
+.fluentBackgroundFooter {
+  display: flex;
+  width: 334px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.fluentSponsorArea {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 366px;
+  min-height: 18px;
+  padding: 0 16px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: $brand-white;
+
+  a {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    color: #2f2d2e;
+  }
+
+  img {
+    width: 90px;
+    margin-left: 5px;
+  }
+}
+
+.fluentCloseButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border-color: transparent;
+  background-color: #000;
+  transition: all 0.2s ease;
+  position: relative;
+  bottom: 542px;
+  right: 5px;
+  z-index: 5000;
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 0;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #7e6f88;
+    transform: rotate(90deg);
+  }
+
+  @include mq("tablet-small") {
+    border-radius: 24px;
+    margin-top: 0;
+  }
+
+  img {
+    width: 14px;
+  }
+}

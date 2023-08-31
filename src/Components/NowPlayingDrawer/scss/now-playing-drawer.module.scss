@@ -1,0 +1,217 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+@keyframes open-drawer {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nowPlayingDrawerWrapper {
+  background-color: $brand-gray;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  padding: 15px;
+  transition: transform 0.8s ease-in-out;
+
+  @include mq("phablet") {
+    padding: 15px 40px;
+  }
+
+  &.chatbotPadding {
+    padding-right: 15px;
+
+    @include mq("phablet") {
+      padding-right: 90px;
+    }
+  }
+
+  &.open {
+    transform: translateY(0);
+    animation: open-drawer 0.8s ease-in-out;
+  }
+
+  &.closed {
+    transform: translateY(100%);
+  }
+}
+
+.nowPlayingDrawerContainer {
+  color: $brand-white;
+  flex-flow: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
+  max-width: 1325px;
+  height: 100%;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  @include mq("midpoint") {
+    flex-flow: row;
+  }
+
+  img {
+    height: 100%;
+    max-height: 90px;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+
+    @include mq("phablet") {
+      flex-flow: row;
+    }
+  }
+}
+
+.drawerVideoPlayLink {
+  &:hover,
+  &:focus-visible {
+    .drawerVideoPlay {
+      border-color: $brand-white;
+    }
+  }
+}
+
+.drawerVideoPlay {
+  box-sizing: border-box;
+  width: 107px;
+  height: 60px;
+  border-radius: 6px;
+  border: solid 2px $primary-color;
+  background: url("/images/icons/video-play.svg") no-repeat center $brand-black;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $brand-white;
+  }
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 10px 0 0 15px;
+  align-content: center;
+  width: 80%;
+
+  @include mq("phablet") {
+    margin-top: 0;
+  }
+}
+
+.nowPlayingDrawerSessionTitleLink {
+  &:hover,
+  &:focus-visible {
+    color: $brand-white;
+    .nowPlayingDrawerSessionTitle {
+      color: $brand-white;
+    }
+  }
+}
+
+.nowPlayingDrawerSessionTitle {
+  color: $secondary-color;
+  font-family: $title-text-font;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 3px 0;
+  cursor: pointer;
+
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
+    text-align: left;
+    display: block;
+    width: 100%;
+
+    &:hover,
+    &:focus-visible {
+      color: $brand-white;
+    }
+  }
+}
+
+.nowPlayingDrawerTitle {
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $brand-white;
+  font-family: $title-text-font;
+  margin: 0;
+  // cursor: pointer;
+
+  button {
+    border: 0;
+    padding: 0;
+    background: none;
+    text-align: left;
+    display: block;
+    width: 100%;
+
+    &:hover,
+    &:focus-visible {
+      color: $primary-color;
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+}
+
+.nowPlayingAllButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 30px;
+  margin-top: 15px;
+
+  @include mq("midpoint") {
+    margin-top: 0;
+  }
+}
+
+.nowPlayingButtonsContainer {
+  + div {
+    margin-left: 60px;
+  }
+}
+
+.detailsButton {
+  @include primaryButton();
+
+  margin: 0;
+  display: inline-block;
+  width: 120px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include mq("laptop") {
+    width: 180px;
+  }
+
+  &:focus {
+    border-color: $brand-white;
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}

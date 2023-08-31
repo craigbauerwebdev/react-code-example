@@ -1,0 +1,72 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.holder {
+  background-image: linear-gradient(
+    to bottom,
+    $primary-color,
+    $secondary-color
+  );
+}
+
+.redirectWrapper {
+  @include mainPageSetting;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirectRectangle {
+  margin: 40px auto;
+  max-width: 495px;
+  width: 100%;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.25);
+  background-color: $brand-white;
+  align-self: center;
+}
+
+.loginButton {
+  @include secondaryButton;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: $brand-black;
+  font-weight: bold;
+}
+
+.redirectButton {
+  @include primaryButton;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.redirectForm {
+  padding: 35px;
+
+  h1 {
+    font-family: $title-text-font;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    color: $brand-black;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.technicalSupport {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+  color: $brand-grey-2;
+  font-size: 11px;
+  line-height: 16px;
+}

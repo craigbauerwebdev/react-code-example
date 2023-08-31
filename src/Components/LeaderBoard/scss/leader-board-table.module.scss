@@ -1,0 +1,163 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+$badgeWidth: 100px;
+
+.board {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: separate;
+
+  thead {
+    tr {
+      border-radius: 10px;
+
+      th {
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        color: $primary-color;
+        text-align: left;
+        border-top: solid 1px $brand-white-6;
+        border-bottom: solid 1px $brand-white-6;
+
+        button {
+          background: none;
+          padding: 0 20px 0 0;
+          border: 0;
+          position: relative;
+
+          &:focus {
+            outline: 1px solid $brand-black;
+          }
+
+          &.active {
+            &:after {
+              top: 3px;
+              transform: rotate(180deg);
+            }
+          }
+
+          &:after {
+            position: absolute;
+            content: "";
+            background: url("/images/icons/chevron-down.svg") no-repeat;
+            background-size: cover;
+            width: 10px;
+            height: 10px;
+            right: 0;
+            top: 2px;
+            transform: rotate(0deg);
+            transition: all 0.3s ease-in-out;
+            transform-origin: center center;
+          }
+        }
+
+        &:last-child,
+        &:first-child {
+          box-sizing: border-box;
+          padding: 0 15px;
+        }
+
+        &:last-child {
+          box-sizing: border-box;
+          border-right: solid 1px $brand-white-6;
+          border-radius: 0 5px 0 0;
+          text-align: center;
+        }
+
+        &:first-child {
+          box-sizing: border-box;
+          border-left: solid 1px $brand-white-6;
+          border-radius: 5px 0 0 0;
+        }
+
+        &.badges {
+          span {
+            width: 100%;
+            display: block;
+            max-width: $badgeWidth;
+            text-align: center;
+          }
+        }
+
+        &.name {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      background: $brand-white-3;
+
+      &:nth-child(2n + 2) {
+        background: $brand-white;
+      }
+
+      &.highlight {
+        background: $primary-color;
+
+        td {
+          color: $brand-white;
+        }
+      }
+
+      &.topThree {
+        font-weight: bold;
+      }
+    }
+
+    td {
+      padding: 20px 0;
+      font-size: 14px;
+      line-height: 1.14;
+      color: $brand-black;
+      font-family: $title-text-font;
+
+      &:last-child,
+      &:first-child {
+        padding: 0 15px;
+      }
+
+      &:first-child {
+        width: 25%;
+      }
+
+      &:last-child {
+        text-align: center;
+      }
+
+      &.name {
+        box-sizing: border-box;
+        width: 30%;
+        padding-right: 20px;
+      }
+
+      &.badges {
+        width: 25%;
+
+        ul {
+          max-width: $badgeWidth;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-flow: wrap;
+
+          li {
+            display: inline-block;
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 25px;
+      }
+    }
+  }
+}

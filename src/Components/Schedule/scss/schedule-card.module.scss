@@ -1,0 +1,111 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.card {
+  @include listCardsBackground;
+  @include listCardsSize(5px 0);
+  border-left: 7px solid $session-green;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column;
+
+  @include mq("tablet-small") {
+    flex-flow: row;
+    align-items: center;
+  }
+}
+
+.cardContent {
+  @include listCardInnerDiv();
+  display: flex;
+  align-items: center;
+}
+
+.bodyTitle, .time {
+  @include listCardsFont()
+}
+
+.icon {
+  padding-right: 15px;
+
+  svg {
+    height: 16px;
+    width: 16px;
+
+    path,
+    g {
+      fill: $brand-grey-2;
+    }
+  }
+}
+
+.iconBlue {
+  svg g,
+  svg path {
+    fill: $primary-color;
+  }
+}
+
+.name {
+  max-width: 500px;
+  margin-top: 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sessionNameButton {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  display: block;
+}
+
+.cardAction {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  @include mq("tablet-small") {
+    margin-bottom: 0;
+  }
+}
+
+.joinBtn {
+  @include primaryButton();
+
+  padding: 10px 15px;
+  margin-right: 10px;
+  width: 90px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.watchButton {
+  @include detailsReplyButton;
+}
+
+.btn {
+  @include detailsReplyButton;
+}
+
+.watchNow {
+  background-color: $light-blue;
+  color: $primary-color;
+}
+
+.session {
+  border-left: 7px solid $session-yellow;
+}
+
+.showcase {
+  border-left: 7px solid $session-red;
+}
+
+.chatJoinBtn {
+  @include detailsReplyButton;
+}

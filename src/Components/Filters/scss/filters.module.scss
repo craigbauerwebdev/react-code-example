@@ -1,0 +1,254 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+@mixin buttons {
+  @include alternateButton();
+
+  font-size: 16px;
+  width: 242px;
+  margin: 5px 0;
+  width: 100%;
+
+  @include mq("tablet-small") {
+    margin: 0 15px 15px 15px;
+    width: 242px;
+  }
+
+  &.active {
+    background: $brand-black;
+    color: $brand-white;
+    border: 1px solid $brand-black;
+  }
+}
+
+.filtersHolder {
+  @include gridFlex;
+
+  flex-flow: column;
+  align-items: center;
+
+  @include mq("tablet-small") {
+    flex-flow: row wrap;
+  }
+}
+
+.filterSubFilterHolder {
+  max-height: 0;
+
+  &.active {
+    max-height: 5500px;
+  }
+
+  > div {
+    @include gridFlex;
+
+    margin: 5px 0 0 0;
+  }
+
+  button {
+    // @include alternateButton();
+
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 auto;
+    border-radius: 2px;
+    font-family: $title-text-font;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+
+    &.active {
+      background-color: $brand-black;
+      color: $brand-white;
+    }
+  }
+}
+
+.filterWithBorder {
+  border-top: 1px solid;
+  border-color: #b9b9b9;
+  margin-bottom: 25px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.list {
+  @include gridFlex;
+  flex-flow: column;
+
+  label {
+    padding-left: 8px;
+    line-height: 18px;
+    color: $brand-grey-2;
+    font-size: 14px;
+  }
+
+  div {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+
+.clearButton {
+  color: $brand-gray;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 10px;
+  border: solid 1px $brand-gray;
+  width: -webkit-fill-available;
+  margin: 0;
+
+  @include mq("tablet-wide") {
+    right: 15px;
+    left: auto;
+    top: 15px;
+    border: none;
+    height: 21px;
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+.filterButton {
+  @include buttons();
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.filterButtonSingleRow {
+    @include mq("tablet-small") {
+      width: auto;
+      flex-grow: 1;
+      padding: 15px 15px;
+    }
+  }
+}
+
+.filtersTopBar {
+  display: flex;
+  justify-content: flex-end;
+  color: $brand-grey-2;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-items: flex-end;
+
+  &.spaceBetween {
+    justify-content: space-between;
+  }
+
+  button {
+    @include alternateButtonAlt;
+
+    border: none;
+    background: none;
+    padding: 5px;
+  }
+}
+
+.mobileFilterSection {
+  transition: height 0.3s ease-in-out;
+  width: 100%;
+
+  &.expanded {
+    height: fit-content;
+    visibility: visible;
+  }
+  &.collapsed {
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.mobileFilterButton {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-color;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 20px;
+  border: solid 1px $brand-gray;
+  margin: 0 30px;
+  width: -webkit-fill-available;
+}
+
+.mobileFilterButtonIcon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+
+  &.mobileFilterButtonIconOpened {
+    transform: rotate(180deg);
+  }
+}
+
+.mobileFilterButtonNetworking {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  color: $brand-black;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 20px;
+  border: solid 1px $brand-gray;
+  width: -webkit-fill-available;
+  margin: 10px 40px 25px;
+
+  &:focus {
+    outline: 1px solid $primary-color;
+  }
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.clearButtonContainer {
+  order: 10; // to endure that this particular button will always be at the end of the section
+}
+.showMoreWrapper {
+  justify-content: end;
+}
+.showMore {
+  color: $primary-color;
+  cursor: pointer;
+}

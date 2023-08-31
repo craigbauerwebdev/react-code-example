@@ -1,0 +1,34 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.tabList {
+  border-bottom: 1px solid $brand-white-6;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tabContent {
+  background-color: $brand-white;
+  height: 520px;
+}
+.tabResponsive {
+  @include mq("tablet-wide", max) {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tabContentNoTab {
+  background-color: $brand-white;
+  height: 548px;
+
+  iframe {
+    height: 548px;
+  }
+}
+
+.hideTabs {
+  display: none;
+}

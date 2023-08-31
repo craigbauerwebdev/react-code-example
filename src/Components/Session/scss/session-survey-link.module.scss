@@ -1,0 +1,62 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sessionSurveyLink {
+  font-family: $title-text-font;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.21;
+  text-align: left;
+  color: $primary-color;
+  position: relative;
+  padding: 0 0 0 35px;
+  transition: color 0.3s ease-in-out;
+  display: block;
+  margin-top: 10px;
+
+  background-color: transparent;
+  border: none;
+
+  &.subSession {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0 0 0 25px;
+
+    span {
+      width: 15px;
+    }
+  }
+
+  span {
+    width: 24px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    svg {
+      width: 100%;
+
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &:hover {
+    color: $secondary-color;
+
+    span {
+      svg {
+        path {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}

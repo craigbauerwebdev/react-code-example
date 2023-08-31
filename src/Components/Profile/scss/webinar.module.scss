@@ -1,0 +1,40 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.schedulePage {
+  @include basePageSetting;
+}
+
+.schedulePageInnerHolder {
+  @include baseInnerHolder;
+}
+
+.newWebinarButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newWebinarButton {
+  @include alternateButton();
+
+  svg {
+    position: relative;
+    top: 4px;
+    width: 18px;
+
+    g,
+    path {
+      fill: $brand-black;
+    }
+  }
+
+  span {
+    margin-left: 5px;
+  }
+}
+
+.emptyContent {
+  margin-top: 50px;
+  text-align: center;
+}

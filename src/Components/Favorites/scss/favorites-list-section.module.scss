@@ -1,0 +1,36 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.section ~ .section {
+  margin-top: 50px;
+}
+
+.favoriteSectionList {
+  li:nth-child(even) > div {
+    background-color: $brand-white;
+
+    button {
+      background-color: $brand-white;
+    }
+  }
+}
+
+.innerSubHeader {
+  @include basePageFonts;
+}
+
+.showMore {
+  text-decoration: none;
+  color: $primary-color;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: auto;
+  display: block;
+
+  &:focus-visible {
+    border: 1px solid $brand-gray;
+  }
+}

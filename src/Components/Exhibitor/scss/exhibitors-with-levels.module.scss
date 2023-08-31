@@ -1,0 +1,112 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.exhibitors {
+  @include mainPageSetting;
+  overflow: initial;
+}
+
+.exhibitorsWrapper {
+  @include gridFlex;
+}
+
+.title {
+  @include gridTitle;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("tableH") {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.subTitle {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  svg {
+    width: 18px;
+    margin-right: 5px;
+  }
+
+  @include mq("tableH") {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.exhibitorsListHolder {
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.exhibitorsLevel {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+  font-size: 13px;
+  font-weight: 300;
+  color: $brand-black-2;
+  font-family: $title-text-font;
+}
+
+.exhibitorLevelRow {
+  @include gridFlex;
+
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.noResults {
+  margin: 0;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+
+  @include mq("tablet-wide", "max") {
+    flex-direction: column;
+  }
+}
+
+.innerFlex {
+  display: flex;
+  flex-direction: column-reverse;
+  height: fit-content;
+  margin-right: 0;
+  background: $brand-white-2;
+  padding: 30px 30px 10px;
+  min-width: 250px;
+  margin-bottom: 0;
+  position: relative;
+
+  @include mq("tablet-wide") {
+    margin-bottom: 40px;
+    padding: 10px 30px;
+  }
+}
+
+.mobileFilterButton {
+  color: $primary-color;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 20px;
+  border: solid 1px $brand-gray;
+  margin: 0 30px;
+  width: -webkit-fill-available;
+}

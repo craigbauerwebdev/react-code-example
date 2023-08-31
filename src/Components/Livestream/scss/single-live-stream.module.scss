@@ -1,0 +1,245 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./livestream-mixins";
+
+.main {
+  @include mainPageSetting(80px);
+}
+
+.liveStreamEmbed {
+  @include liveStreamEmbed;
+}
+
+.liveStreamWherebyEmbed {
+  @include liveStreamEmbed;
+
+  @include mq("tablet-wide", max) {
+    display: block;
+  }
+}
+
+.liveStreamPluginContainer {
+  @include liveStreamPluginContainer;
+
+  border-bottom: 1px solid $brand-grey-2;
+
+  @include mq("tablet") {
+    //overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.liveStreamSessionContainer {
+  @include liveStreamSessionContainer;
+}
+
+.customSessionContainer {
+  @include customSessionContainer(60%);
+
+  section {
+    height: auto;
+  }
+}
+
+.speakerSessionInfo {
+  @include speakerSessionInfo;
+
+  @include mq("midpoint") {
+    margin-left: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .description {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
+.sessionTitle {
+  @include sessionTitle;
+  font-size: 24px;
+
+  button {
+    top: -3.5px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.sessionFileName {
+  margin-left: 5px;
+}
+
+.speakerList {
+  @include speakerList;
+}
+
+.languageSurvey {
+  width: 100%;
+  margin-bottom: 40px;
+
+  > div {
+    margin-bottom: 0;
+  }
+
+  @include mq("phablet") {
+    display: flex;
+  }
+}
+
+.surveyHolderAboveContent {
+  margin-bottom: 40px;
+}
+
+.videoContainer {
+  box-sizing: border-box;
+  flex-grow: 1;
+
+  @include mq("tablet-wide") {
+    padding-right: 20px;
+  }
+}
+
+.boothCalendarButton {
+  margin-top: 25px;
+
+  button {
+    @include primaryButton();
+
+    margin: auto;
+    display: block;
+    width: 120px;
+    min-width: max-content;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+
+    svg {
+      path {
+        fill: $brand-white;
+      }
+    }
+
+    @include mq("laptop") {
+      width: 180px;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $brand-white;
+
+      svg {
+        path {
+          fill: $primary-color;
+        }
+      }
+    }
+
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+}
+
+.boothButton {
+  @include primaryButton();
+
+  margin: auto;
+  display: block;
+  width: 120px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+
+  @include mq("laptop") {
+    width: 180px;
+  }
+
+  &:focus {
+    border-color: $brand-white;
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+
+.showcaseContainer {
+  box-sizing: border-box;
+  flex-grow: 1;
+  height: 550px !important;
+  @include mq("tablet-wide", min) {
+    padding-right: 50px;
+  }
+
+  @include mq("tablet-wide", max) {
+    margin-bottom: 40px;
+  }
+
+  iframe {
+    height: 100%;
+    height: -webkit-fill-available;
+  }
+}
+
+.whereByEmbed {
+  background-color: $brand-black-3;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 500px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 75px;
+
+  text-align: center;
+  .sponsorLogo {
+    height: 167px;
+    max-width: 244px;
+    width: 100%;
+    background-color: $brand-white;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    height: unset;
+    width: 100%;
+    object-fit: scale-down;
+    margin: 10px auto;
+    max-height: 200px;
+  }
+  h1 {
+    color: $brand-white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    display: block;
+    margin: 5% 0 2%;
+  }
+  h2 {
+    color: $brand-white;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+
+    &.ended {
+      margin-top: 50px;
+    }
+  }
+}

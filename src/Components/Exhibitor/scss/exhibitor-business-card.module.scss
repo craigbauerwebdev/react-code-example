@@ -1,0 +1,32 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.scheduleMeetingContainer {
+  margin-top: 12px;
+  display: flex;
+  max-width: 100%;
+  justify-content: flex-end;
+}
+
+.detailsButton {
+  @include primaryButton;
+
+  font-weight: 700;
+  width: 219px;
+
+  &.inactive {
+    background-color: $brand-light-grey;
+    border: unset;
+
+    &:hover:not(:disabled) {
+      background-color: $brand-light-grey;
+      color: $brand-white;
+      border: unset;
+      cursor: default;
+    }
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}

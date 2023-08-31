@@ -1,0 +1,80 @@
+import i18n from "util/i18n";
+
+export const defaultIconPath = "/images/icons/arrow.png";
+export const cards = {
+  subLabelImageURL: defaultIconPath,
+  displaySubLabelImageOnTiles: true,
+  tiles: [
+    {
+      linkURL: "/sessions",
+      backgroundImage: i18n.t("main_link_page_cards_1_image"),
+      label: i18n.t("main_link_page_cards_1_name"),
+      subLabel: i18n.t("main_link_page_cards_1_subtitle"),
+      type: "_parent",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+    {
+      linkURL: `/${process.env.REACT_APP_SPEAKERS_PRESENTERS_TITLE.toLowerCase()}`,
+      backgroundImage: i18n.t("main_link_page_cards_2_image"),
+      label: i18n.t("main_link_page_cards_2_name"),
+      subLabel: i18n.t("main_link_page_cards_2_subtitle"),
+      type: "_parent",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+    {
+      linkURL: `/${process.env.REACT_APP_EXHIBITORS_SPONSORS_TITLE.toLowerCase()}`,
+      backgroundImage: i18n.t("main_link_page_cards_3_image"),
+      label: i18n.t("main_link_page_cards_3_name"),
+      subLabel: i18n.t("main_link_page_cards_3_subtitle"),
+      type: "_parent",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+    {
+      linkURL: `/matchmaking`,
+      backgroundImage: i18n.t("main_link_page_cards_4_image"),
+      label: i18n.t("main_link_page_cards_4_name"),
+      subLabel: i18n.t("main_link_page_cards_4_subtitle"),
+      type: "grip",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+    {
+      linkURL: `/posters`,
+      backgroundImage: i18n.t("main_link_page_cards_5_image"),
+      label: i18n.t("main_link_page_cards_5_name"),
+      subLabel: i18n.t("main_link_page_cards_5_subtitle"),
+      type: "_parent",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+    {
+      linkURL: "/sessions/on-demand",
+      backgroundImage: i18n.t("main_link_page_cards_6_image"),
+      label: i18n.t("main_link_page_cards_6_name"),
+      subLabel: i18n.t("main_link_page_cards_6_subtitle"),
+      type: "_parent",
+      sort: 0,
+      backgroundColor: "",
+      start: "",
+      end: "",
+    },
+  ],
+};
+
+export default {
+  cards,
+  defaultIconPath,
+};

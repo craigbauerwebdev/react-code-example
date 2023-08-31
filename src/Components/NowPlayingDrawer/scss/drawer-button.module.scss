@@ -1,0 +1,51 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.drawerToggleButton {
+  background-color: $brand-gray;
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 72px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  svg {
+    transition: transform 0.2s 0.8s linear;
+    transform-origin: 50%;
+    transform: rotateX(0);
+    width: 24px;
+    height: 12px;
+  }
+
+  &.closed svg {
+    transform: rotateX(180deg);
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    .defaultIcon {
+      display: none;
+    }
+    .hoverIcon {
+      display: block;
+    }
+  }
+  &:focus-visible {
+    outline: auto;
+  }
+}

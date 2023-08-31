@@ -1,0 +1,125 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.schedulePage {
+  @include basePageSetting;
+}
+
+.schedulePageHeaderWrapper {
+  @include accountPageHeaderSectionGrid;
+}
+
+.schedulePageHeader {
+  @include accountPageInnerHeaderDisplay;
+}
+
+.innerHeader {
+  @include basePageFonts;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq("tablet-small") {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.headerAlign {
+  @include accountPageInnerHeaderDisplay;
+  justify-content: space-between;
+  @include mq("tablet-small", max) {
+    display: block;
+  }
+  @include midpointAlign();
+}
+
+.scheduleBtn {
+  @include alternateButton;
+
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+  @include mq("midpoint") {
+    width: 240px;
+  }
+
+  .icon {
+    margin-right: 5px;
+
+    svg {
+      width: 16px;
+      path,
+      g {
+        fill: $brand-black;
+      }
+    }
+  }
+}
+
+.filters {
+  @include accountPageFilters;
+}
+
+.legend {
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-top: 5px;
+
+  @include mq("midpoint") {
+    margin: 15px 0 0 0;
+  }
+
+  li {
+    display: flex;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 0 0 15px;
+    margin: 0 0 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.green {
+      &:before {
+        background: $session-green;
+      }
+    }
+
+    &.yellow {
+      &:before {
+        background: $session-yellow;
+      }
+    }
+
+    &.red {
+      &:before {
+        background: $session-red;
+      }
+    }
+  }
+}

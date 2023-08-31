@@ -1,0 +1,13 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.registerPage {
+  // background: linear-gradient(90deg, $primary-color, rgba(16, 176, 230, 0)),
+  //   url("/images/register-bkgnd-img-1.png") no-repeat top;
+  background-size: cover;
+  padding: 80px 0 30px;
+}
+
+.registerPageContent {
+  @include mainPageSetting;
+}

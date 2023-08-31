@@ -1,0 +1,80 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+@import "../../Network/scss/networking-pages-mixins";
+
+.main {
+  @include main;
+}
+
+.title {
+  @include networkingPageTitles;
+}
+
+.headerWrapper {
+  @include headerWrapper;
+}
+
+.scrollingContentHolder {
+  @include scrollingContentHolder;
+
+  > div {
+    padding-bottom: 30px;
+  }
+}
+
+.scrollingContent {
+  @include scrollingContent;
+}
+
+.table {
+  @include table;
+}
+
+.flexTDText {
+  @include flexTDText;
+}
+
+.exhibitorName {
+  font-weight: bold;
+  display: block;
+  margin-left: 10px;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer {
+  @include searchContainer;
+}
+
+.exhibitorButton {
+  @include networkingButtons;
+}
+
+.svgContainer {
+  @include svgContainer;
+}
+
+.searchIcon {
+  @include searchIcon;
+}
+
+.popUpAnchor {
+  @include popUpAnchor;
+}
+
+.inputHolder {
+  position: relative;
+  height: 100%;
+}
+
+.logo {
+  width: 139px;
+  object-fit: scale-down;
+  margin: 5px auto;
+  height: 44px;
+}

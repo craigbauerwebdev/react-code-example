@@ -1,0 +1,14 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.main {
+  display: flex;
+}
+.sectionWrapper {
+  width: 100%;
+  padding: 0 0 40px 0;
+
+  &:focus {
+    outline: 0;
+  }
+}

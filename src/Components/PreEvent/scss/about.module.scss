@@ -1,0 +1,101 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.aboutContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq("tablet") {
+    padding: 0 30px;
+    justify-content: space-between;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+
+  a {
+    @include alternateButton();
+  }
+
+  h1 {
+    color: $primary-color;
+    font-size: 32px;
+    font-family: $title-text-font;
+    margin: 0 0 30px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+
+  p {
+    color: $brand-gray;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $title-text-font;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.aboutContent {
+  width: 100%;
+  margin-bottom: 50px;
+
+  @include mq("tablet") {
+    margin-bottom: 0;
+    width: 48%;
+  }
+}
+
+.registerTodayHolder {
+  background-color: $secondary-color;
+  height: 500px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  @include mq("tablet") {
+    width: 48%;
+  }
+}
+
+.registerToday {
+  box-sizing: border-box;
+  background-color: $secondary-color;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    color: $brand-black;
+    font-family: $title-text-font;
+    font-size: 48px;
+    line-height: 1.19;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 22px;
+    color: $brand-black;
+    font-family: $title-text-font;
+    text-align: left;
+    line-height: 1.18;
+  }
+}
+
+.signUp {
+  box-sizing: border-box;
+  background-color: $secondary-color;
+  width: 100%;
+  padding: 0 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+}

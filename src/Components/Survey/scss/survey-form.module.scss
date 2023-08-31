@@ -1,0 +1,150 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.errorTitle {
+  box-sizing: border-box;
+  margin-right: 20px;
+
+  font-family: $title-text-font;
+  font-size: 23px;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.formWrapper {
+  max-height: max-content;
+  .formTitle {
+    box-sizing: border-box;
+    margin-right: 20px;
+
+    font-family: $title-text-font;
+    font-size: 23px;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  .formDescription {
+    font-family: $title-text-font;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2.4;
+    color: $brand-black;
+  }
+
+  .submitPostMessage {
+    margin: 10px 0;
+    font-family: $title-text-font;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 2.4;
+    color: $brand-black;
+
+    &.submitPostMessageError {
+      font-size: 16px;
+      border: 1px solid $brand-black;
+      padding: 1rem 1rem;
+      border-radius: 0.25rem;
+      color: $brand-red;
+      background-color: $brand-red-transparent;
+      border-color: $brand-red;
+    }
+  }
+
+  .rowWrapper {
+    margin: 10px 0;
+
+    @include mq("tablet") {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+    }
+  }
+
+  .formGridWrapper {
+    list-style-type: none;
+    padding: 0;
+
+    &.gridTwoColumn {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 24px;
+    }
+  }
+
+  .formGeneralAlert {
+    margin: 10px 0;
+    color: $brand-black;
+    background-color: $brand-off-white-4;
+    border: 1px solid $brand-black;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+
+    &.formGeneralErrorAlert {
+      color: $brand-red;
+      background-color: $brand-red-transparent;
+      border-color: $brand-red;
+    }
+
+    &.formGeneralSuccessAlert {
+      color: $brand-green-1;
+      background-color: $brand-green-transparent;
+      border-color: $brand-green-1;
+    }
+  }
+
+  .formGeneralErrorAlert {
+    margin: 10px 0;
+    color: $brand-red;
+    background-color: $brand-red-transparent;
+    border: 1px solid $brand-red;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .formGeneralSuccessAlert {
+    margin: 10px 0;
+    color: $brand-green-1;
+    background-color: $brand-green-transparent;
+    border: 1px solid $brand-green-1;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .buttonRowWrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+    button {
+      margin: 0 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  label {
+    font-family: $title-text-font;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: $title-text-font;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

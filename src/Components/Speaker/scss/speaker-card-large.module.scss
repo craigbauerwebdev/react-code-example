@@ -1,0 +1,78 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.speakerContainerLargeOuterShell {
+  position: relative;
+}
+
+.speakerContainerLarge {
+  box-sizing: border-box;
+  height: 270px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+}
+
+.speakerName {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: $title-text-font;
+  text-align: left;
+  color: $primary-color;
+  font-weight: 100;
+
+  @include mq("phone-wide") {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.speakerOrg {
+  color: $brand-black;
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 100;
+
+  @include mq("phone-wide") {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.speakerGradient {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent 66%,
+    rgba(0, 0, 0, 0.39) 93%
+  );
+}
+
+.speakerInfo {
+  margin: 10px 0;
+}
+
+.favoriteHolder {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
+}
+
+.homeFeaturedOuterShell {
+  .speakerName {
+    margin-bottom: 0;
+    font-family: $title-text-font-2;
+  }
+
+  .speakerOrg {
+    margin-top: 0;
+    font-family: $title-text-font-2;
+  }
+}

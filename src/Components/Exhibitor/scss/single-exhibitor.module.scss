@@ -1,0 +1,288 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Livestream/scss/livestream-mixins";
+
+.hero {
+  background-size: cover;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .main {
+    background: $brand-white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+}
+
+.main {
+  @include mainPageSetting(34px);
+}
+
+.scheduleMeetingContainer {
+  margin-top: 20px;
+  display: flex;
+  max-width: 100%;
+  justify-content: flex-end;
+
+  .detailsButton {
+    @include primaryButton;
+
+    font-weight: 700;
+    width: 219px;
+
+    &.inactive {
+      background-color: $brand-light-grey;
+      border: unset;
+
+      &:hover:not(:disabled) {
+        background-color: $brand-light-grey;
+        color: $brand-white;
+        border: unset;
+        cursor: default;
+      }
+    }
+
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+}
+
+.singlePageTopImg {
+  display: block;
+  margin: 0 auto 40px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.singleExhibitorContainer {
+  @include singleSpeakerContainer;
+
+  section {
+    height: auto;
+  }
+  > section:last-of-type {
+    width: 100%;
+
+    @include mq("phablet") {
+      width: 54%;
+    }
+
+    @include mq("midpoint") {
+      width: 75%;
+    }
+  }
+
+  iframe {
+    margin-top: 0;
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include mq("tablet") {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .title {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h1 {
+      font-family: $title-text-font;
+      color: $primary-color;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.13;
+      margin: 0;
+
+      @include mq("tablet") {
+        font-size: 60px;
+      }
+    }
+  }
+
+  .descriptionContainer {
+    margin-top: 24px;
+    color: $brand-black;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: $title-text-font;
+    font-size: 17px;
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    li {
+      display: list-item;
+    }
+  }
+}
+
+.singleWebsite {
+  color: $primary-color;
+  font-family: $title-text-font;
+  margin: 0 0 25px 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  display: block;
+  word-break: break-all;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  @include mq("tablet-small") {
+    margin-bottom: 15px;
+  }
+}
+
+.exhibitorSocialLinks {
+  margin-bottom: 20px;
+}
+
+.contentWrapperWithContact {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @include mq("midpoint") {
+    flex-flow: row;
+  }
+}
+
+.leftDetails {
+  width: 100%;
+
+  @include mq("midpoint") {
+    width: 40%;
+  }
+}
+
+.singleListDetails {
+  width: 100%;
+  margin-bottom: 0;
+
+  @include mq("midpoint") {
+    width: 40%;
+  }
+
+  a {
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  li {
+    color: $brand-gray;
+    line-height: 1.5em;
+    font-family: $title-text-font;
+    font-size: 14px;
+    text-align: right;
+  }
+}
+
+.liveStreamPluginContainer {
+  @include liveStreamPluginContainer;
+
+  width: 100%;
+}
+
+// .carouselContainer {
+//   svg {
+//     width: 14px;
+//     height: 14px;
+//     fill: black;
+//     color: black;
+//   }
+// }
+
+.carouselHeader {
+  display: flex;
+  justify-content: space-between;
+  font-family: $title-text-font;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: $brand-black;
+  flex-direction: column;
+
+  @include mq("tableH") {
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
+
+  h2 {
+    font-family: $title-text-font;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: normal;
+    color: $brand-black;
+    margin-bottom: 10px;
+
+    @include mq("tableH") {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $brand-black;
+
+    &:hover,
+    &:focus-visible {
+      color: $primary-color;
+    }
+  }
+}
+
+.innerCarouselContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  > div {
+    width: inherit;
+  }
+
+  @include mq("midpoint") {
+    > div {
+      width: 360px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@mixin sessionTitle {
+  box-sizing: border-box;
+  padding: 0;
+  color: $primary-color;
+  font-size: 20px;
+  font-family: $title-text-font;
+  margin: 0 0 30px;
+  line-height: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+@mixin liveStreamEmbed {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 25px;
+
+  @include mq("tablet-wide") {
+    flex-flow: row;
+    margin-top: 10px;
+    align-items: center;
+  }
+}
+
+@mixin liveStreamPluginContainer {
+  width: 300px;
+  margin-left: 20px;
+  height: 555px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  align-self: center;
+
+  @include mq("tablet-wide") {
+    align-self: auto;
+    margin-top: 0;
+  }
+
+  iframe {
+    box-sizing: border-box;
+    height: 520px;
+    border: 1px solid $brand-grey-2;
+    width: 100%;
+  }
+}
+
+@mixin liveStreamSessionContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq("midpoint") {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  article {
+    margin: 0;
+    padding: 0;
+    color: $brand-black;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $title-text-font;
+    line-height: 24px;
+
+    @include mq("tablet") {
+      padding-right: 40px;
+    }
+  }
+}
+
+@mixin customSessionContainer($width: 100%) {
+  display: flex;
+  flex-flow: column;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+
+  @include mq("tablet") {
+    flex-flow: row;
+  }
+
+  @include mq("laptop-wide") {
+    width: $width;
+    flex-grow: 1;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+    display: block;
+  }
+}
+
+@mixin speakerSessionInfo {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  max-width: 690px;
+  padding-top: 0;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .description {
+    margin-top: 10px;
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    li {
+      display: list-item;
+    }
+  }
+}

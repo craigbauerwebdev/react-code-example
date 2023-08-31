@@ -1,0 +1,140 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Livestream/scss/livestream-mixins";
+
+.main {
+  @include mainPageSetting(80px);
+}
+
+.sessionNav {
+  display: flex;
+  width: 100%;
+
+  @include mq("tablet") {
+    padding: 0;
+  }
+}
+
+.sessionFileName {
+  margin-left: 5px;
+}
+
+.customSessionContainer {
+  @include customSessionContainer;
+}
+
+.speakerSessionInfo {
+  @include speakerSessionInfo;
+
+  @include mq("phablet") {
+    margin-left: 30px;
+  }
+
+  &.speakerSessionInfoSubSession {
+    max-width: none;
+  }
+}
+
+.sessionTitle {
+  @include sessionTitle;
+
+  button {
+    top: -3.5px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.speakerList {
+  @include speakerList;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.subSessionCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > div,
+  > a {
+    @include clickCardSetting;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include mq("midpoint") {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.liveStreamPluginContainer {
+  @include liveStreamPluginContainer;
+}
+
+.subSessionVideoHolder {
+  display: flex;
+  width: 100%;
+}
+
+.subSessionVideoContent {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+
+  .speakerList {
+    margin-top: 30px;
+  }
+
+  .description {
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    li {
+      display: list-item;
+    }
+  }
+}
+
+.languageSurvey {
+  display: block;
+
+  @include mq("phablet") {
+    display: flex;
+  }
+}
+
+.subSessionContentWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 30px 0 0 0;
+
+  @include mq("midpoint") {
+    flex-direction: revert;
+  }
+  .innerWrapper {
+    padding-right: 0.5rem;
+  }
+}

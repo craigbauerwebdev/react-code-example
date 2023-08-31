@@ -1,0 +1,34 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.liveStreamEmbedIframeVideo {
+  width: 100%;
+  border: none;
+  max-width: 890px;
+  height: 550px;
+  margin: 0;
+}
+
+.showcaseStreamEmbed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-width: 980px;
+  max-height: 575px;
+  margin: 0;
+}
+
+.iframeVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  @include mq("midpoint") {
+    height: 560px;
+  }
+}

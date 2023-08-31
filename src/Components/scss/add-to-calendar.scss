@@ -1,0 +1,301 @@
+/* Use Google's hosted "Open Sans" font as display font in button */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600");
+@import "../../css/core";
+
+/* The button */
+.addeventatc {
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  justify-content: flex-end;
+  background-color: $brand-white;
+  border: 1px solid $brand-black;
+  cursor: pointer;
+  font-family: $title-text-font;
+  color: $brand-black;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 15px 20px;
+  // min-height: 46px;
+  min-width: 60px;
+  box-sizing: border-box;
+
+  .atc_title {
+    font-family: $title-text-font;
+    color: $brand-black;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+  }
+
+  &.atc_button--no-text {
+    padding-right: 0;
+  }
+
+  .atc_icon_holder {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .atc_icon {
+    width: 12px;
+    // height: 18px;
+    // position: absolute;
+    // z-index: 1;
+    // left: 20px;
+    // top: 12px;
+    // background: url("/images/atc-icons/calendar-icon-calendar-t1.svg") no-repeat;
+    // background-size: 18px 18px;
+    pointer-events: none;
+    margin-right: 10px;
+    display: block;
+
+    svg {
+      width: 17px;
+
+      path {
+        fill: $brand-black;
+      }
+    }
+  }
+
+  .calendar-text {
+    display: inline;
+    padding-left: 10px;
+  }
+
+  .sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+  div {
+    padding: 0;
+    margin: 0;
+  }
+
+  .add-to-calendar-button {
+    box-sizing: border-box;
+    width: fit-content;
+    max-height: 25px;
+    font-family: $title-text-font;
+    border: 1px solid $brand-black;
+    margin-bottom: 2em;
+    color: $brand-black;
+    outline: none;
+
+    img {
+      padding-right: 20px;
+    }
+
+    @include mq("laptop") {
+      img {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+.addeventatc:hover {
+  color: $brand-black;
+  text-decoration: none;
+  background-color: $brand-grey-3;
+  border: 1px solid $brand-white;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.65);
+  // .atc_icon {
+  //   svg {
+  //     g {
+  //       fill: $brand-white;
+  //     }
+  //   }
+  // }
+}
+.addeventatc {
+  &.add-to-calendar-focus {
+    box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0);
+    border: 1px solid $brand-black;
+    background-color: $brand-grey-3;
+    outline: none;
+
+    // .atc_icon {
+    //   svg {
+    //     g {
+    //       fill: $brand-white;
+    //     }
+    //   }
+    // }
+  }
+}
+.addeventatc .arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+  background: url("/images/atc-icons/calendar-icon-arrow-t1.svg") no-repeat;
+  background-size: 16px 16px;
+}
+.addeventatc-selected {
+  background-color: #2c84f4;
+}
+.addeventatc .start,
+.addeventatc .end,
+.addeventatc .timezone,
+.addeventatc .title,
+.addeventatc .description,
+.addeventatc .location,
+.addeventatc .organizer,
+.addeventatc .organizer_email,
+.addeventatc .facebook_event,
+.addeventatc .all_day_event,
+.addeventatc .date_format,
+.addeventatc .alarm_reminder,
+.addeventatc .recurring,
+.addeventatc .attendees,
+.addeventatc .calname,
+.addeventatc .uid,
+.addeventatc .status,
+.addeventatc .method,
+.addeventatc .client,
+.addeventatc .transp {
+  display: none;
+}
+
+/* Drop down */
+.addeventatc_dropdown {
+  left: unset !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: unset !important;
+  width: max-content;
+  position: absolute;
+  padding: 8px 5px;
+  font-family: $title-text-font;
+  color: #000;
+  font-weight: 600;
+  line-height: 100%;
+  background: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: left;
+  margin-left: -1px;
+  display: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 26px;
+  transform: scale(0.98, 0.98) translateY(5px);
+  z-index: 200;
+  transition: transform 0.15s ease;
+}
+.addeventatc_dropdown.topdown {
+  transform: scale(0.98, 0.98) translateY(-5px);
+}
+.addeventatc_dropdown span {
+  display: block;
+  line-height: 100%;
+  background: $brand-white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+  padding: 14px 10px 14px 55px;
+  margin: -2px 0px;
+}
+.addeventatc_dropdown span:hover {
+  background-color: #f4f4f4;
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+.addeventatc_dropdown em {
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+}
+.addeventatc_dropdown .frs a {
+  background: #fff;
+  color: #cacaca;
+  cursor: pointer;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  padding-left: 10px;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  text-decoration: none;
+  top: 5px;
+  z-index: 101;
+}
+.addeventatc_dropdown .frs a:hover {
+  color: #999;
+}
+.addeventatc_dropdown .ateappleical {
+  background: url("/images/atc-icons/calendar-icon-apple-t5.svg") 18px 40%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .ategoogle {
+  background: url("/images/atc-icons/calendar-icon-google-t5.svg") 18px 50%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .ateoffice365 {
+  background: url("/images/atc-icons/calendar-icon-office365-t5.svg") 19px 50%
+    no-repeat;
+  background-size: 18px 100%;
+}
+.addeventatc_dropdown .ateoutlook {
+  background: url("/images/atc-icons/calendar-icon-outlook-t5.svg") 18px 50%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .ateoutlookcom {
+  background: url("/images/atc-icons/calendar-icon-outlookcom-t5.svg") 18px 50%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .ateyahoo {
+  background: url("/images/atc-icons/calendar-icon-yahoo-t5.svg") 18px 50%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .atefacebook {
+  background: url("/images/atc-icons/calendar-icon-facebook-t5.svg") 18px 50%
+    no-repeat;
+  background-size: 22px 100%;
+}
+.addeventatc_dropdown .copyx {
+  display: none;
+}
+.addeventatc_dropdown .brx {
+  height: 1px;
+  overflow: hidden;
+  background: #e8e8e8;
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+  right: 10px;
+  top: 9px;
+}
+.addeventatc_dropdown.addeventatc-selected {
+  transform: scale(1, 1) translateY(0px);
+  z-index: 99999999999;
+}
+.addeventatc_dropdown.topdown.addeventatc-selected {
+  transform: scale(1, 1) translateY(0px);
+}
+.addeventatc_dropdown .drop_markup {
+  background-color: #f4f4f4;
+}

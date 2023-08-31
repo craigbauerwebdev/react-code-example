@@ -1,0 +1,61 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.notifications {
+  display: flex;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $brand-gray;
+  transition: all 0.5s $easeInOutCirc;
+
+  &.active {
+    max-height: 800px;
+    opacity: 1;
+  }
+
+  &.close {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  article {
+    box-sizing: border-box;
+    max-width: 750px;
+    width: 100%;
+    position: relative;
+    padding: 30px 0;
+
+    p {
+      color: $brand-white;
+      font-family: $title-text-font;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 0 60px;
+
+      @include mq("tableH") {
+        padding: 0 60px 0 0;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    background: none;
+    border: 0;
+    padding: 0;
+    top: 35px;
+    right: 32px;
+    width: 18px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

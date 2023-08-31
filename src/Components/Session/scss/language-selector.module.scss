@@ -1,0 +1,44 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.languageSelector {
+  display: flex;
+  margin: 0 0 15px 0;
+  flex-grow: 1;
+
+  img {
+    vertical-align: middle;
+    display: inline;
+    height: 26px;
+    margin-right: 10px;
+    width: auto;
+  }
+}
+
+.holder {
+  position: relative;
+  flex-grow: 1;
+
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    width: 10px;
+
+    path {
+      fill: $brand-black;
+    }
+  }
+}
+
+.selectLanguage {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  font-family: $title-text-font;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: solid 1px $brand-grey-2;
+  background-color: $brand-white;
+  appearance: none;
+}

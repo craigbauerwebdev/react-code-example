@@ -1,0 +1,99 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.main {
+  min-height: max-content;
+  max-height: 90vh;
+}
+
+.datePicker {
+  max-width: 40%;
+  margin-left: 15px;
+}
+
+.saveButton {
+  background-color: $primary-color;
+  color: $brand-white;
+  margin: 20px;
+  width: 40%;
+}
+
+.labels {
+  font-weight: bold;
+}
+
+.smallLabel {
+  color: $brand-light-grey;
+  font-style: italic;
+  font-size: 11px;
+  padding-left: 40px;
+  font-weight: normal;
+}
+
+.moderator {
+  padding-bottom: 15px;
+  padding-left: 130px;
+  font-weight: normal;
+}
+
+.typeButton {
+  max-width: 22%;
+  margin-right: 14px;
+  background-color: $brand-white;
+  color: $primary-color;
+  border-color: $brand-light-grey;
+  font-family: $title-text-font;
+  font-size: 11px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.customTags {
+  display: inline-block;
+  background: $secondary-color;
+  color: $primary-color;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.mainContainer {
+  text-align: left;
+  justify-content: space-between;
+  padding: 15px;
+  font-family: $title-text-font-2;
+  font-weight: 600;
+}
+
+.copyLink {
+  font-weight: normal;
+  color: $secondary-color;
+}
+
+.copyLinkButton {
+  font-weight: normal;
+  background-color: $light-blue;
+  color: $primary-color;
+  border: none;
+}
+
+.linkInput {
+  border: none;
+  color: $primary-color;
+}
+
+.buttonContainer {
+  margin-top: 10%;
+}
+
+.copySpan {
+  width: 100%;
+}
+
+.cancelButton {
+  color: $primary-color;
+  border-color: $primary-color;
+  margin: 20px;
+  width: 40%;
+}

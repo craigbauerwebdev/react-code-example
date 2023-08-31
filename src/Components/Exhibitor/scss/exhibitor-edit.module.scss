@@ -1,0 +1,86 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.row {
+  margin-top: 10px;
+  margin-left: 50px;
+  max-width: 1100px;
+}
+
+.FormElement {
+  max-width: "80%";
+  margin-top: "10px";
+
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.kFormFieldset {
+  max-width: 75%;
+}
+
+.mb3 {
+  color: $brand-light-grey;
+  font-weight: 500;
+}
+
+.divText {
+  color: $brand-light-grey;
+  font-weight: 500;
+}
+
+.settingsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2em;
+
+  p {
+    margin-left: 10px;
+  }
+}
+
+.numericTextBox {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  color: #f5f5f5;
+}
+
+.kFormButtons {
+  margin-bottom: 10px;
+}
+
+.saveButton {
+  background: #0066b2;
+  color: $brand-white;
+  width: 100px;
+  font-weight: bold;
+}
+
+.cancelButton {
+  background: white;
+  color: $primary-color;
+  width: 100px;
+  border: none;
+  font-weight: bold;
+}
+
+.emailDomain {
+  width: 50%;
+  font-weight: bold;
+}
+
+.multiSelect {
+  width: auto;
+}
+
+.br {
+  margin-bottom: 2em;
+}

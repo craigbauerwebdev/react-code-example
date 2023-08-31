@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.001" viewBox="0 0 16 16.001">
+  <g id="icon_webinar" data-name="icon / webinar" transform="translate(0 0.001)">
+    <g id="Group">
+      <path id="Vector" d="M6.5,0H.5a.5.5,0,0,0,0,1h6a.5.5,0,1,0,0-1Z" transform="translate(4.5 6)" fill="#fff"/>
+      <path id="Vector-2" data-name="Vector" d="M7,.5A.5.5,0,0,0,6.5,0H.5a.5.5,0,1,0,0,1h6A.5.5,0,0,0,7,.5Z" transform="translate(4.5 8.333)" fill="#fff"/>
+      <path id="Vector-3" data-name="Vector" d="M.667,4.334H3.334A.667.667,0,0,0,4,3.668V2A2,2,0,0,0,1.462.072,2.03,2.03,0,0,0,0,2.059V3.668a.667.667,0,0,0,.667.667Zm.833-2.5a.5.5,0,1,1,.038.191A.5.5,0,0,1,1.5,1.834Z" transform="translate(6 -0.001)" fill="#fff"/>
+      <path id="Vector-4" data-name="Vector" d="M11.333,0H9.5a.167.167,0,0,0-.167.167v1a.167.167,0,0,0,.167.167H11a.333.333,0,0,1,.333.333v8.528a.333.333,0,0,1-.1.236L9.1,12.569a.333.333,0,0,1-.235.1h-7.2a.333.333,0,0,1-.333-.333V1.667a.333.333,0,0,1,.333-.333h1.5a.167.167,0,0,0,.167-.167v-1A.167.167,0,0,0,3.167,0H1.333A1.333,1.333,0,0,0,0,1.333V12.667A1.333,1.333,0,0,0,1.333,14h10a1.333,1.333,0,0,0,1.333-1.333V1.333A1.333,1.333,0,0,0,11.333,0Z" transform="translate(1.667 2)" fill="#fff"/>
+      <path id="Vector-5" data-name="Vector" d="M.5,0a.5.5,0,1,0,0,1H3A.5.5,0,1,0,3,0Z" transform="translate(4.5 10.667)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

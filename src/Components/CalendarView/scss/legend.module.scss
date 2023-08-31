@@ -1,0 +1,35 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.legend {
+  display: flex;
+  align-items: center;
+  width: 590px;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0 0 25px 0;
+
+  > div {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+
+    hr {
+      display: block;
+      width: 30px;
+      height: 14px;
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.67;
+    font-family: $title-text-font;
+    display: block;
+    margin: 0 0 0 10px;
+  }
+}

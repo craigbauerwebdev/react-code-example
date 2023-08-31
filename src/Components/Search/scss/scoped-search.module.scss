@@ -1,0 +1,96 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.scopedSearch {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px auto 20px;
+  width: 100%;
+  align-items: center;
+
+  &.fullWidth {
+    max-width: 100%;
+  }
+
+  input {
+    @include inputSettings();
+
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 15px 10px;
+  }
+
+  ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: rgba(46, 44, 45, 0.3);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $title-text-font;
+    line-height: 24px;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(46, 44, 45, 0.3);
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(46, 44, 45, 0.3);
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(46, 44, 45, 0.3);
+  }
+
+  svg {
+    cursor: pointer;
+    path {
+      transition: fill 0.3s, stroke 0.3s;
+      fill: #0066b2;
+      stroke: #0066b2;
+    }
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+
+  @include mq("midpoint") {
+    margin-right: 1rem;
+  }
+}
+
+.inputHolder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 80px !important;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  h4 {
+    display: none;
+    font-size: 22px;
+    margin: 0;
+
+    @include mq("midpoint") {
+      display: block;
+    }
+  }
+}
+
+.submit {
+  @include secondaryButton();
+
+  flex-grow: 1;
+  padding: 5px 10px;
+  font-weight: bold;
+
+  @include mq("tablet-small") {
+    padding: 15px 30px;
+  }
+}

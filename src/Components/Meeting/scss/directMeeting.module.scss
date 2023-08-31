@@ -1,0 +1,123 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.primary {
+  @include primaryButton();
+
+  svg {
+    path {
+      fill: $brand-white;
+    }
+  }
+
+  &.active {
+    @include alternateButton();
+
+    svg {
+      path {
+        fill: $brand-black;
+      }
+    }
+  }
+}
+
+.styledLayout {
+  min-height: 90vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "content";
+
+  &[shownav="true"] {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "nav content";
+
+    &[showroster="true"] {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "nav content roster";
+      grid-template-rows: calc(100vh - 81px);
+    }
+  }
+
+  &[showroster="true"] {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: calc(100vh - 81px);
+    grid-template-areas: "content roster";
+  }
+
+  .nav {
+    grid-area: nav;
+
+    @include mq("tablet") {
+      grid-area: unset;
+      position: fixed;
+    }
+  }
+
+  .roster {
+    max-width: 100%;
+    grid-area: roster;
+    z-index: 2;
+    height: auto !important;
+
+    @include mq("phone-wide") {
+      max-width: none;
+    }
+
+    @include mq("tablet") {
+      grid-area: unset;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 320px;
+    }
+  }
+
+  @include mq("tablet") {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+  }
+
+  .headers {
+    text-align: center;
+  }
+
+  p {
+    color: $brand-white;
+  }
+}
+
+.styledContent {
+  position: relative;
+  grid-area: content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .videos {
+    .ch-nameplate {
+      z-index: 0 !important; // in case video tiles are layered make sure the name plate is obfuscated
+    }
+    // flex: 1;
+
+    // &[size="2"] {
+    //   display: flex;
+    //   video {
+    //     object-fit: contain !important;
+    //   }
+    // }
+  }
+
+  .controls {
+    position: static;
+    bottom: 1rem;
+    left: 50%;
+
+    @include mq("tablet") {
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
+}

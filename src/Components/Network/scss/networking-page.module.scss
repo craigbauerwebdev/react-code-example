@@ -1,0 +1,33 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.networkingPage {
+  .h1 {
+    display: none;
+
+    @include mq("midpoint") {
+      display: block;
+      font-size: 38px;
+      color: $primary-color;
+      font-family: $title-text-font;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.main {
+  @include mainPageSetting(0, 0, 0);
+  @include mq("midpoint") {
+    margin: 60px auto;
+    padding: 0 30px;
+  }
+  overflow: unset;
+}
+
+.background {
+  overflow: auto;
+  background-color: $brand-white-2;
+}
+

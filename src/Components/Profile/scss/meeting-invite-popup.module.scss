@@ -1,0 +1,173 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.main {
+  min-height: max-content;
+  max-height: 90vh;
+  position: absolute;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  align-items: flex-start;
+
+  @include mq("phablet") {
+    flex-flow: row;
+  }
+}
+
+.fieldTitle {
+  font-weight: 700;
+  width: 150px;
+  text-align: left;
+  font-family: $title-text-font;
+
+  @include mq("phablet") {
+    text-align: right;
+    margin-right: 50px;
+  }
+}
+
+.rightSide {
+  font-weight: normal;
+  max-width: 404px;
+}
+
+.typeLabel {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  width: 95px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+
+  svg {
+    margin-bottom: 5px;
+    width: 16px;
+
+    path {
+      fill: $brand-white;
+    }
+  }
+
+  .type {
+    color: $brand-white;
+    font-family: $title-text-font;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.meetingStatusBtn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  width: 150px;
+  color: $brand-white;
+  background-color: $session-green;
+  margin-top: 20px;
+
+  &:disabled {
+    background-color: $brand-grey-3;
+  }
+}
+
+.declineBtn {
+  background-color: $brand-red;
+  margin-left: 10px;
+
+  &:disabled {
+    background-color: $brand-grey-3;
+  }
+}
+
+.grayedOut {
+  color: $brand-grey-3;
+}
+
+.invitees {
+  @include scrollBar;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 12px;
+
+  li {
+    float: left;
+    width: 50%;
+  }
+
+  @include mq("phablet") {
+    margin-bottom: 60px;
+  }
+}
+
+.confirmDeclineBtn {
+  @include secondaryButton();
+
+  margin-right: 20px;
+  // border-radius: 0;
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.startChatBtn {
+  @include primaryButton();
+  // border-radius: 0;
+  flex-grow: 1;
+  max-width: 50%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  .meetingInviteAtc {
+    padding: 12px !important;
+  }
+}
+
+.confirmationBtns {
+  display: flex;
+  padding-top: 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  button {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    max-width: inherit;
+  }
+
+  @include mq("phablet") {
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: 0;
+
+    button {
+      margin-bottom: initial;
+      max-width: 50%;
+
+      &:last-of-type {
+        margin-left: 20px;
+      }
+    }
+  }
+}

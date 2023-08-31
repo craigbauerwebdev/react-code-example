@@ -1,0 +1,50 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.holder {
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  button {
+    @include primaryButton;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    width: 110px;
+
+    @include mq("tablet-small") {
+      width: 190px;
+      padding: 15px 30px;
+    }
+
+    svg {
+      position: relative;
+      top: 1px;
+      width: 16px;
+    }
+  }
+}
+
+.page {
+  border: none;
+  background-color: inherit;
+
+  &:focus-visible {
+    border: 1px solid $brand-gray;
+  }
+}
+
+.pageActive {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

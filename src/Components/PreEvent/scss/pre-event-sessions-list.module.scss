@@ -1,0 +1,14 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.title {
+  @include gridTitle();
+}
+
+.results {
+  @include gridFlex;
+
+  &:focus {
+    outline: 0;
+  }
+}

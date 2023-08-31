@@ -1,0 +1,146 @@
+@mixin main {
+  @include basePageSetting;
+  width: auto;
+
+  @include mq("phone-wide") {
+    width: 81%;
+  }
+
+  @include mq("phablet") {
+    width: auto;
+    padding: 40px;
+  }
+
+  @include mq("tableH") {
+    border: 1px solid #dee2e6;
+  }
+}
+
+@mixin networkingPageTitles {
+  font-size: 30px;
+  color: $primary-color;
+  font-weight: 500;
+  margin: 0;
+  line-height: 41px;
+  font-family: $title-text-font;
+  margin-top: 10px !important;
+
+  @include mq("tablet") {
+    margin-top: 0 !important;
+  }
+}
+
+@mixin headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  @include mq("phone-wide") {
+    flex-direction: row;
+  }
+  @include mq("midpoint", max) {
+    margin-bottom: 0px;
+  }
+  @include midpointAlign();
+}
+
+@mixin scrollingContentHolder {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+@mixin scrollingContent {
+  @include scrollBar;
+
+  margin-top: 20px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+@mixin table {
+  width: 100%;
+  box-shadow: 0 0 4px 0 rgba(46, 44, 45, 0.2);
+
+  td,
+  th {
+    border: none;
+    background-color: $brand-white;
+    padding: 10px;
+    line-height: 19px;
+  }
+
+  th {
+    padding: 10px 5px;
+  }
+
+  thead tr th {
+    box-sizing: border-box;
+    border: none;
+    background-color: $brand-grey-5;
+    height: 22px;
+    text-align: left;
+    font-weight: normal;
+    padding: 12px 7px;
+  }
+
+  tfoot tr td {
+    border: none;
+    background-color: $brand-grey-5;
+    text-align: center;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin flexTDText {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 40px;
+}
+
+@mixin searchContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  max-width: 80%;
+  min-width: 80%;
+}
+
+@mixin networkingButtons {
+  color: $primary-color;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 10px;
+
+  &.hidden {
+    visibility: hidden;
+  }
+
+  &:focus-visible {
+    border: 1px solid $brand-gray;
+  }
+}
+
+@mixin svgContainer {
+  display: flex;
+}
+
+@mixin searchIcon {
+  margin-top: 10px;
+}
+
+@mixin popUpAnchor {
+  position: fixed;
+  bottom: 125px;
+  right: 1em;
+}

@@ -1,0 +1,131 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+@mixin notificationDot {
+  &:before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: rgba($secondary-color, 0);
+    border-radius: 50%;
+    left: 0;
+    transition: background-color 0.3s $easeInOutCirc;
+    margin-right: 10px;
+
+    @include mq("phone-wide", max) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.notificationItemHolder {
+  @include listCardsSize(15px 0);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  @include mq("tablet-small") {
+    @include notificationDot;
+  }
+  &.dot {
+    &:before {
+      background-color: rgba($secondary-color, 1);
+    }
+  }
+}
+
+.notificationWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("phone-wide", max) {
+    @include notificationDot;
+  }
+  @include mq("tablet-small") {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.notificationBanner {
+  @include listCardsFont ($primary-color, 700);
+  padding-left: 25px; //spacing between notification dot and text
+  box-sizing: border-box;
+  display: block;
+  flex-flow: wrap;
+  width: 100%;
+  border: 5px;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+
+  &:before{
+    position: absolute;
+  }
+
+  @include mq("phone-wide") {
+    display: flex;
+    padding-left: 0;
+    &:before{
+      position: unset;
+    }
+  }
+
+  @include mq("tablet-small", max) {
+    @include notificationDot;
+    &.dot {
+      &:before {
+        background-color: rgba($secondary-color, 1);
+      }
+    }
+  }
+
+  @include mq("tablet-small") {
+    flex-flow: row;
+    margin: 15px 0;
+    align-items: center;
+  }
+}
+
+.notificationBannerBody {
+  background-color: $brand-white;
+  flex-flow: column;
+  padding: 0;
+  width: 75%;
+
+  @include mq("phone-wide") {
+    @include listCardInnerDiv();
+    flex-grow: 1;
+    width: 40%;
+  }
+}
+
+.innerWrapper {
+  @include mq("phone") {
+    display: flex;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-flow: row;
+  margin-top: 15px;
+
+  @include mq("tablet-small", max) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @include mq("tablet-small") {
+    margin: 0;
+  }
+}

@@ -1,0 +1,56 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.tabListItem {
+  box-sizing: border-box;
+  max-width: 170px;
+  display: inline-block;
+  margin-bottom: -1px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: $brand-black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px 10px 0 0;
+  border: 1px solid $brand-grey-2;
+  border-bottom: 3px solid transparent;
+
+  button {
+    box-sizing: border-box;
+    border: 0;
+    background: none;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+
+  @include mq("phone") {
+    width: 186px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border-bottom-color: $primary-color;
+  }
+
+  a {
+    color: $primary-color;
+  }
+}
+
+.tabListActive {
+  background-color: $brand-white;
+  border-bottom-color: $brand-grey-2;
+  border-bottom: none;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: 1px solid $brand-grey-2;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 3px;
+  }
+}

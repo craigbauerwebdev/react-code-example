@@ -1,0 +1,27 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.featuredSessions {
+  @include gridFlex();
+
+  margin-bottom: 40px;
+
+  > div,
+  > a {
+    max-width: 100%;
+    min-height: 0;
+
+    @include mq("phablet") {
+      max-width: 48%;
+    }
+
+    @include mq("midpoint") {
+      max-width: 23%;
+      min-height: 280px;
+    }
+  }
+}
+
+.title {
+  @include gridTitle();
+}

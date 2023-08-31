@@ -1,0 +1,56 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.datePicker {
+  display: flex;
+  width: 135px;
+  margin-left: 10px;
+
+  @include mq("midpoint") {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $brand-grey-5;
+    color: black;
+    border-radius: 4px;
+    width: 195px;
+    font-weight: normal;
+    max-height: 40px;
+    margin-left: 30px;
+
+    img {
+      height: 8px;
+      width: 9px;
+    }
+  }
+
+  .iconButton {
+    box-sizing: border-box;
+    width: 38px;
+    margin: 0;
+    border: 1px solid $brand-grey-4;
+    background-color: transparent;
+    border-radius: 4px 0 0 4px;
+
+    &:nth-of-type(even) {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:hover {
+      background-color: $brand-grey-3;
+    }
+
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+
+  .pickedDate {
+    box-sizing: border-box;
+    width: 119px;
+    border-top: 1px solid $brand-grey-4;
+    border-bottom: 1px solid $brand-grey-4;
+    text-align: center;
+    font-size: 16px;
+    line-height: 38px;
+  }
+}

@@ -1,0 +1,309 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sessionTab {
+  box-sizing: border-box;
+  display: flex;
+  border-top: 1px solid rgba(18, 7, 107, 0.5);
+  padding-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  flex-flow: column;
+
+  @include mq("tablet") {
+    flex-flow: row;
+  }
+
+  img {
+    height: 20px;
+    display: block;
+  }
+
+  &.modal {
+    border-top: 0;
+
+    .sessionInfo {
+      @include mq("tablet") {
+        padding-right: 50px;
+        width: 250px;
+      }
+    }
+
+    .sessionContent {
+      box-sizing: border-box;
+      max-width: 750px;
+      padding-right: 50px;
+    }
+
+    .sessionCardHolder {
+      @include scrollBar;
+
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+
+    .sessionTitle {
+      padding-right: 0;
+
+      .titleAndFavorite {
+        justify-content: flex-start;
+
+        > button {
+          margin-left: 20px;
+          position: relative;
+          right: -7px;
+        }
+      }
+    }
+  }
+}
+
+.sessionInfo {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  padding-right: 10px;
+
+  @include mq("tablet") {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.sessionContent {
+  width: 100%;
+}
+
+.webinarSessionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sessionTitle {
+  padding: 0 40px 0 0;
+  font-size: 20px;
+  margin: 0 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h1 {
+    line-height: 30px;
+    font-weight: 700;
+    font-family: $title-text-font;
+    color: $primary-color;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .titleAndFavorite {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    align-items: flex-start;
+    width: 85%;
+
+    > button {
+      top: 0px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.sessionMeta {
+  font-family: $title-text-font;
+  font-size: 14px;
+  font-weight: 700;
+  color: $primary-color;
+  text-transform: none;
+  margin: 17px 13px 17px 0;
+
+  &:nth-of-type(1) {
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+    margin: 0 13px 0 0;
+    color: $brand-gray;
+    white-space: nowrap;
+  }
+
+  &:nth-of-type(2) {
+    color: $brand-gray;
+    margin: 5px 13px 0 0;
+  }
+}
+
+.addToHolder {
+  margin: 20px 0;
+  max-width: 200px;
+  width: 100%;
+
+  > div,
+  > button {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+.sessionTitleLink {
+  color: $primary-color;
+  transition: color 0.3s ease-in-out;
+  max-width: 90%;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.sessionCardHolder {
+  padding: 0 40px 0 0;
+  color: $brand-gray;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $title-text-font;
+  line-height: 24px;
+  margin: 30px 0;
+
+  @include mq("tablet") {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  > div {
+    margin: 0;
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    li {
+      display: list-item;
+    }
+  }
+}
+
+.sessionCardDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column;
+
+  &.sessionCardDetailsOnly {
+    justify-content: flex-end;
+  }
+
+  @include mq("tablet") {
+    flex-flow: wrap;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  h2 {
+    display: block;
+    margin: 0 40px 20px 0;
+    font-size: 14px;
+    line-height: 19px;
+    color: $primary-color;
+    font-weight: 700;
+    font-family: $title-text-font;
+
+    @include mq("tablet") {
+      margin-bottom: 0;
+      max-width: 65%;
+    }
+  }
+}
+
+.speakerList {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  transition: max-height 0.3s $expandEase;
+  overflow: hidden;
+
+  &.croppedArticle {
+    max-height: 0;
+  }
+
+  &.expandedArticle {
+    max-height: 2000px;
+  }
+}
+
+.detailsButton {
+  @include primaryButton();
+
+  box-sizing: border-box;
+  display: block;
+}
+
+.watchButton {
+  @include alternateButton();
+
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.webinarWatchNow {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 20px;
+  margin-top: 0;
+}
+
+.addToScheduleBtn {
+  @include alternateButton();
+
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 20px;
+  margin-top: 15px;
+}
+
+.clockIcon {
+  width: 13px;
+
+  pointer-events: none;
+  margin-right: 10px;
+  display: block;
+
+  svg {
+    width: 100%;
+
+    path {
+      fill: $brand-black;
+    }
+  }
+}
+
+.companyName {
+  padding-right: 10px;
+  border-right: 2px solid $primary-color;
+  margin-right: 10px;
+}

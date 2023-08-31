@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="undefined undefined"
+>
+  <div>
+    <OEPAnalytics
+      componentType="Text Link"
+      page="preevent"
+    >
+      <p
+        className="undefined gtm-FAQ-question"
+        onClick={[Function]}
+        role="presentation"
+      />
+    </OEPAnalytics>
+    <ExpandToggle
+      ariaControls="faq-answer-undefined"
+      ariaLabel={
+        Array [
+          "frequently asked question collapse",
+          "frequently asked question expand",
+        ]
+      }
+      classList={
+        Array [
+          "faq",
+        ]
+      }
+      expanded={false}
+      handleClick={[Function]}
+      page="preevent"
+    />
+  </div>
+  <div
+    aria-hidden={true}
+    className="undefined false"
+    id="faq-answer-undefined"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
+  </div>
+</div>
+`;

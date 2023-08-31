@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- AppDynamics -->
+    <script charset="UTF-8">
+      window["adrum-start-time"] = new Date().getTime();
+      (function (config) {
+        config.appKey = "%REACT_APP_APP_DYNAMICS_APP_KEY%";
+        config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
+        config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
+        config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
+        config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
+        config.xd = { enable: false };
+        config.spa = { spa2: true };
+        (function (info) {
+          info.PageView = function () {
+            return {
+              userData: {
+                username: _adrumData.username,
+              },
+            };
+          };
+          info.VPageView = function () {
+            return {
+              userData: {
+                username: _adrumData.username,
+              },
+            };
+          };
+        })(config.userEventInfo || (config.userEventInfo = {}));
+      })(window["adrum-config"] || (window["adrum-config"] = {}));
+      _adrumData = {
+        username: "",
+      };
+      window.setAdrumData = function (data) {
+        _adrumData = data;
+      };
+    </script>
+    <script src="//cdn.appdynamics.com/adrum/adrum-4.5.17.2890.js"></script>
+    <title>%REACT_APP_META_TITLE%</title>
+
+    <link href="/images/favicons/favicon.ico" rel="shortcut icon" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!--    <script src="//rum-static.pingdom.net/%REACT_APP_PINGDOM_RUM%.js" async></script>-->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="%REACT_APP_META_DESCRIPTION%" />
+
+    <!-- Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/favicons/safari-pinned-tab.svg"
+      color="#0066b3"
+    />
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta
+      name="msapplication-config"
+      content="/images/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="%REACT_APP_META_TITLE%" />
+    <meta name="twitter:description" content="%REACT_APP_META_DESCRIPTION%" />
+    <meta
+      name="twitter:image"
+      content="%REACT_APP_EVENT_URL%/images/twitter-card.png"
+    />
+    <!-- Open Graph data -->
+    <meta property="og:title" content="%REACT_APP_META_TITLE%" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="%REACT_APP_EVENT_URL%" />
+    <meta property="og:description" content="%REACT_APP_META_DESCRIPTION%" />
+    <meta property="og:site_name" content="%REACT_APP_META_TITLE%" />
+    <meta
+      property="og:image"
+      content="%REACT_APP_EVENT_URL%/images/twitter-card.png"
+    />
+
+    <!-- Facebook Pixel Code -->
+
+    <!-- MathJax CDN begin// -->
+    <!-- Only include this if you know you need to render mathematical expressions -->
+    <!--    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
+    <!--    <script-->
+    <!--      type="text/javascript"-->
+    <!--      id="MathJax-script"-->
+    <!--      async-->
+    <!--      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"-->
+    <!--    ></script>-->
+
+    <!-- MathJax CDN end// -->
+
+    <!-- Fluent Chatbot CSS -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      const now = new Date(Date.now());
+      const eventOver = new Date("%REACT_APP_REMOVE_LIVE_AGENT_DATE%");
+
+      if (now < eventOver) {
+        (function (d, src, c) {
+          var t = d.scripts[d.scripts.length - 1],
+            s = d.createElement("script");
+          s.id = "%REACT_APP_LIVE_AGENT_ID%";
+          s.async = true;
+          s.src = src;
+          s.onload = s.onreadystatechange = function () {
+            var rs = this.readyState;
+            if (rs && rs != "complete" && rs != "loaded") {
+              return;
+            }
+            c(this);
+          };
+          t.parentElement.insertBefore(s, t.nextSibling);
+        })(document, "%REACT_APP_LIVE_AGENT_SRC%", function (e) {
+          LiveAgent.createButton("%REACT_APP_LIVE_AGENT_BUTTON_ID%", e);
+        });
+      }
+    </script>
+  </body>
+</html>

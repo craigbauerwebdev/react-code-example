@@ -1,0 +1,49 @@
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.bodyHolder {
+  padding: 0 25px 0 0;
+
+  &.small {
+    h3.senderFullName {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  h3.senderFullName {
+    font-family: $title-text-font;
+    font-weight: bold;
+    margin: 0;
+    color: $brand-black;
+    font-size: 18px;
+    line-height: 1;
+
+    @include mq("phone", max) {
+      width:75%;
+      word-break: break-all;
+    }
+
+    span {
+      font-weight: normal;
+      color: $brand-black;
+    }
+  }
+
+  p.message {
+    color: $brand-black;
+    font-family: $title-text-font;
+    line-height: 1;
+    font-size: 16px;
+    margin: 10px 0;
+
+    @include mq("phone", max) {
+      width:75%;
+      word-break: break-all;
+    }
+  }
+
+  .bodyTitle, .bodyContent, .time {
+    @include listCardsFont($primary-color, 700);
+  }
+}

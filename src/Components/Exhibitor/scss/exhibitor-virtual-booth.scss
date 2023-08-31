@@ -1,0 +1,199 @@
+.single-exhibitor-light-theme,
+.single-exhibitor-dark-theme {
+  .content-wrapper-with-contact {
+    padding-top: 47px;
+  }
+  #chat-widget-container {
+    z-index: 1 !important;
+    bottom: 200px !important;
+    max-height: 68% !important;
+  }
+  .intercom-messenger-frame {
+    z-index: 1 !important;
+    max-height: 68% !important;
+  }
+
+  #booth-chat-widget {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #005eb8;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06),
+      0 2px 32px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+.single-exhibitor-light-theme {
+  background-color: #ffffff;
+}
+.single-exhibitor-dark-theme {
+  background-color: #171516;
+
+  .breadcrumbs-container {
+    background-color: #171516;
+  }
+}
+
+.single-exhibitor-dark-theme {
+  .single-exhibitor-mobile {
+    display: none;
+  }
+  .single-exhibitor-booth {
+    #booth-intro-video-container {
+      background: #2e2c2d;
+    }
+  }
+}
+.single-exhibitor-booth {
+  position: relative;
+  margin-bottom: 38px;
+  #booth {
+    display: block;
+    .interactive-element {
+      cursor: pointer;
+      .glow {
+        opacity: 0;
+      }
+      &:hover {
+        .glow {
+          opacity: 1;
+        }
+      }
+      &:focus:not(:focus-visible) {
+        outline: none;
+      }
+    }
+  }
+  #booth-intro-video-container {
+    background: #ffffff;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 9/16 * 100%;
+      width: 100%;
+    }
+    &.hidden {
+      display: block !important;
+      visibility: hidden;
+    }
+    #intro-video {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+    }
+  }
+}
+
+.booth-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2%;
+  .booth-modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .booth-modal {
+    position: relative;
+    max-width: 1200px;
+    .booth-modal-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .booth-modal-close-button {
+        background: transparent;
+        color: #ffffff;
+        border: none;
+      }
+    }
+    .booth-modal-content {
+      background-image: url(/images/loader.gif);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 75px;
+      max-width: 100%;
+      min-height: 200px;
+      min-width: 200px;
+      img,
+      video {
+        display: block;
+        background-color: #c7c7c7;
+      }
+      img {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: calc(100vh - 96px);
+      }
+      .booth-video-container {
+        width: 90vw;
+        max-width: 1200px;
+        position: relative;
+        padding-top: 9/16 * 100%;
+        @media screen and (max-width: 959px) and (orientation: landscape) {
+          width: 70vw;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 96vw;
+        }
+        .play-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.25);
+          right: 0;
+          button {
+            height: auto;
+            max-width: 14%;
+            color: #ffffff;
+            width: 135px;
+            background: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+          }
+          &.hidden {
+            display: none;
+          }
+        }
+        video {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@import "../../css/core";
+
+.str-cha.str-chat-channel-list {
+  height: 100%;
+}
+
+.str-chat-channel {
+  height: 100%;
+  width: 100%;
+  /* max-width: 400px; */
+}
+
+/*.str-chat__message-livestream-content {*/
+/*  max-width: 194px !important;*/
+/*}*/
+
+.rfu-file-previewer__file a {
+  max-width: 154px !important;
+}
+
+.rfu-file-previewer {
+  display: none !important;
+}
+.rfu-dropzone__notifier {
+  display: none !important;
+}
+
+.str-chat__message-livestream-content p {
+  color: $brand-white !important;
+}
+
+.str-chat__message-attachment-card--flex > * {
+  max-height: 44px !important;
+}
+
+.row {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.team-chat-container {
+  background: $brand-white;
+  border-radius: 10px;
+  height: 638px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.chat-container {
+  max-width: 1220px;
+  padding: 20px 0px;
+  margin: 20px;
+  margin: 0 auto;
+}
+
+.live-stream-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+  height: inherit;
+  margin-top: 50px;
+}
+
+.rfu-file-upload-button {
+  display: none !important;
+}
+
+.str-chat__small-message-input-emojipicker {
+  background: $brand-black;
+  margin-right: 10px;
+}
+
+.str-chat__input--emojipicker {
+  background: $brand-black;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  transform: scale(0.6);
+  transform-origin: 100% 100%;
+}
+
+.str-chat__small-message-input-emojipicker {
+  transform: scale(0.6) !important;
+  transform-origin: 130% 100% !important;
+  right: 33px !important;
+  bottom: 100px !important;
+}
+
+.str-chat__small-message-input-emojipicker section,
+.str-chat__input--emojipicker section {
+  padding: 0;
+}
+
+.emoji-mart-search input {
+  width: 85% !important;
+  margin: 10px 10px 10px 5px;
+}
+
+.emoji-mart-skin-swatches {
+  border: 0;
+  background: initial;
+}
+
+.live-stream-plugin-container.exhibitor-live-stream {
+  max-width: 300px;
+}
+
+.str-chat__date-separator {
+  margin: 5px;
+}
+
+.str-chat__message-livestream {
+  padding: 5px 5px;
+}
+
+.livestream.str-chat .str-chat__list {
+  padding: 50px 10px 0px;
+}
+
+.str-chat__emojiselect-wrapper {
+  position: relative;
+  bottom: 1px;
+}
+
+.margin-top-initial {
+  margin-top: initial !important;
+}
+
+.margin-initial {
+  margin: 0 20px !important;
+}
+
+.margin-left-initial {
+  margin-left: initial;
+}
+
+.str-chat__channel-list-team {
+  display: inherit !important;
+  height: inherit !important;
+}
+
+.str-chat {
+  height: 100% !important;
+}
+
+.rfu-dropzone__notifier {
+  display: none;
+}
+.str-chat.str-chat-channel-list.team.light.dropdown
+  .str-chat__channel-list-team {
+  height: initial !important;
+}
+.str-chat.str-chat-channel.team.light.dropdown .str-chat__message-team-status {
+  display: none !important;
+}
+.str-chat.str-chat-channel-list.team.light.dropdown
+  .str-chat__channel-list-team
+  .str-chat__channel-preview.str-chat__channel-preview--active {
+  background: none !important;
+}
+
+.str-chat.str-chat-channel-list.team.light.dropdown
+  .str-chat__channel-list-team
+  .str-chat__channel-preview.str-chat__channel-preview--active
+  .str-chat__channel-preview-title,
+.str-chat.str-chat-channel-list.team.light.dropdown
+  .str-chat__channel-preview-last-message {
+  color: black !important;
+}
+
+.str-chat.str-chat-channel-list.team.light.dropdown
+  .str-chat__channel-preview
+  button {
+  padding: 10px 40px 10px 20px !important;
+}
+
+.str-chat__channel-preview--dot--dropdown {
+  margin-left: 3px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  left: 2px;
+  background-color: $primary-color;
+}
+
+@media screen and (min-width: 768px) {
+  .team.str-chat .str-chat__input .rfu-file-upload-button,
+  .livestream.str-chat .str-chat__input .rfu-file-upload-button {
+    /* set as needed */
+  }
+  .team.str-chat .str-chat__input-emojiselect,
+  .livestream.str-chat .str-chat__input-emojiselect {
+    /* set as needed */
+  }
+}
+@media screen and (min-width: 768px) {
+  .str-chat__send-button {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .str-chat-channel-list.team.light.dropdown {
+    position: initial !important;
+    /*left: -380px;*/
+    /*top: 0;*/
+    /*z-index: 1001;*/
+    /*min-height: 100vh;*/
+    /*overflow-y: auto;*/
+    /*box-shadow: 7px 0 9px 0 rgb(0 0 0 / 3%), 1px 0 0 0 rgb(0 0 0 / 3%);*/
+    /*transition: left 200ms ease-in-out;*/
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .str-chat__date-separator {
+    padding: 15px !important;
+  }
+  .str-chat__message-team {
+    padding: 5px 15px !important;
+  }
+  .str-chat__input {
+    padding: 10px 15px !important;
+  }
+  .str-chat__input-footer {
+    padding: 0 15px 10px !important;
+  }
+}
+
+.str-chat__send-button:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}

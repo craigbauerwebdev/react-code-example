@@ -1,0 +1,240 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.mainHolder {
+  width: 100%;
+  margin: 10px;
+
+  @include mq("tablet-small") {
+    width: auto;
+  }
+}
+
+.cardOuterShell {
+  position: relative;
+  width: 100%;
+}
+
+.baseCardLevel {
+  background: $brand-off-white;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 275px;
+  box-shadow: 0 5px 8px 0 rgba($brand-black, 0);
+  transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 5px 8px 0 rgba($brand-black, 0.33);
+    background-color: $brand-white-2;
+  }
+
+  &:focus {
+    outline-color: $brand-black;
+  }
+
+  h1 {
+    font-family: $title-text-font;
+    color: $brand-gray;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    margin: 10px 0 0 0;
+  }
+
+  h2 {
+    font-family: $title-text-font;
+    font-size: 15px;
+    line-height: 20px;
+    color: $brand-gray;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: $title-text-font;
+    font-size: 15px;
+    margin: 0;
+    line-height: 20px;
+    color: $primary-color;
+    font-weight: 500;
+  }
+
+  &.largeCardLevel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    @include mq("tablet-small") {
+      width: 290px;
+    }
+
+    .cardImageContainer {
+      height: 175px;
+    }
+  }
+
+  &.mediumCardLevel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    @include mq("tablet-small") {
+      width: 262px;
+    }
+
+    .cardImageContainer {
+      height: 175px;
+    }
+  }
+
+  &.smallCardLevel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    @include mq("tablet-small") {
+      width: 200px;
+    }
+  }
+
+  &.extraSmallCardLevel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+
+    @include mq("tablet-small") {
+      width: 200px;
+    }
+
+    h1 {
+      text-align: center;
+      width: 159px;
+    }
+  }
+}
+
+.cardImageContainer {
+  box-sizing: border-box;
+  border: solid 1px $brand-white-5;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $brand-white;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.noSponsorOverlay {
+    height: 175px;
+
+    .exhibitorCompanyLogo {
+      display: block;
+    }
+  }
+
+  &.withSponsorOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.sponsorLevelImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+
+  &.platinum {
+    .corner {
+      svg {
+        path {
+          fill: $primary-color;
+        }
+      }
+    }
+
+    .cornerIcon {
+      top: 5px;
+
+      svg {
+        path {
+          fill: $brand-white;
+        }
+      }
+    }
+  }
+
+  &.gold {
+    .corner {
+      svg {
+        path {
+          fill: $brand-green;
+        }
+      }
+    }
+
+    .cornerIcon {
+      top: 2px;
+
+      svg {
+        path {
+          fill: $brand-white;
+        }
+      }
+    }
+  }
+
+  &.silver {
+    .corner {
+      svg {
+        path {
+          fill: $brand-black-2;
+        }
+      }
+    }
+
+    .cornerIcon {
+      top: 4px;
+
+      svg {
+        path {
+          fill: $brand-white;
+        }
+      }
+    }
+  }
+}
+
+.corner {
+  width: 100%;
+}
+
+.cornerIcon {
+  left: 5px;
+  width: 18px;
+  position: absolute;
+}
+
+.favoritesIcon {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.exhibitorCompanyLogo {
+  display: block;
+  max-width: 85%;
+  max-height: 80%;
+  object-fit: cover;
+}

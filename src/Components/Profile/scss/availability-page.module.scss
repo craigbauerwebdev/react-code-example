@@ -1,0 +1,18 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.title {
+  color: $primary-color;
+  font-family: $title-text-font;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  @include basePageSetting;
+  border: 1px solid #dee2e6;
+}

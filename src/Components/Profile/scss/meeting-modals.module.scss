@@ -1,0 +1,270 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.main {
+  min-height: max-content;
+  max-height: 90vh;
+  position: absolute;
+}
+
+.fieldWrapper {
+  display: flex;
+  padding: 5px;
+  margin-bottom: 10px;
+  flex-flow: column;
+  align-items: flex-start;
+
+  @include mq("phablet") {
+    flex-flow: row;
+    padding: 10px;
+  }
+}
+
+.datePicker {
+  width: 100%;
+
+  @include mq("phablet") {
+    width: 40%;
+  }
+}
+
+.saveButton {
+  @include primaryButton;
+  padding: 10px 15px;
+
+  @include mq("phablet") {
+    padding: 15px 30px;
+  }
+
+  border-radius: 0;
+}
+
+.labels {
+  font-weight: bold;
+  margin-right: auto;
+  width: 60px;
+
+  @include mq("phablet") {
+    margin-right: 50px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.typeButton {
+  box-sizing: border-box;
+  width: 100px;
+  margin-top: 8px;
+  margin-right: 8px;
+  background-color: $brand-white;
+  color: $brand-light-grey;
+  border: 1px solid $brand-gray-2;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 16px;
+
+    path {
+      fill: $brand-light-grey;
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 4px 0 rgba(46, 44, 45, 1);
+  }
+}
+
+.active {
+  background-color: $primary-color;
+  color: $brand-white;
+
+  svg path,
+  svg g {
+    fill: $brand-white;
+  }
+}
+
+.iconActive {
+  svg path,
+  svg g {
+    fill: $brand-white;
+  }
+}
+
+.mainContainer {
+  text-align: left;
+  justify-content: space-between;
+  padding: 15px;
+  font-family: $title-text-font;
+  font-weight: 600;
+}
+
+.cancelButton {
+  @include alternateButton;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+
+  @include mq("phablet") {
+    padding: 15px 30px;
+    margin-bottom: 0;
+  }
+
+  border-radius: 0;
+}
+
+.multiSelectItemWrapper {
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: left;
+
+  flex-wrap: wrap;
+
+  @include mq("phablet") {
+    flex-wrap: nowrap;
+  }
+}
+
+.attendeeName {
+  text-align: left;
+  width: 100%;
+  margin-top: 5px;
+
+  @include mq("phablet") {
+    width: 50%;
+    margin-left: 20px;
+  }
+}
+
+.attendeeInfo {
+  text-align: left;
+  width: 100%;
+
+  @include mq("phablet") {
+    width: 50%;
+  }
+}
+
+.multiSelect {
+  font-size: 10px;
+  width: 80%;
+  font-weight: lighter;
+
+  span {
+    div {
+      ul {
+        li {
+          background-color: $light-blue;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 30px;
+}
+
+.imageIcon {
+  border-radius: 50%;
+  height: 17px;
+  margin: 5px;
+}
+
+.meetingBtn {
+  margin-bottom: 2px;
+}
+
+.inputStyle {
+  box-sizing: border-box;
+  display: block;
+  width: 80%;
+  height: 38px;
+  padding: 0 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $brand-gray-2;
+  background-color: $brand-white;
+  background-clip: padding-box;
+  border: 1px solid $brand-black;
+  border-radius: 0.38rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.timePicker {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-flow: column;
+
+  @include mq("phablet") {
+    width: 80%;
+    flex-flow: row;
+  }
+}
+
+.timePickerFields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.miniLabel {
+  font-size: 12px;
+  font-weight: normal;
+  color: $brand-light-grey;
+  margin-bottom: 5px;
+}
+
+.buttonContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include mq("phablet") {
+    flex-direction: row;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  height: 120px;
+}
+
+.textFields {
+  font-size: 10px;
+  width: 80%;
+  font-weight: 300;
+
+  .inputStyle {
+    width: 100%;
+  }
+}
+
+.error {
+  color: $brand-red;
+  display: block;
+}

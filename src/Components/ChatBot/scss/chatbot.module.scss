@@ -1,0 +1,229 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.fluentHidden {
+  display: block;
+
+  @include mq("phone") {
+    display: none;
+  }
+}
+
+.fluentShow {
+  display: none;
+
+  @include mq("phone") {
+    display: block;
+  }
+}
+
+.previewChatAppEmbed {
+  box-sizing: border-box;
+  position: fixed;
+  left: auto;
+  top: auto;
+  display: block;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition-duration: 1s;
+  z-index: 91;
+  margin: 0;
+  padding: 10px;
+  bottom: 0px;
+  right: 0px;
+  pointer-events: none;
+
+  &.out {
+    bottom: -40%;
+  }
+
+  @include mq("phone-wide") {
+    padding: 0;
+    bottom: 19px;
+    right: 24px;
+  }
+}
+
+.fluentPreviewClose {
+  display: none;
+
+  @include mq("phone") {
+    pointer-events: all;
+    width: 18px;
+    display: block;
+    position: relative;
+    left: auto;
+    background-color: transparent;
+    border: none;
+    top: 45px;
+    right: -216px;
+    bottom: auto;
+    z-index: 1100;
+    margin: 0;
+    opacity: 0.45;
+    transition: all 0.2s ease;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1050;
+  }
+}
+
+.fluentPreviewChat {
+  display: none;
+
+  @include mq("tablet-small") {
+    pointer-events: all;
+    display: block;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 254px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding: 18px;
+    border-radius: 24px;
+    border: 4px solid $primary-color;
+    background-color: #fff;
+    background-image: linear-gradient(180deg, #fff, #f7f7f7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+
+    span {
+      display: block;
+    }
+
+    &:focus-visible {
+      border-color: $brand-black;
+      .fluent-preview-icon {
+        background-color: $brand-black;
+      }
+    }
+  }
+}
+
+.fluentPreviewIcon {
+  box-sizing: border-box;
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin-top: -60px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 42px;
+  background: $primary-color;
+  background-size: cover;
+  border: 2px solid $primary-color;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.fluentPreviewHeadline {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: $primary-color;
+  font-weight: 700;
+  text-align: left;
+}
+
+.chatBotAppEmbed {
+  box-sizing: border-box;
+  position: fixed;
+  left: auto;
+  top: auto;
+  display: block;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition-duration: 1s;
+  z-index: 91;
+  margin: 0;
+  padding: 10px;
+  bottom: 0px;
+  right: 0px;
+  pointer-events: none;
+
+  &.out {
+    bottom: -40%;
+  }
+
+  @include mq("phone-wide") {
+    padding: 0;
+    bottom: 19px;
+    right: 24px;
+  }
+}
+
+.fluentOpenButton {
+  pointer-events: all;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: block;
+  border: 2px solid $primary-color;
+  background-color: $primary-color;
+  background-image: url("/images/icons/chatbot-icon.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 44px;
+    height: 44px;
+    padding: 4px;
+    cursor: pointer;
+    margin-top: 0;
+  }
+
+  img {
+    width: 90%;
+    margin: 5%;
+    cursor: pointer;
+  }
+
+  @include mq("tablet-small") {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #000;
+      border-radius: 40px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

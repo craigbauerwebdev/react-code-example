@@ -1,0 +1,96 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.pageCards {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  padding-right: 0;
+
+  @include mq("phablet") {
+    padding-right: 65px;
+  }
+
+  @include mq("desktop") {
+    justify-content: flex-start;
+  }
+}
+
+.smallCardRectangle {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  height: 180px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 30px;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease-in-out;
+  background-size: cover;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  @include mq("phablet") {
+    width: 47%;
+    margin: 10px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.tileTitle {
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 0;
+  font-family: $title-text-font;
+  color: $brand-white;
+
+  @include mq("tablet-small") {
+    font-size: 26px;
+  }
+
+  @include mq("desktop") {
+    font-size: 42px;
+  }
+}
+
+.tileSubtitle {
+  font-family: $title-text-font;
+  color: $brand-white;
+  display: flex;
+  flex-flow: row;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0;
+  align-items: center;
+
+  @include mq("tablet-small") {
+    font-size: 16px;
+    margin-top: 0.05%;
+  }
+
+  @include mq("desktop") {
+    margin: 0;
+    font-size: 22px;
+  }
+}
+
+.smallCardArrow {
+  box-sizing: border-box;
+  height: 20px;
+  padding-left: 8px;
+}

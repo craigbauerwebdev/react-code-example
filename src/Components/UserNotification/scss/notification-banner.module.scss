@@ -1,0 +1,46 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.holder {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10001;
+  @include mq("phone", max) {
+    width:90%;
+  }
+
+}
+
+.notificationGroup {
+  background-color: $brand-white;
+  box-shadow: 0 0 10px $brand-gray;
+
+  ul {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+}
+
+.popupCard {
+  position: relative;
+}
+
+.close {
+  @include imgButton();
+
+  background: $brand-grey-5;
+  position: absolute;
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    background: $brand-grey-4;
+  }
+}

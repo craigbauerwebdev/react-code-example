@@ -1,0 +1,58 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.title {
+  @include gridTitle;
+}
+
+.preEventSponsorCards {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  align-items: center;
+
+  @include mq("tablet") {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
+
+.smallCardSponsor {
+  background-color: $brand-white;
+  padding: 0;
+  flex-flow: column;
+  justify-content: space-between;
+  display: flex;
+  max-width: 300px;
+  width: 100%;
+
+  @include mq("tablet") {
+    width: 30%;
+    margin: 20px;
+  }
+
+  div {
+    box-sizing: border-box;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $brand-light-grey;
+    padding: 10px;
+    flex: 1;
+    height: 100%;
+  }
+
+  h1 {
+    margin-left: 5px;
+    color: $primary-color;
+    font-size: 20px;
+    font-family: $title-text-font;
+    font-weight: 300;
+  }
+
+  img {
+    width: 100%;
+  }
+}

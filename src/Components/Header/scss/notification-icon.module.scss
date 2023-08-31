@@ -1,0 +1,63 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.iconHolder,
+.popUpButton {
+  @include headerControlItem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 0;
+  justify-content: center;
+  background: none;
+
+  &.active {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $secondary-color;
+    opacity: 0;
+    border-radius: 50%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  svg {
+    width: 24px;
+
+    // path {
+    //   fill: $brand-black;
+    // }
+  }
+}
+
+.title {
+  color: $brand-black;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.list {
+  li {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.allNotificationsButton {
+  @include alternateButton();
+
+  margin: 0 auto;
+}

@@ -1,0 +1,116 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sessionTab {
+  display: flex;
+  border-top: 1px solid rgba(18, 7, 107, 0.5);
+  padding-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  @include mq("tablet") {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  img {
+    height: 20px;
+    display: block;
+  }
+
+  article,
+  p {
+    margin: 0;
+    padding: 0 40px 0 0;
+    color: $brand-gray;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $title-text-font;
+    line-height: 24px;
+  }
+}
+
+.sideBar {
+  width: 100%;
+
+  @include mq("tablet") {
+    min-width: 200px;
+    width: 20%;
+  }
+
+  h1 {
+    .imgButton {
+      align-self: center;
+    }
+  }
+}
+
+.tabContent {
+  box-sizing: border-box;
+  width: 100%;
+
+  @include mq("tablet") {
+    width: 80%;
+    max-width: 1100px;
+  }
+
+  article {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include mq("tablet") {
+      margin: 0;
+    }
+  }
+}
+
+.sessionTitle {
+  padding: 0 40px 0 0;
+  color: $primary-color;
+  font-size: 20px;
+  font-family: $title-text-font;
+  margin: 0 0 30px;
+  line-height: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sessionMeta {
+  font-family: $title-text-font;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  width: auto;
+  margin: 0 13px 0 0;
+  color: $brand-gray;
+  white-space: nowrap;
+}
+
+.speakerListHolder {
+  transition: max-height 0.3s $expandEase;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.speakerList {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  @include mq("tablet") {
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row wrap;
+  }
+}
+
+.expandedArticle {
+  .speakerListHolder {
+    max-height: 3000px;
+  }
+}

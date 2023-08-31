@@ -1,0 +1,77 @@
+.cookie-drawer-wrapper {
+  background-color: #2e2c2d;
+  margin: auto;
+  position: fixed;
+  top: -50px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 15px 40px;
+  transition: transform 0.8s ease-in-out;
+  transition-duration: 0.8s;
+}
+
+.cookie-drawer-wrapper.drawer--open {
+  transform: translateY(95%);
+  animation: open-drawer 0.8s ease-in-out;
+  animation-direction: reverse;
+}
+.cookie-drawer-wrapper.drawer--closed {
+  transform: translateY(-100%);
+}
+
+.cookie-drawer-container {
+  color: #ffffff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
+  max-width: 1325px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 0 0 15px;
+  align-content: center;
+}
+
+.cookie-drawer-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  padding: 0 30px;
+}
+
+.details-button {
+  display: flex;
+  width: 90px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding: 5px 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  border-radius: 2px;
+  background-color: #0066b3;
+  border: 1px solid #0066b3;
+  font-family: "Akzidenz Grotesk", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+  margin-top: 0 !important;
+  white-space: nowrap;
+}

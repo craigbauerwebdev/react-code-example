@@ -1,0 +1,20 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.rule {
+  h1 {
+    color: $primary-color;
+    margin: 0;
+    font-family: $title-text-font;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.36;
+  }
+
+  p {
+    font-family: $title-text-font;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $brand-black;
+  }
+}

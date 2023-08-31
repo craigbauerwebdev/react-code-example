@@ -1,0 +1,32 @@
+@mixin headerLabel() {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+@mixin dropDownTitle($marginRight: 44px) {
+  margin-left: 10px;
+  margin-right: $marginRight;
+  font-weight: bold;
+}
+
+@mixin dropDownCaret {
+  &:after {
+    content: "";
+    background: url("/images/icons/chevron-down.svg") top center no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+  }
+}
+
+@mixin activeDropdown {
+  display: block;
+  background: $brand-white;
+  min-width: 130px;
+  z-index: 10;
+}

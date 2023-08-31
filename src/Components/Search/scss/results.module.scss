@@ -1,0 +1,43 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Speaker/scss/speaker-mixins";
+@import "../../Poster/scss/poster_mixins";
+
+.main {
+  @include mainPageSetting;
+}
+
+.searchError {
+  font-size: 2em;
+  margin: 0.67em 0;
+  color: $secondary-color;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 0;
+  color: $brand-gray;
+  font-size: 54px;
+  margin: 40px 0;
+}
+
+.grid {
+  @include gridFlex();
+
+  justify-content: flex-start;
+}
+
+.speakerCardHolder {
+  > div,
+  > a {
+    @include speakerList();
+    @include speaker5Up;
+    @include speakerCardHover;
+  }
+}
+
+.posterList {
+  @include poster4Up;
+}

@@ -1,0 +1,530 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+$trackHeightFullScreen: 100%;
+$trackHeight: 15px;
+
+.holder {
+  .player {
+    max-width: 100%;
+  }
+}
+
+.player {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+
+  &.fullscreenPlayer {
+    max-width: none;
+  }
+
+  &.active,
+  &:hover {
+    .controlsHolder {
+      transform: translateX(-50%) translateY(0%);
+    }
+  }
+}
+
+.fullscreen {
+  iframe {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.adaLayer {
+  // This is a layer on top of the video do not add a background color here.
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    width: 50px;
+    background: none;
+    border: 0;
+    position: absolute;
+    z-index: 10;
+    background: $brand-black;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    @include mq("tablet") {
+      width: 75px;
+      padding: 15px 20px;
+    }
+
+    &:hover {
+      background: $primary-color;
+    }
+
+    &:focus {
+      box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    svg {
+      width: 100%;
+
+      path {
+        fill: $brand-white;
+      }
+    }
+  }
+}
+
+.controlsHolder {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%) translateY(150%);
+  transition: transform 0.5s $easeInOutCirc;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+
+  @include mq("tablet") {
+    bottom: 10px;
+  }
+
+  &.fullscreenPlayer {
+    background: $brand-black;
+    padding: 10px;
+    bottom: 0;
+  }
+}
+
+.controls {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  &.fullscreenPlayer {
+    max-width: 980px;
+
+    .fullscreenIcon {
+      margin-top: 8px;
+    }
+
+    .track {
+      height: $trackHeightFullScreen;
+
+      input {
+        height: $trackHeightFullScreen;
+      }
+
+      .progressHolder {
+        height: $trackHeightFullScreen;
+      }
+
+      .progress {
+        height: $trackHeightFullScreen;
+      }
+
+      .buffer {
+        height: $trackHeightFullScreen;
+      }
+    }
+  }
+}
+
+.videoHolder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  box-sizing: border-box;
+
+  &.fullscreenPlayer {
+    height: 100vh;
+    padding: 0;
+  }
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.playBtn {
+  background: $brand-gray;
+  border: 0;
+  border-radius: 5px;
+  max-width: 45px;
+  min-width: 20px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  transition: background 0.3s $easeInOutCirc;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.fullscreen {
+    background: #000;
+  }
+
+  &:focus {
+    box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+  }
+
+  img {
+    width: 100%;
+    max-width: 15px;
+    height: auto;
+    margin: 0;
+  }
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.track {
+  position: relative;
+  height: $trackHeight;
+  border-radius: 2px;
+  background-color: $brand-gray;
+  width: 100%;
+  border: 1px solid rgba($brand-light-grey, 0.6);
+  box-sizing: border-box;
+
+  &.focus {
+    border: 1px solid $primary-color;
+  }
+
+  input {
+    appearance: none;
+    height: $trackHeight;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.progressHolder {
+  z-index: 3;
+  width: 0;
+  height: $trackHeight;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.2s linear;
+  pointer-events: none;
+
+  time {
+    position: absolute;
+    top: -20px;
+    font-size: 10px;
+    background: $brand-white;
+    right: -15px;
+    padding: 0 3px;
+    box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+
+    img {
+      position: absolute;
+      bottom: -13px;
+      width: 3px;
+      transform: rotate(90deg) translateX(-50%);
+      left: 50%;
+    }
+  }
+}
+
+.progress {
+  width: 100%;
+  height: $trackHeight;
+  background-color: $primary-color;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+}
+
+.buffer {
+  transition: width 0.2s linear;
+  pointer-events: none;
+  z-index: 2;
+  width: 0;
+  height: $trackHeight;
+  background-color: rgba($brand-light-grey, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.bar {
+  background: rgba($brand-gray, 0.9);
+  display: flex;
+  flex-grow: 1;
+  margin-left: 15px;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.soundBars {
+  margin: 0 3%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+
+  &.fullscreen {
+    button {
+      width: 5px;
+    }
+  }
+
+  button {
+    width: 3px;
+    padding: 0;
+    background: none;
+    border: 0;
+    margin: 0 3px 0 0;
+    transform: scale(1, 1);
+    transform-origin: bottom;
+    transition: transform 0.3s $easeInOutCirc;
+
+    &:focus {
+      background-color: rgba($brand-light-grey, 1);
+      box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+
+      &.active {
+        hr {
+          background-color: rgba($primary-color, 0.6);
+          box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1, 1.2);
+    }
+
+    &.active {
+      hr {
+        background-color: $primary-color;
+      }
+    }
+
+    hr {
+      margin: 0;
+      height: 100%;
+      display: block;
+      width: 100%;
+      background-color: rgba($brand-light-grey, 0.6);
+      border: 0;
+    }
+  }
+}
+
+.fullscreenIcon {
+  background: none;
+  border: 0;
+  width: 15px;
+  padding: 0;
+
+  &.fullscreenPlayer {
+    width: 20px;
+  }
+
+  &:focus {
+    svg {
+      path {
+        fill: rgba($brand-light-grey, 1);
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1, 1.1);
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  svg {
+    width: 100%;
+    transition: all 0.3s $easeInOutCirc;
+    transform: scale(1, 1);
+  }
+}
+
+.settingsHolder {
+  position: relative;
+  margin-right: 3%;
+  margin-left: 3%;
+
+  @include mq("tablet") {
+    margin-left: 0;
+  }
+}
+
+.settings {
+  background: $brand-black;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s $easeInOutCirc;
+
+  &.inActive {
+    display: none;
+  }
+
+  &.active {
+    max-height: 500px;
+    display: block;
+  }
+
+  ul {
+    margin: 0;
+    padding: 5px 10px;
+    border: 0;
+  }
+
+  .title {
+    font-size: 12px;
+    font-family: $title-text-font;
+    display: block;
+    color: $brand-white;
+    margin: 0 0 3px 0;
+    text-align: center;
+    padding-top: 2px;
+
+    @include mq("tablet") {
+      font-size: 14px;
+      padding-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.speedHolder {
+  list-style: none;
+  display: block;
+
+  &.active {
+    span {
+      color: $secondary-color;
+
+      &:before {
+        background: $secondary-color;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    padding: 3px 5px;
+    text-align: left;
+    border: 1px solid transparent;
+
+    @include mq("tablet") {
+      padding: 5px;
+    }
+
+    &:focus {
+      border: 1px solid $secondary-color;
+      span {
+        &:before {
+          box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+
+  span {
+    color: $brand-white;
+    font-size: 10px;
+    font-family: $title-text-font;
+    display: flex;
+    align-items: center;
+
+    @include mq("tablet") {
+      font-size: 12px;
+    }
+
+    &:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $brand-grey-3;
+      box-sizing: border-box;
+      background: $brand-white;
+      display: inline-block;
+      margin: 0 5px 0 0;
+      box-shadow: 3px 4px 4px -1px rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+.playerSettingsIcons {
+  padding: 0;
+  background: none;
+  border: 0;
+  width: 15px;
+  transform: rotate(0);
+  transition: transform 0.3s $easeInOutCirc;
+
+  &.fullscreen {
+    width: 20px;
+  }
+
+  &:focus {
+    svg {
+      path {
+        fill: rgba($brand-light-grey, 1);
+      }
+    }
+  }
+
+  &.active,
+  &:hover {
+    transform: rotate(30deg);
+
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  svg {
+    margin: 5px 0 0 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,75 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.btnContainer {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.overflowButton {
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+
+  svg {
+    width: 12px;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    border: none;
+    outline: none;
+    background-color: $light-blue;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $brand-gray;
+  }
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+
+  svg {
+    width: 12px;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    border: none;
+    outline: none;
+    background-color: $light-blue;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $brand-gray;
+  }
+}
+
+.popUp {
+  background-color: $brand-white;
+  padding: 5px;
+  font-size: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-width: 112px;
+  margin-left: 20px;
+  z-index: 1005;
+
+  > div {
+    border: none;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}

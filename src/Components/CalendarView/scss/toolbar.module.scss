@@ -1,0 +1,181 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+$maxDropdownHeight: 231px;
+
+.toolbar {
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+  justify-content: center;
+  height: 40px;
+  position: relative;
+  margin: 0 0 10px 0;
+
+  @include mq("tablet-small") {
+    padding: 0 50px;
+  }
+}
+
+.daySelectHolder {
+  box-sizing: border-box;
+  width: 300px;
+  border: 1px solid $primary-color;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 21;
+  background: $brand-white;
+
+  span {
+    justify-content: center;
+  }
+
+  button {
+    text-align: left;
+  }
+
+  span,
+  button {
+    box-sizing: border-box;
+    color: $primary-color;
+    font-family: $title-text-font;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    padding: 0 15px;
+    background: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      width: 13px;
+      transition: all 0.3s $expandEase;
+
+      &.active {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+  }
+}
+
+.selectHolder {
+  display: flex;
+  line-height: 0;
+  border: 1px solid $primary-color;
+  padding: 10px;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: url("/images/icons/chevron-down.svg") no-repeat;
+    z-index: 10;
+    display: block;
+  }
+
+  select {
+    font-family: $title-text-font;
+    font-size: 14px;
+    font-weight: 600;
+    appearance: none;
+    margin: 0;
+    line-height: 1;
+    width: 300px;
+    box-sizing: border-box;
+    border: 0;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.daySelect {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 39px;
+  z-index: 20;
+  background: $brand-white;
+  width: 300px;
+  transition: max-height 0.3s $expandEase;
+  left: -1px;
+  right: -1px;
+
+  ul {
+    border: 1px solid $primary-color;
+    border-top: 0;
+    background: $brand-white;
+    display: none;
+
+    &.active {
+      display: block;
+      scrollbar-width: thin; //Firefox only
+      overflow-y: auto;
+      max-height: $maxDropdownHeight;
+
+      &::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+        height: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: rgba($brand-black, 0); /* color of the tracking area */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(
+          $primary-color,
+          0.8
+        ); /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 2px solid $brand-white;
+      }
+    }
+  }
+
+  &.active {
+    max-height: $maxDropdownHeight;
+  }
+
+  li {
+    width: 100%;
+
+    button {
+      padding: 0px 10px;
+      border: 0;
+      font-family: $title-text-font;
+      font-size: 14px;
+      font-weight: bold;
+      color: $brand-gray;
+      display: block;
+      width: 100%;
+      height: 48px;
+
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        color: $brand-white;
+        background: $primary-color;
+      }
+
+      &.active {
+        color: $primary-color;
+
+        &:hover {
+          color: $brand-white;
+        }
+      }
+    }
+  }
+}

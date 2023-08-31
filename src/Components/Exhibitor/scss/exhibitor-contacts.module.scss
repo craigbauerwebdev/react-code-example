@@ -1,0 +1,32 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.representativeWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-bottom: 12px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: right;
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 10px;
+  }
+
+  > ul {
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}

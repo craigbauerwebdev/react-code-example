@@ -1,0 +1,15 @@
+@import "../../../../../css/core";
+
+.controlsMenu {
+  width: 100%;
+  position: static;
+  flex-flow: wrap;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  height: auto !important;
+
+  @include mq("tablet") {
+    flex-flow: nowrap;
+    padding: 10px 0;
+  }
+}

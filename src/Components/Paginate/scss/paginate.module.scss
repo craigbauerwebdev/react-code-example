@@ -1,0 +1,48 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+%buttonSetting {
+  @include primaryButton();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+
+  svg {
+    position: relative;
+    top: 1px;
+    width: 16px;
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+
+.paginateContainerLarge {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 40px;
+  justify-content: center;
+
+  button {
+    @extend %buttonSetting;
+
+    width: 190px;
+  }
+}
+
+.paginateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-flow: row-reverse;
+  margin-top: 40px;
+
+  button {
+    @extend %buttonSetting;
+
+    width: 140px;
+  }
+}

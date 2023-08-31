@@ -1,0 +1,52 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./livestream-mixins";
+
+.main {
+  @include mainPageSetting(80px);
+}
+
+.liveStreamEmbed {
+  @include liveStreamEmbed;
+}
+
+.liveStreamPluginContainer {
+  @include liveStreamPluginContainer;
+}
+
+.liveStreamSessionContainer {
+  @include liveStreamSessionContainer;
+}
+
+.customSessionContainer {
+  @include customSessionContainer(60%);
+}
+
+.speakerSessionInfo {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  max-width: 690px;
+  padding-top: 0;
+
+  @include mq("tablet") {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  article {
+    margin-top: 10px;
+  }
+
+  h1 {
+    @include sessionTitle;
+  }
+}
+
+.speakerList {
+  width: 100%;
+  justify-content: flex-start;
+  flex-flow: column;
+}

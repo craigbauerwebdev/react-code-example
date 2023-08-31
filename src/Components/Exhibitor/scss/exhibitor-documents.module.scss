@@ -1,0 +1,41 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.pdfLinks {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 10px;
+
+  .linkTitle {
+    line-height: 16px;
+    margin: 0 0 0 10px;
+    font-weight: 700;
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.productContainer {
+  margin: 50px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .products {
+    align-content: center;
+    margin: 20px 0 20px 25px;
+
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    p {
+      margin: 5px 0 25px 0;
+    }
+  }
+}

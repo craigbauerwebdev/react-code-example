@@ -1,0 +1,70 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+.registerBanner {
+  background-color: $secondary-color;
+  width: 100%;
+
+  h1 {
+    color: $brand-white;
+    font-size: 32px;
+    line-height: 1em;
+    font-family: $title-text-font;
+    font-weight: 700;
+    margin: 0;
+    text-transform: none;
+
+    @include mq("laptop") {
+      font-size: 36px;
+    }
+
+    @include mq("desktop") {
+      font-size: 60px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+    font-family: $title-text-font;
+    color: $brand-white;
+    font-weight: 400;
+
+    @include mq("laptop") {
+      font-size: 23px;
+    }
+  }
+}
+
+.registerBannerContainer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-flow: column;
+  max-width: $maxBaseWidth;
+  padding: 20px 30px;
+  margin: auto;
+  min-height: 175px;
+
+  @include mq("laptop") {
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  a {
+    @include buttonBase;
+    box-sizing: border-box;
+    border: 1px solid $brand-white;
+    color: $primary-color;
+    background: $brand-white;
+    max-width: 140px;
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+}

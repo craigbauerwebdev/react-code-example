@@ -1,0 +1,95 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.largeCardSubSession {
+  box-sizing: border-box;
+  width: 100%;
+  height: 271px;
+  border-radius: 4px;
+  padding: 25px 25px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 0 20px 0;
+
+  a {
+    @include buttonBase;
+
+    background: $primary-color;
+    color: $brand-white;
+    border: none;
+    display: inline-block;
+    max-width: 100px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+
+  h2 {
+    font-family: $title-text-font;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.14;
+    text-align: left;
+    color: $primary-color;
+    margin: 0;
+
+    @include mq("phone-wide") {
+      font-size: 20px;
+    }
+  }
+}
+
+.presenterInfo {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+
+  @include mq("tablet") {
+    align-items: center;
+  }
+
+  h3 {
+    font-family: $title-text-font;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.19;
+    color: $brand-black;
+    margin: 0;
+
+    &:nth-of-type(2) {
+      color: $brand-black;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+
+    @include mq("phone-wide") {
+      font-size: 16px;
+    }
+  }
+  section {
+    margin-left: 10px;
+  }
+
+  .subSessionSpeakerImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.subSessionCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}

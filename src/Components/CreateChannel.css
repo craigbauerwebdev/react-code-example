@@ -1,0 +1,50 @@
+.select-file button,
+.channel-list button {
+  font-size: 15px;
+  font-family: "Akzidenz Grotesk", sans-serif;
+  text-align: center;
+  line-height: 20px;
+  padding: 15px 30px;
+  background-color: #0066b3;
+  border: 1px solid #0066b3;
+  color: #ffffff;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+  max-width: 100px;
+  width: 100%;
+  padding: 5px 0;
+  margin: 10px 50px 20px 20px;
+}
+.channel-list button.cancel {
+  background-color: #707070;
+  border: 1px solid #cccccc;
+}
+.channel-list button.cancel:hover {
+  background-color: #cccccc;
+  color: #000000;
+}
+.select-file button:hover,
+.channel-list button:hover {
+  color: #0066b3;
+  background-color: #ffffff;
+}
+.select-file {
+  text-align: center;
+  margin: 100px;
+}
+.channel-list {
+  text-align: center;
+}
+.channel-list-table {
+  margin: auto;
+}
+td {
+  padding: 5px;
+}
+.success {
+  text-align: center;
+  color: green;
+}
+.error {
+  text-align: center;
+  color: red;
+}

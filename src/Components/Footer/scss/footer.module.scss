@@ -1,0 +1,316 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.footer {
+  &.preEvent {
+    .footerCopy {
+      margin-top: 25px;
+    }
+  }
+
+  h1 {
+    color: $brand-white;
+    font-size: 60px;
+    line-height: 1em;
+    font-family: $title-text-font;
+    font-weight: 700;
+    margin: 0;
+    text-transform: none;
+  }
+}
+
+.footerWrapper {
+  width: 100%;
+  background-color: $primary-color;
+  color: $brand-white;
+  padding: 40px 0 100px;
+}
+
+.innerFooterWrapper {
+  max-width: 1385px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.footerContainer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+
+  @include mq("tablet") {
+    flex-flow: row;
+    align-items: flex-start;
+  }
+}
+
+.linksHolder {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  width: 100%;
+
+  @include mq("tablet") {
+    width: auto;
+  }
+}
+
+.innerWrapper {
+  box-sizing: border-box;
+  width: 100%;
+
+  li {
+    font-family: $title-text-font;
+    color: $brand-white;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+    text-align: center;
+
+    @include mq("tablet") {
+      text-align: left;
+    }
+
+    a {
+      margin-bottom: 16px;
+      font-family: $title-text-font;
+      color: $brand-white;
+      line-height: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+
+    &:hover,
+    a:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.subItems {
+  li {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.navList {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 40px;
+
+  @include mq("tablet") {
+    padding-left: 10%;
+    padding-top: 0;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+
+  @include mq("midpoint") {
+    padding-left: 0;
+    justify-content: flex-end;
+  }
+}
+
+.noSubNav {
+  width: 100%;
+  margin: 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include mq("tablet") {
+    margin: 0 30px 0 0;
+    width: auto;
+  }
+}
+
+.navSection {
+  width: 100%;
+
+  @include mq("tablet-small") {
+    width: 20%;
+    margin-right: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include mq("tablet") {
+    width: 30%;
+    margin-right: 2%;
+    max-width: 175px;
+  }
+
+  @include mq("midpoint") {
+    width: 16%;
+    margin-right: 3%;
+  }
+}
+
+.navSectionHeader {
+  border-bottom: 1px solid $brand-white;
+  font-family: $title-text-font;
+  color: $brand-white;
+  font-size: 17px;
+  text-transform: none;
+  padding-bottom: 4px;
+  display: inline-block;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  @include mq("tablet-small") {
+    padding: 0;
+  }
+}
+
+.footerLogo {
+  @include fixBlur;
+  height: 50px;
+  display: block;
+  margin: 20px 0;
+
+  @include mq("tablet") {
+    margin-top: 0;
+  }
+
+  @include mq("laptop") {
+    height: 60px;
+  }
+}
+
+.footerSocialContainer {
+  display: flex;
+  justify-content: center;
+
+  @include mq("tablet") {
+    justify-content: flex-start;
+  }
+}
+
+.footerSocialItem {
+  display: inline-block;
+  margin-right: 14px;
+  background-color: $brand-white;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $brand-gray;
+    cursor: pointer;
+  }
+}
+
+.footerSocial {
+  display: block;
+
+  img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+}
+
+.footerClientLegal {
+  margin: 70px auto 0 auto;
+  width: 100%;
+
+  > div {
+    display: flex;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+    width: 100%;
+    padding-top: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column;
+
+    @include mq("tablet") {
+      flex-flow: row;
+    }
+
+    &.hasLeft {
+      justify-content: space-between;
+    }
+  }
+}
+
+.footerClientLegalLeft {
+  font-family: $title-text-font, sans-serif;
+  color: $brand-white;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.45;
+  a {
+    color: $brand-white;
+  }
+}
+
+.footerClientLegalRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  flex-flow: column;
+
+  @include mq("tablet") {
+    flex-flow: row;
+  }
+
+  ul {
+    margin: 10px 10px 10px 0;
+
+    @include mq("tablet") {
+      margin: 0 10px 0 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      font-family: $title-text-font, sans-serif;
+      color: $brand-white;
+      font-size: 11px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.45;
+
+      a {
+        color: $brand-white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.oepLink {
+  line-height: 0;
+}

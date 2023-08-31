@@ -1,0 +1,56 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.paginateContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  a {
+    font-family: $title-text-font;
+    text-transform: none;
+    line-height: 22px;
+    font-weight: 700;
+    margin-right: 13px;
+    font-size: 16px;
+    display: block;
+    width: auto;
+    color: $primary-color;
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 10px;
+    padding: 0 0 2px;
+    cursor: pointer;
+  }
+}
+
+.paginateButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-family: $title-text-font;
+    width: 180px;
+    padding: 15px 40px;
+    text-transform: none;
+    line-height: 22px;
+    font-weight: 700;
+    margin-right: 13px;
+    font-size: 16px;
+    display: block;
+    width: auto;
+    color: $brand-white;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      background-color: $brand-white;
+    }
+  }
+}

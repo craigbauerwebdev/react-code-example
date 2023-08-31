@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__iconVolumeUp" width="24" height="22" viewBox="0 0 24 22">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_126" data-name="Group 126" transform="translate(0 -1)">
+        <path id="prefix__Path_198" d="M0 7v10h5l6 6V1L5 7z" class="prefix__cls-1" data-name="Path 198"/>
+    </g>
+    <path id="prefix__Path_199" d="M13 1v2a9 9 0 0 1 0 18v2a11 11 0 0 0 0-22z" class="prefix__cls-1" data-name="Path 199" transform="translate(0 -1)"/>
+    <path id="prefix__Path_200" d="M13 5v2a5 5 0 0 1 0 10v2a7 7 0 0 0 0-14z" class="prefix__cls-1" data-name="Path 200" transform="translate(0 -1)"/>
+    <path id="prefix__Path_201" d="M13 9v6a3 3 0 0 0 0-6z" class="prefix__cls-1" data-name="Path 201" transform="translate(0 -1)"/>
+</svg>

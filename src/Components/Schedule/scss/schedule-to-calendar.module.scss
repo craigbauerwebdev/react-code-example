@@ -1,0 +1,82 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.schedule {
+  @include alternateButton();
+
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 10px;
+
+  &.active {
+    background: $brand-black;
+    color: $brand-white;
+
+    > svg {
+      path {
+        fill: $brand-white;
+      }
+    }
+  }
+
+  > svg {
+    width: 15px;
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+
+    path {
+      fill: $brand-black;
+    }
+  }
+}
+
+.iconOnly {
+  border: none;
+  padding: 5px;
+  max-width: unset;
+  min-width: unset;
+  width: auto;
+  box-sizing: border-box;
+
+  svg {
+    margin-right: 0;
+    min-width: 20px;
+    height: 20px;
+
+    path {
+      fill: $primary-color;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-color;
+    svg {
+      path {
+        fill: $brand-white;
+      }
+    }
+  }
+}
+
+.primary {
+  @include primaryButton();
+
+  svg {
+    path {
+      fill: $brand-white;
+    }
+  }
+
+  &.active {
+    @include alternateButton();
+
+    svg {
+      path {
+        fill: $brand-black;
+      }
+    }
+  }
+}

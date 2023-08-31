@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Modal
+  active={true}
+  button={
+    Array [
+      <default
+        alignment="center"
+        componentName="Close blocked users"
+        componentType="Button"
+        confirmationButtonText="Try Again"
+        page="homepage"
+        type="confirmation"
+        url="Try Again"
+      />,
+      <default
+        type="close-icon"
+      />,
+    ]
+  }
+  closeCallback={[Function]}
+  modalType="short"
+>
+  <ModalBody
+    className="errorModal"
+    title={
+      <div>
+        Something went wrong. Please try again or select the
+         
+        <default
+          componentName="Support"
+          to="/support"
+        >
+          Technical Support Form
+        </default>
+      </div>
+    }
+  />
+</Modal>
+`;

@@ -1,0 +1,90 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.posterCardHolder {
+  position: relative;
+}
+
+.posterCard {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq("midpoint") {
+    min-height: 210px;
+  }
+}
+
+.posterTitle {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: $title-text-font;
+  padding: 0 30px 0 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-align: left;
+  color: $primary-color;
+
+  @include mq("phone-wide") {
+    font-size: 16px;
+  }
+}
+
+.posterPresenter {
+  width: 130px;
+  height: 16px;
+}
+
+.posterPresenterName {
+  font-family: $title-text-font;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.19;
+  color: $brand-black;
+  margin-bottom: 0;
+  display: block;
+
+  @include mq("phone-wide") {
+    font-size: 14px;
+  }
+}
+
+.posterPresenterOrg {
+  margin-top: 0;
+  font-family: $title-text-font;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5em;
+  display: block;
+}
+
+.posterTopic {
+  font-family: $title-text-font;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  color: $brand-white;
+  border-radius: 20px;
+  background-color: $brand-black;
+  padding: 5px 20px 5px 20px;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+.favoritesHolder {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  @include mq("midpoint") {
+    top: 35px;
+  }
+}

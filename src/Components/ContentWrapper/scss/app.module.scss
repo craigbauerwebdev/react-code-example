@@ -1,0 +1,10 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.appStickyHeader {
+  padding: 0;
+
+  @include mq("tablet-small") {
+    padding-top: $desktopHeight;
+  }
+}

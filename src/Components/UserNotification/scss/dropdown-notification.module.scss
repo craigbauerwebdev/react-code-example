@@ -1,0 +1,60 @@
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.listItem {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 0 30px 0 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 45px;
+    top: 2px;
+    height: 15px;
+    width: 15px;
+    background-color: rgba($secondary-color, 0);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s $easeInOutCirc;
+  }
+
+  &.dot {
+    &:after {
+      background-color: rgba($secondary-color, 1);
+    }
+  }
+}
+
+.actionButtonContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-flow: row;
+}
+
+.notificationBanner {
+  @include listCardsFont ($primary-color, 700);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 380px;
+  border: 5px;
+  align-items: flex-start;
+
+  img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.notificationBannerBody {
+  margin-left: 15px;
+  text-align: left;
+  flex-grow: 1;
+}

@@ -1,0 +1,65 @@
+@import "../../../css/core";
+
+.container {
+  position: relative;
+
+  &:focus .dropdown {
+    opacity: 1;
+  }
+}
+
+.shareButton {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 320ms;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.shareIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  top: 100%;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 120ms, transform 120ms;
+
+  @include mq("tablet", "max") {
+    flex-direction: row;
+    right: 0;
+  }
+}
+
+.dropdownActive {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+
+  @include mq("tablet", "max") {
+    width: 60px;
+    height: 60px;
+    margin-left: 8px;
+  }
+}
+
+.socialIcon {
+  pointer-events: none;
+}

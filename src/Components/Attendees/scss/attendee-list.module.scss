@@ -1,0 +1,139 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+@import "../../Network/scss/networking-pages-mixins";
+
+.main {
+  @include main;
+}
+
+.title {
+  @include networkingPageTitles;
+}
+
+.headerWrapper {
+  @include headerWrapper;
+}
+
+.scrollingContentHolder {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scrollingContent {
+  @include scrollingContent;
+
+  &.spacing {
+    padding: 0 0 75px 0;
+
+    @include mq("tablet-small") {
+      padding: 0 0 100px 0;
+    }
+  }
+}
+
+.table {
+  @include table;
+}
+
+.centerVert {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.flexTDText {
+  @include flexTDText;
+}
+
+.attendeeName {
+  font-weight: bold;
+  display: block;
+  margin-left: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.attendeeName:hover {
+  text-decoration: underline;
+}
+
+.avatarContainer {
+  display: flex;
+}
+
+.searchContainer {
+  @include searchContainer;
+}
+
+.role {
+  text-align: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    g,
+    path {
+      fill: $checkmark-green;
+    }
+  }
+}
+
+.sortLabel {
+  padding-right: 10px;
+}
+
+.attendeeButton {
+  @include networkingButtons;
+}
+
+.svgContainer {
+  @include svgContainer;
+}
+
+.searchIcon {
+  @include searchIcon;
+}
+
+.popUpAnchor {
+  @include popUpAnchor;
+}
+
+.filterHolder {
+  margin-bottom: 10px;
+}
+
+.filterContainer {
+  background: $brand-white;
+  padding: 11px 0px;
+
+  @include mq("midpoint") {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq("laptop") {
+    justify-content: space-between !important;
+  }
+
+  > button {
+    @include mq("laptop") {
+      min-width: 184px;
+    }
+    @include mq("desktop") {
+      min-width: 213px;
+    }
+    @media screen and (min-width: 1350px) {
+      min-width: 240px;
+    }
+  }
+}
+
+.innerFlex {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}

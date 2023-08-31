@@ -1,0 +1,23 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.mainContainer {
+  width: 70%;
+}
+
+.schedulerItem {
+  transform: translateY(30px);
+  background-color: $brand-white-5;
+  color: $primary-color;
+}
+
+.schedulerHeader {
+  background-color: $brand-white;
+  padding: 20px;
+}
+
+.headerButton {
+  background-color: $primary-color;
+  box-shadow: none;
+  color: $brand-white;
+}

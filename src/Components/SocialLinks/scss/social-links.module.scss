@@ -1,0 +1,20 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.linkList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linkListItem {
+  @include socialIcons();
+
+  margin-right: 5px;
+}
+
+.linkListItemPrimary {
+  @include socialIcons($primary-color, 25px, rgba($primary-color, 0.7));
+
+  margin-right: 25px;
+}

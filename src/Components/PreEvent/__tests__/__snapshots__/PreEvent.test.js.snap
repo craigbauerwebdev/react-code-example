@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Fragment>
+  <Meta
+    pageTitle="PreEvent"
+  />
+  <BannerWrapper
+    pageName="pre_event"
+  />
+  <Suspense
+    fallback={
+      <div
+        className="main"
+      >
+        <Loader />
+      </div>
+    }
+  >
+    <div
+      className="main"
+    >
+      <lazy />
+      <lazy />
+      <lazy
+        pageName="preevent"
+        preevent={true}
+      />
+      <lazy />
+    </div>
+  </Suspense>
+</Fragment>
+`;

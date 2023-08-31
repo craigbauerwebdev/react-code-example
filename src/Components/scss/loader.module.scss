@@ -1,0 +1,47 @@
+@import "../../css/core";
+
+.loader {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+
+  &.small {
+    min-height: 0;
+    img {
+      height: 50px;
+    }
+  }
+
+  &.midSize {
+    min-height: 0;
+
+    img {
+      height: 150px;
+
+      @include mq("phone-wide") {
+        height: 150px;
+      }
+    }
+  }
+
+  &.chat {
+    min-height: 0;
+    img {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  img {
+    height: 150px;
+    display: block;
+    margin: auto;
+
+    @include mq("phone-wide") {
+      height: 200px;
+    }
+  }
+}

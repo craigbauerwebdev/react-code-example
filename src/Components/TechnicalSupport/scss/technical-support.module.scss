@@ -1,0 +1,120 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.supportPageWrapper {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 50px auto;
+  max-width: $maxBaseWidth;
+  flex-direction: column-reverse;
+
+  @include mq("tablet") {
+    grid-template-columns: auto 1fr;
+    flex-direction: row;
+    padding: 0 15px;
+  }
+
+  @include mq("desktop") {
+    margin: 115px auto;
+  }
+}
+
+.supportFormWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  max-width: 728px;
+  margin: 0 auto;
+
+  h1 {
+    font-family: $title-text-font;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: $primary-color;
+    margin-top: 0;
+  }
+}
+
+.formGridWrapper {
+  list-style-type: none;
+  padding: 0;
+
+  &.gridTwoColumn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include mq("tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 53px;
+      grid-row-gap: 24px;
+    }
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 24px;
+  }
+}
+
+.formFooter {
+  margin-top: 39px;
+}
+
+.buttonRowWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+
+  button {
+    margin: 0 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.formGeneralAlert {
+  margin: 10px 0;
+  color: $brand-black;
+  background-color: $brand-off-white-4;
+  border: 1px solid $brand-black;
+  padding: 1rem 1rem;
+  border-radius: 0.25rem;
+
+  &.formGeneralErrorAlert {
+    color: $brand-red;
+    background-color: $brand-red-transparent;
+    border-color: $brand-red;
+  }
+
+  &.formGeneralSuccessAlert {
+    color: $brand-green-1;
+    background-color: $brand-green-transparent;
+    border-color: $brand-green-1;
+  }
+}
+
+.formGeneralErrorAlert {
+  margin: 10px 0;
+  color: $brand-red;
+  background-color: $brand-red-transparent;
+  border: 1px solid $brand-red;
+  padding: 1rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.formGeneralSuccessAlert {
+  margin: 10px 0;
+  color: $brand-green-1;
+  background-color: $brand-green-transparent;
+  border: 1px solid $brand-green-1;
+  padding: 1rem 1rem;
+  border-radius: 0.25rem;
+}

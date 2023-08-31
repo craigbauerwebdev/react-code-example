@@ -1,0 +1,47 @@
+@import "../../../css/core";
+
+.main {
+  @include mainPageSetting;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $title-text-font;
+
+  svg {
+    width: 200px;
+    height: 200px;
+
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
+.button {
+  @include primaryButton();
+
+  padding: 10px 15px;
+  margin-top: 20px;
+  width: 90px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.header {
+  font-family: $title-text-font-2;
+  font-weight: 300;
+  color: $primary-color;
+  font-size: 42px;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.description {
+  color: $brand-gray;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+@mixin speakerList {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 250px;
+  margin: 1%;
+
+  @include mq("tablet-small") {
+    max-width: 290px;
+    width: 45%;
+  }
+
+  @include mq("midpoint") {
+    width: 23%;
+    max-width: 250px;
+  }
+}
+
+@mixin speakerCardHover {
+  h2 {
+    color: $secondary-color;
+  }
+}
+
+@mixin speaker5Up {
+  min-width: 215px;
+
+  @include mq("tablet-small") {
+    width: 45%;
+  }
+
+  @include mq("tablet") {
+    width: 30%;
+  }
+
+  @include mq("desktop") {
+    width: 18%;
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../../../css/core";
+@import "../../scss/networking-pages-mixins.scss";
+
+.header {
+  @include headerWrapper;
+
+  align-items: flex-end;
+
+  @include mq("phone-wide") {
+    flex-direction: column;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq("tablet") {
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+  }
+}
+
+.headerAlign {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  @include mq("tablet-small", max) {
+    display: block;
+  }
+}
+
+.title {
+  @include networkingPageTitles;
+
+  @include midpointAlign();
+}
+
+.mySchedule {
+  @include primaryButton();
+
+  height: 40px;
+  font-size: 14px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 5px;
+    height: 16px;
+    width: 16px;
+    box-sizing: border-box;
+
+    path,
+    g {
+      fill: $brand-white;
+      transition: fill 0.3s;
+    }
+  }
+
+  &:hover {
+    svg path,
+    svg g {
+      fill: $primary-color;
+    }
+
+    &:focus {
+      svg path,
+      svg g {
+        fill: $brand-white;
+      }
+    }
+  }
+}
+
+.myScheduleWrapper {
+  position: relative;
+  height: 40px;
+  margin: 10px 0;
+  @include midpointAlign();
+}

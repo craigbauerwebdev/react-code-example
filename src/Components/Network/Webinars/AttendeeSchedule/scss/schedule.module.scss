@@ -1,0 +1,180 @@
+@import "../../../../../css/core";
+
+.scheduleWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 15px 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 3, 0.15),
+    0px 0px 0px rgba(63, 63, 68, 0.05);
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 2;
+  color: $brand-gray-2;
+  max-height: 70vh;
+  height: auto;
+  overflow: auto;
+  max-height: 70vh;
+  min-height: max-content;
+
+  @include mq("phone-wide", "max") {
+    min-width: 75vw;
+    right: 0;
+    left: 0;
+    transform: translateX(-25%);
+  }
+
+  @include mq("phone", "max") {
+    min-width: 85vw;
+  }
+  @include mq("phablet", "max") {
+    width: 100%;
+    min-width: 300px;
+    top: 50px;
+  }
+
+  .loader {
+    width: 50px;
+    max-height: 50px;
+  }
+
+  @include mq("phablet") {
+    width: 500px;
+  }
+}
+
+.cardWrapper {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+  border-left: 5px solid $session-green;
+}
+
+.active {
+  background-color: $light-blue;
+  color: $primary-color;
+  border-left: 5px solid $primary-color;
+  padding-right: 10px;
+}
+
+.scheduleTitle {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: $brand-grey-2;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.icon {
+  box-sizing: border-box;
+  align-items: center;
+
+  svg {
+    width: 16px;
+  }
+}
+
+.iconButton {
+  border: none;
+  background: none;
+  padding: 0;
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  float: left;
+  max-width: 200px;
+
+  @include mq("tablet") {
+    max-width: initial;
+  }
+
+  span {
+    font-size: 10px;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin: 0 10px;
+  }
+}
+
+.hr {
+  height: 1px;
+  border: none;
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.karet {
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.iconBlue {
+  svg g,
+  svg path {
+    fill: $primary-color;
+  }
+}
+
+.sessionName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.session {
+  border-left: 5px solid $session-yellow;
+}
+
+.showcase {
+  border-left: 7px solid $session-red;
+}
+
+.sorryMessage {
+  font-family: $title-text-font;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+.watchButton {
+  @include primaryButton();
+
+  box-sizing: border-box;
+  width: 47px;
+  padding: 0;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 28px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.smallCardSubSession {
+  @include smallCardSubSession();
+  @include clickCardSetting;
+}
+
+.subSessionCardHeader {
+  display: flex;
+  align-items: flex-start;
+}

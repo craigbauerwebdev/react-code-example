@@ -1,0 +1,68 @@
+// // https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+$primary-color: #0066b2;
+$secondary-color: #10b0e6;
+$mobile-blue: #50ade1;
+$tertiary-color: #00ffff;
+$light-blue: #eff7fd;
+$brand-gray: #2e2c2d;
+$brand-gray-2: #212b36;
+$brand-light-grey: #7f7f7f;
+$brand-light-grey-2: #767676;
+$brand-grey: #bbbbbb;
+$brand-grey-2: #707070;
+$brand-grey-3: #c7c7c7;
+$brand-grey-4: #cfd4d9;
+$brand-grey-5: #f4f5f7;
+$brand-grey-6: #979797;
+$brand-grey-7: #f0f1f2;
+$brand-grey-8: #637381;
+$brand-off-white: rgba(0, 0, 0, 0.04);
+$brand-off-white-2: rgba(0, 0, 3, 0.15);
+$brand-off-white-3: rgba(63, 63, 68, 0.05);
+$brand-off-white-4: rgba(0, 0, 0, 0.1);
+$brand-white: #ffffff;
+$brand-white-2: #fafafa;
+$brand-white-3: #f0f0f0;
+$brand-white-4: #cecece;
+$brand-white-5: #e6e7e8;
+$brand-white-6: #ccc;
+$brand-white-7: #eee;
+$brand-white-8: #f5f5f5;
+$brand-black: #2e2c2d;
+$brand-black-2: #4c5b6d;
+$brand-black-3: #414141;
+$title-text-font: "Akzidenz Grotesk", sans-serif;
+$title-text-font-2: "AkzidenzGroteskBE-CnIt", sans-serif;
+$chat-text-font: "Roboto", sans-serif;
+$chat-emoji-background: #f4f4f4;
+$brand-warning: #ffd94d;
+$desktopHeight: 81px;
+$maxBaseWidth: 1355px;
+$expandEase: cubic-bezier(0.65, 0, 0.35, 1);
+$easeInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
+$bodyMinHeight: calc(100vh - 500px);
+$brand-red: #ff0000;
+$brand-red-transparent: rgba(255, 0, 0, 0.1);
+$brand-green: #0b5a6b;
+$brand-green-1: #008000;
+$brand-green-transparent: rgba(0, 128, 0, 0.1);
+$session-green: #37d045;
+$checkmark-green: #00980e;
+$session-yellow: #fdbf32;
+$session-red: #fc7a6b;
+
+$breakpoints: (
+  "phone-small": 320px,
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tableH": 800px,
+  "midpoint": 980px,
+  "tablet-wide": 1024px,
+  "laptop-wide": 1080px,
+  "laptop": 1200px,
+  "desktop": 1280px,
+  "desktop-wide": 1440px,
+);

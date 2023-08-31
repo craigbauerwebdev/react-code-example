@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="LinkedIn" width="33" height="31.734" viewBox="0 0 33 31.734">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#fff}
+        </style>
+    </defs>
+    <path id="Rectangle_14" d="M0 0H31.655V31.655H0z" class="cls-1" transform="translate(0 .079)"/>
+    <path id="Rectangle_15" d="M0 0H31.655V31.655H0z" class="cls-1" transform="translate(1.345)"/>
+    <path id="Rectangle_16" d="M0 0H31.655V31.655H0z" class="cls-1" transform="translate(1.108 .079)"/>
+    <path id="Rectangle_17" d="M0 0H31.655V31.655H0z" class="cls-1" transform="translate(.158 .079)"/>
+    <g id="Group_4" transform="translate(7.874 8.547)">
+        <path id="Path_23" d="M34.3 32.9h3.126v1.583h.04a3.439 3.439 0 0 1 3.086-1.583c3.284 0 3.917 2.058 3.917 4.709v5.421h-3.245v-4.788c0-1.147-.04-2.612-1.7-2.612-1.7 0-1.939 1.266-1.939 2.532v4.906H34.34L34.3 32.9z" class="cls-2" transform="translate(-28.642 -28.389)"/>
+        <path id="Path_24" d="M20 32.9h3.363v10.129H20z" class="cls-2" transform="translate(-20 -28.389)"/>
+        <path id="Path_25" d="M23.4 23.2a1.7 1.7 0 1 1-1.7-1.7 1.714 1.714 0 0 1 1.7 1.7z" class="cls-2" transform="translate(-20 -21.5)"/>
+    </g>
+</svg>

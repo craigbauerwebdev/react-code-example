@@ -1,0 +1,558 @@
+// // https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+// @import "../../../css/core";
+// .fluent-chat-hide {
+//   display: none !important;
+// }
+
+// .iframe-cont-freeman {
+//   position: fixed;
+//   width: 100%;
+//   height: 556px;
+//   bottom: -14px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   border-radius: 12px;
+//   transition-duration: 1s;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+//   font-family: sans-serif;
+//   z-index: 1001;
+
+//   @include mq("phone-wide") {
+//     width: 85%;
+//     height: 474px;
+//     bottom: 130px;
+//     left: auto;
+//     transform: translateX(0);
+//     right: 3%;
+//   }
+
+//   @include mq("tablet-small") {
+//     height: 556px;
+//     width: 350px;
+//     bottom: 5px;
+//   }
+// }
+// .iframe-cont.hidden {
+//   transform: translate(100%);
+// }
+
+// .close-icon-freeman {
+//   text-align: right;
+//   float: right;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   cursor: pointer;
+//   width: 38px;
+//   height: 38px;
+//   margin-left: -42px;
+//   margin-right: 4px;
+//   transition-duration: 0.4s;
+
+//   &.show-freeman {
+//     background-image: url("https://s3.amazonaws.com/ny-now-chatbot-fe/close-icon-2.png");
+//   }
+// }
+// #close-chat-freeman {
+//   transition-duration: 0.4s;
+
+//   &.rotate-freeman {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// .hide-freeman {
+//   bottom: -900px;
+
+//   @include mq("tablet-small") {
+//     bottom: -700px;
+//   }
+// }
+// .fluent-chat {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+// }
+
+// .preview-chat-app-embed {
+//   box-sizing: border-box;
+//   position: fixed;
+//   left: auto;
+//   top: auto;
+//   display: block;
+//   //width: 100%;
+//   //max-width: 350px;
+//   padding-right: 24px;
+//   padding-bottom: 24px;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   transition-duration: 1s;
+//   z-index: 91;
+//   margin: 0;
+//   padding: 10px;
+//   bottom: 0px;
+//   right: 0px;
+//   pointer-events: none;
+
+//   &.out {
+//     bottom: -40%;
+//   }
+
+//   @include mq("phone-wide") {
+//     padding: 0;
+//     bottom: 19px;
+//     right: 24px;
+//   }
+// }
+
+// .fluent-open-button {
+//   pointer-events: all;
+//   box-sizing: border-box;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 20px;
+//   display: block;
+//   border: 2px solid $primary-color;
+//   background-color: $primary-color;
+//   background-image: url("/images/icons/chatbot-icon.png");
+//   background-position: 50% 50%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   padding: 4px;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+//   margin-top: 6px;
+//   transition: all 0.2s ease;
+//   cursor: pointer;
+
+//   &:hover,
+//   &:focus-visible {
+//     box-sizing: border-box;
+//     border-radius: 25px;
+//     width: 44px;
+//     height: 44px;
+//     padding: 4px;
+//     cursor: pointer;
+//     margin-top: 0;
+//   }
+
+//   img {
+//     width: 90%;
+//     margin: 5%;
+//     cursor: pointer;
+//   }
+
+//   @include mq("tablet-small") {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 30px;
+//     // display: none;
+
+//     &:hover,
+//     &:focus-visible {
+//       background-color: #000;
+//       border-radius: 40px;
+//       width: 64px;
+//       height: 64px;
+//     }
+//   }
+// }
+
+// .fluent-preview-chat {
+//   display: none;
+
+//   @include mq("tablet-small") {
+//     pointer-events: all;
+//     display: block;
+//     cursor: pointer;
+//     font-family: arial;
+//     font-size: 14px;
+//     line-height: 18px;
+//     position: relative;
+//     bottom: 0;
+//     right: 0;
+//     width: 254px;
+//     margin-top: 12px;
+//     margin-bottom: 0;
+//     padding: 18px;
+//     border-radius: 24px;
+//     border: 4px solid $primary-color;
+//     background-color: #fff;
+//     background-image: linear-gradient(180deg, #fff, #f7f7f7);
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+
+//     span {
+//       display: block;
+//     }
+
+//     &:focus-visible {
+//       border-color: $brand-black;
+//       .fluent-preview-icon {
+//         background-color: $brand-black;
+//       }
+//     }
+//   }
+// }
+// .fluent-preview-icon {
+//   box-sizing: border-box;
+//   display: block;
+//   width: 76px;
+//   height: 76px;
+//   margin-top: -60px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   border-radius: 42px;
+//   background: url("/images/icons/chatbot-icon.png") $primary-color center
+//     no-repeat;
+//   background-size: cover;
+//   border: 2px solid $primary-color;
+// }
+
+// .fluent-preview-headline {
+//   margin-top: 8px;
+//   margin-bottom: 8px;
+//   color: $primary-color;
+//   font-weight: 700;
+//   text-align: left;
+// }
+// .fluent-preview-close {
+//   display: none;
+
+//   @include mq("phone") {
+//     pointer-events: all;
+//     width: 18px;
+//     display: block;
+//     position: relative;
+//     left: auto;
+//     background-color: transparent;
+//     border: none;
+//     top: 45px;
+//     right: -216px;
+//     bottom: auto;
+//     z-index: 1100;
+//     margin: 0;
+//     opacity: 0.45;
+//     transition: all 0.2s ease;
+//     color: #000;
+//     font-weight: 700;
+//     text-decoration: none;
+//     cursor: pointer;
+//     padding: 0;
+//   }
+
+//   &:hover,
+//   &:focus-visible {
+//     opacity: 1;
+//     cursor: pointer;
+//   }
+
+//   img {
+//     display: block;
+//     width: 100%;
+//   }
+// }
+
+// #fluent-preview-close-img {
+//   cursor: pointer;
+//   z-index: 1050;
+// }
+// .fluent-close-button {
+//   display: flex;
+//   width: 24px;
+//   height: 24px;
+//   justify-content: center;
+//   align-items: center;
+//   border-color: transparent;
+//   background-color: #000;
+//   transition: all 0.2s ease;
+//   position: relative;
+//   bottom: 542px;
+//   right: 5px;
+//   z-index: 5000;
+//   border-radius: 12px;
+//   margin-top: 10px;
+//   padding: 0;
+
+//   &:hover,
+//   &:focus-visible {
+//     background-color: #7e6f88;
+//     transform: rotate(90deg);
+//   }
+
+//   @include mq("tablet-small") {
+//     border-radius: 24px;
+//     margin-top: 0;
+//   }
+// }
+
+// .fluent-close-image {
+//   width: 14px;
+// }
+
+// .fluent-chat-app-main-container {
+//   position: absolute;
+//   left: auto;
+//   top: auto;
+//   right: 0;
+//   bottom: 0;
+//   display: block;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 100%;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   color: hsla(330, 2.17%, 18.04%, 1);
+
+//   &.embed {
+//     position: relative;
+//     height: 530px;
+//     max-height: 100%;
+//     min-height: 240px;
+//     margin-bottom: 8px;
+//     border-radius: 12px;
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.35);
+
+//     @include mq("tablet-small") {
+//       margin-bottom: 18px;
+//     }
+//   }
+// }
+// .chat-wrap {
+//   box-sizing: border-box;
+//   height: 430px;
+//   width: 334px;
+//   margin: 0 auto;
+//   background-color: #fff;
+//   border: 5px solid #fff;
+//   border-top-right-radius: 12px;
+//   border-top-left-radius: 12px;
+//   border-bottom: 0;
+
+//   iframe {
+//     position: relative;
+
+//     .d-flex {
+//       display: table-header-group;
+//     }
+//   }
+// }
+// .get-chat-bot {
+//   background-color: #fff;
+//   bottom: 0;
+//   position: relative;
+// }
+
+// .fluent-app-background {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $primary-color;
+
+//   &.no-header {
+//     display: none;
+//   }
+// }
+
+// .fluent-background-header {
+//   box-sizing: border-box;
+//   display: block;
+//   width: 100%;
+//   padding: 10px 0;
+//   height: 82px;
+//   background: url("/images/virtual-assistant-chatbot-header.png") no-repeat
+//     center;
+//   background-size: 78%;
+// }
+
+// .fluent-background-footer {
+//   display: flex;
+//   width: 334px;
+//   margin: 0 auto;
+//   justify-content: center;
+//   align-items: flex-start;
+//   padding: 0;
+// }
+
+// .fluent-header-bot-icon {
+//   width: 42px;
+//   height: 42px;
+//   border-radius: 32px;
+// }
+
+// .fluent-profile-name {
+//   padding: 0 8px;
+//   color: $brand-gray;
+//   font-size: 16px;
+//   font-weight: 700;
+// }
+
+// .fluent-profile-header {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .fluent-preview {
+//   width: 48px;
+//   height: 48px;
+// }
+
+// .fluent-chat-app-wrapper {
+//   box-sizing: border-box;
+//   position: relative;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 100%;
+//   padding-top: 64px;
+//   padding-right: 12px;
+//   padding-left: 12px;
+//   flex: 0 auto;
+// }
+
+// .fluent-message-bot-icon {
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 12px;
+//   background: url("https://s3.amazonaws.com/freeman.chat-chatbot-fe/freeman-chatbot-icon.png")
+//     center center no-repeat;
+//   background-size: contain;
+
+//   &.no-view {
+//     display: none;
+//   }
+// }
+// .fluent-chat-app-area {
+//   position: relative;
+//   display: flex;
+//   overflow: hidden;
+//   height: 100%;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+//   background-color: #fff;
+//   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+
+//   &.embed {
+//     border-radius: 12px;
+//   }
+// }
+
+// .fluent-sponsor-area {
+//   box-sizing: border-box;
+//   justify-content: center;
+//   align-items: center;
+//   display: flex;
+//   width: 366px;
+//   height: 18px;
+//   padding: 0 16px;
+//   font-size: 14px;
+//   text-align: center;
+//   border-bottom-left-radius: 12px;
+//   border-bottom-right-radius: 12px;
+//   background-color: #fff;
+
+//   a {
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     font-size: 14px;
+//     color: #2f2d2e;
+//   }
+// }
+// .fluent-sponsor-link {
+//   display: flex !important;
+//   justify-content: center;
+//   align-items: center;
+//   color: #fff;
+//   text-decoration: none;
+
+//   &:hover,
+//   &:focus-visible {
+//     color: $brand-gray;
+//   }
+
+//   img {
+//     margin-right: 5px;
+//   }
+// }
+
+// .chat-icon-freeman {
+//   @include mq("tablet-small", "max") {
+//     width: 94%;
+
+//     &.open-freeman {
+//       bottom: 85%;
+//     }
+//   }
+// }
+
+// .fluent-hidden {
+//   display: block;
+
+//   @include mq("phone") {
+//     display: none;
+//   }
+// }
+
+// .fluent-show {
+//   display: none;
+
+//   @include mq("phone") {
+//     display: block;
+//   }
+// }
+
+// .fadeOut-hide {
+//   opacity: 0;
+//   margin-top: -100px;
+// }
+
+// .fadeIn-show {
+//   opacity: 1;
+//   transition: opacity 0.3 ease-in-out;
+// }
+
+// .chatbot-app-embed {
+//   box-sizing: border-box;
+//   position: fixed;
+//   left: auto;
+//   top: auto;
+//   display: block;
+//   //width: 100%;
+//   //max-width: 350px;
+//   padding-right: 24px;
+//   padding-bottom: 24px;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   transition-duration: 1s;
+//   z-index: 91;
+//   margin: 0;
+//   padding: 10px;
+//   bottom: 0px;
+//   right: 0px;
+//   pointer-events: none;
+
+//   &.out {
+//     bottom: -40%;
+//   }
+
+//   @include mq("phone-wide") {
+//     padding: 0;
+//     bottom: 19px;
+//     right: 24px;
+//   }
+// }
+
+// .chat-iframe {
+//   position: absolute;
+//   height: 422px;
+//   width: 320px;
+//   margin: 0 auto;
+//   border-radius: 12px 12px 0 0;
+//   border: 0;
+// }
+
+// .fluent-sponsor-icon-bottom {
+//   width: 90px;
+//   margin-left: 5px;
+// }

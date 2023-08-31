@@ -1,0 +1,201 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+%buttonBase {
+  font-family: $title-text-font;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: $brand-white;
+  margin: 5px 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  width: 100%;
+  text-align: left;
+}
+
+%listTitle {
+  font-weight: normal;
+  color: $brand-white;
+  font-size: 16px;
+  border-bottom: 1px solid $brand-gray;
+  font-family: $title-text-font;
+}
+
+.audioPlayerHolder {
+  position: relative;
+  margin: 0 0 20px 0;
+
+  .title {
+    font-family: $title-text-font;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    width: auto;
+    text-transform: none;
+    margin: 0 0 10px 0;
+    color: $primary-color;
+    white-space: nowrap;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  audio {
+    visibility: hidden;
+    height: 0;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+.audioPlayer {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: rgba(46, 44, 45, 0.9);
+  width: 100%;
+  padding: 20px 30px 40px 30px;
+
+  time {
+    font-family: $title-text-font;
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: right;
+    color: $brand-white;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 30px 0;
+  }
+}
+
+.buttonsHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background: $brand-gray;
+    border: 0;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+
+      &.play {
+        position: relative;
+        left: 3px;
+      }
+    }
+
+    &:focus-visible {
+      background-color: black;
+    }
+  }
+}
+
+.track {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $brand-gray;
+  overflow: hidden;
+  width: 100%;
+
+  input {
+    appearance: none;
+    height: 4px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+
+    &:focus-visible {
+      background-color: black;
+      opacity: 1;
+
+      &::-webkit-slider-thumb {
+        display: none;
+      }
+    }
+  }
+}
+
+.progress {
+  z-index: 3;
+  width: 0;
+  height: 4px;
+  background-color: $tertiary-color;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: width 0.2s linear;
+  pointer-events: none;
+}
+
+.buffer {
+  transition: width 0.2s linear;
+  pointer-events: none;
+  z-index: 2;
+  width: 0;
+  height: 4px;
+  background-color: rgba($brand-light-grey, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.list {
+  h3 {
+    @extend %listTitle;
+
+    padding: 0 0 5px 0;
+    margin: 30px 0 5px 0;
+  }
+
+  button {
+    @extend %buttonBase;
+    font-size: 12px;
+
+    &.active {
+      color: $tertiary-color;
+    }
+
+    &:focus-visible {
+      background-color: black;
+    }
+  }
+}
+
+.downLoadList {
+  h3 {
+    @extend %listTitle;
+
+    padding: 0 0 5px 0;
+    margin: 0 0 5px 0;
+  }
+
+  button {
+    @extend %buttonBase;
+    font-size: 14px;
+
+    &:focus-visible {
+      background-color: black;
+    }
+  }
+}

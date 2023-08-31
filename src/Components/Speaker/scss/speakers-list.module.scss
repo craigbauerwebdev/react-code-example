@@ -1,0 +1,65 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./speaker-mixins";
+
+.title {
+  @include gridTitle;
+}
+
+.speakerCardHolder {
+  @include gridFlex();
+
+  > div,
+  > a {
+    @include speakerList();
+    @include speaker5Up;
+    @include speakerCardHover;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.flex {
+  display: flex;
+
+  @include mq("tablet-wide", "max") {
+    flex-direction: column;
+  }
+}
+
+.innerFlex {
+  display: flex;
+  flex-direction: column-reverse;
+  height: fit-content;
+  margin-right: 0;
+  background: $brand-white-2;
+  padding: 30px 30px 10px;
+  min-width: 250px;
+  margin-bottom: 0;
+  position: relative;
+
+  @include mq("tablet-wide") {
+    margin-bottom: 40px;
+    padding: 10px 30px;
+  }
+}
+
+.mobileFilterButton {
+  color: $primary-color;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 20px;
+  border: solid 1px $brand-gray;
+  margin: 0 30px;
+  width: -webkit-fill-available;
+}
+
+.content {
+  width: 100%;
+}

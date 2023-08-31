@@ -1,0 +1,271 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.arrows {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  position: absolute;
+  width: 34px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px 5px 8px;
+  z-index: 5;
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+
+  &:focus {
+    svg {
+      path {
+        fill: $brand-grey-2;
+      }
+    }
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  &.left {
+    left: 20px;
+  }
+
+  &.horizontalLeft {
+    left: 17px;
+
+    @include leftArrowColorAndFill();
+  }
+
+  &.horizontalLeftTransparent {
+    left: 17px;
+
+      @include leftArrowTransparent();
+  }
+
+  &.rotatingLeft {
+    left: 17px;
+
+    @include leftArrowColorAndFill();
+  }
+
+  &.rotatingLeftTransparent {
+    left: 17px;
+
+      @include leftArrowTransparent();
+  }
+  
+
+  &.verticalLeft {
+    left: 10px;
+
+    @include leftArrowColorAndFill();
+  }
+
+  &.verticalLeftTransparent {
+    left: 10px;
+    
+    @include leftArrowTransparent();
+  }
+
+  &.right {
+    right: 20px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &.horizontalRight {
+    right: 17px;
+    transform: translateY(-50%) rotate(180deg);
+
+    @include rightArrowColorAndFill();
+  }
+
+    &.horizontalRightTransparent {
+    right: 17px;
+    transform: translateY(-50%) rotate(180deg);
+
+    @include rightArrowTransparent();
+  }
+
+    &.rotatingRight {
+    right: 17px;
+    transform: translateY(-50%) rotate(180deg);
+
+    @include rightArrowColorAndFill();
+  }
+
+    &.rotatingRightTransparent {
+    right: 17px;
+    transform: translateY(-50%) rotate(180deg);
+
+    @include rightArrowTransparent();
+  }
+
+  &.verticalRight {
+    transform: translateY(-50%) rotate(180deg);
+    right: 10px;
+
+    @include rightArrowColorAndFill();
+  }
+
+    &.verticalRightTransparent {
+      transform: translateY(-50%) rotate(180deg);
+      right: 10px;
+
+      @include rightArrowTransparent();
+    }
+}
+
+.bannerNavigation {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  z-index: 5;
+
+  &.rotating {
+    bottom: 3px;
+    svg {
+      path {
+        fill: rgba($brand-gray, 0.5);
+      }
+    }
+
+    .bannerNavigationButtonActive {
+      svg {
+        path {
+          fill: rgba($brand-gray, 1);
+        }
+      }
+    }
+  }
+
+  &.rotatingTransparent {
+    bottom: 3px;
+    svg {
+      path {
+        fill: none;
+        stroke:rgba($brand-gray, 0.5)
+      }
+    }
+
+    .bannerNavigationButtonActive {
+      svg {
+        path {
+          fill: none;
+          stroke: rgba($brand-gray, 0.5);
+        }
+      }
+    }
+  }
+
+  &.horizontal {
+    bottom: 3px;
+    svg {
+      path {
+        fill: rgba($brand-gray, 0.5);
+      }
+    }
+
+    .bannerNavigationButtonActive {
+      svg {
+        path {
+          fill: rgba($brand-gray, 1);
+        }
+      }
+    }
+  }
+
+    &.horizontalTransparent {
+    bottom: 3px;
+    svg {
+      path {
+        fill: none;
+        stroke:rgba($brand-gray, 0.5)
+      }
+    }
+
+    .bannerNavigationButtonActive {
+      svg {
+        path {
+          fill: none;
+          stroke: rgba($brand-gray, 0.5);
+        }
+      }
+    }
+  }
+
+    &.vertical {
+      bottom: 3px;
+      svg {
+        path {
+          fill: rgba($brand-gray, 0.5);
+        }
+      }
+
+      .bannerNavigationButtonActive {
+        svg {
+          path {
+            fill: rgba($brand-gray, 1);
+          }
+        }
+      }
+    }
+
+    &.verticalTransparent {
+      bottom: 3px;
+      svg {
+        path {
+          fill: none;
+          stroke:rgba($brand-gray, 0.5)
+        }
+      }
+
+      .bannerNavigationButtonActive {
+        svg {
+          path {
+            fill: none;
+            stroke: rgba($brand-gray, 0.5);
+          }
+        }
+      }
+    }
+
+  svg {
+    height: 7px;
+    width: 7px;
+
+    @include mq("phablet") {
+      height: 10px;
+      width: 10px;
+    }
+  }
+}
+
+.bannerNavigationButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    svg {
+      path {
+        fill: rgba($brand-black, 1);
+      }
+    }
+  }
+}
+
+.bannerNavigationButtonActive {
+  svg {
+    path {
+      fill: $brand-grey-2;
+    }
+  }
+}

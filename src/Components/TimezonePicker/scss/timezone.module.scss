@@ -1,0 +1,87 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.holder {
+  box-sizing: border-box;
+  position: relative;
+  width: 35px;
+  height: 28px;
+  margin-top: 5px;
+  padding: 0 10px 0 0;
+  cursor: pointer;
+
+  &:hover {
+    .clock {
+      path,
+      line,
+      circle {
+        stroke: $brand-white;
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &.focusActive {
+    &:before {
+      position: absolute;
+      left: -5px;
+      right: -5px;
+      top: -5px;
+      bottom: -2px;
+      content: "";
+      z-index: 5;
+      border: 1px solid $brand-black;
+    }
+  }
+
+  > div {
+    box-sizing: border-box;
+    background: $brand-white;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    pointer-events: none;
+    cursor: pointer;
+    border: 1px solid $brand-white;
+
+    &:after {
+      background: url("/images/icons/chevron-down.svg") top center no-repeat;
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    svg {
+      pointer-events: none;
+    }
+  }
+}
+
+.timePicker {
+  appearance: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  border: 0;
+
+  &:focus {
+    outline: 1px solid $brand-black;
+  }
+}
+
+.clock {
+  path,
+  line,
+  circle {
+    stroke: $primary-color;
+    fill: $brand-white;
+  }
+}

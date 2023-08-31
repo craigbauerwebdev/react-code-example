@@ -1,0 +1,158 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./header-mixins";
+
+.headerContainer {
+  padding: 10px 30px;
+  border-bottom: 1px solid $primary-color;
+
+  &.preEvent {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.headerInterior {
+  display: flex;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+
+  .headerLogoWrapper {
+    margin: 0;
+  }
+}
+
+.headerInteriorRight {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  .mainNav {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+}
+
+.headerLabel {
+  @include headerLabel;
+
+  border: 1px solid $brand-white;
+}
+
+.tabItem {
+  cursor: pointer;
+  color: $primary-color;
+}
+
+.headerLabelButton {
+  background: transparent;
+  outline: none;
+  border: none;
+  position: relative;
+  padding: 0;
+  text-align: left;
+
+  &:focus-visible {
+    outline: 1px solid $brand-black;
+  }
+
+  &:focus {
+    background-color: $brand-off-white;
+  }
+}
+
+.mainLink {
+  @include dropDownTitle();
+  margin-right: 30px;
+  @media screen and (min-width: 1380px) {
+    margin-right: 44px;
+  }
+}
+
+// .dropDownNoCaret {
+//   @include dropDownTitle(10px);
+// }
+
+.dropDownTitle {
+  @include dropDownTitle();
+  @include dropDownCaret;
+}
+
+.inactiveDropdown {
+  display: none;
+}
+
+.activeDropdown {
+  @include activeDropdown();
+
+  position: absolute;
+  padding: 20px;
+  left: -10px;
+  top: 50px;
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
+
+.dropdownNotification {
+  top: 60px;
+  left: -400px;
+  width: 400px;
+}
+
+.dropdownLink {
+  padding: 10px 0;
+  display: block;
+
+  li {
+    padding: 5px 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    > a {
+      display: block;
+      color: $brand-black;
+
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.iconHolder {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  @media screen and (min-width: 1380px) {
+    padding-left: 20px;
+  }
+
+  .headerLabelButton {
+    padding: 0;
+    height: auto;
+  }
+}
+
+.avatar {
+  margin-left: 10px;
+}

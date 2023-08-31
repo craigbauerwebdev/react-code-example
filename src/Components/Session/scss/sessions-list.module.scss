@@ -1,0 +1,103 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sessionList {
+  padding-bottom: 30px;
+  max-width: 100%;
+
+  @include mq("tableH") {
+    margin-left: 3rem;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.title {
+  @include gridTitle;
+}
+
+.titleWrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("laptop-wide") {
+    width: 70%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @include midpointAlign();
+}
+
+.pastSessionsTitle {
+  margin: auto;
+  padding-top: 25px;
+}
+
+.noResults {
+  text-align: center;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+
+  @include mq("tablet-wide", "max") {
+    flex-direction: column;
+  }
+}
+
+.innerFlex {
+  display: flex;
+  flex-direction: column-reverse;
+  height: fit-content;
+  margin-right: 0;
+  background: $brand-white-2;
+  padding: 30px 30px 10px;
+  min-width: 250px;
+  margin-bottom: 0;
+  position: relative;
+
+  @include mq("tablet-wide") {
+    margin-bottom: 40px;
+    padding: 10px 30px;
+  }
+}
+.innerFlexNetworking {
+  display: flex;
+  flex-direction: column-reverse;
+  height: fit-content;
+  margin-right: 0;
+  background: $brand-white-2;
+  padding: 30px 30px 10px;
+  min-width: 250px;
+  margin-bottom: 0;
+  position: relative;
+  height: calc(100% + 3em);
+
+  @include mq("tablet-wide") {
+    margin-bottom: 40px;
+    margin-right: 40px;
+    padding: 10px 30px;
+  }
+  @include mq("midpoint", max) {
+    padding: 0;
+  }
+}
+
+.mobileFilterButtonNetworking {
+  color: $primary-color;
+  background: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $title-text-font;
+  height: 40px;
+  bottom: 20px;
+  border: solid 1px $brand-gray;
+  width: -webkit-fill-available;
+  margin: 10px 100px 25px 100px;
+}

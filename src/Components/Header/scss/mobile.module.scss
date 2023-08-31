@@ -1,0 +1,126 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./header-mixins";
+
+// Mobile first implications
+.preEvent {
+  &.headerContainer {
+    border: 0;
+  }
+}
+
+.headerContainer {
+  margin: 0;
+  padding: 15px 0 10px;
+  border-bottom: 1px solid $primary-color;
+}
+
+.mobileInnerHolder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .headerLogoWrapper {
+    margin: 10px 0;
+  }
+}
+
+.srOnly {
+  display: none;
+}
+
+.imgButton {
+  border: none;
+  background: transparent;
+  padding: 5px;
+
+  &:focus {
+    background-color: $brand-white-3;
+  }
+
+  img {
+    height: 20px;
+    display: block;
+  }
+}
+
+.hamburgerIcon {
+  height: 15px;
+  cursor: pointer;
+}
+
+.headerLabel {
+  @include headerLabel;
+
+  justify-content: space-between;
+}
+
+.headerLabelButton {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+
+  &:focus {
+    background-color: $brand-off-white;
+  }
+}
+
+.mainLink {
+  @include dropDownTitle();
+
+  box-sizing: border-box;
+  display: block;
+  align-content: center;
+  padding: 20px 0 20px 20px;
+  min-height: 60px;
+}
+
+.dropDownTitle {
+  @include dropDownTitle();
+  @include dropDownCaret;
+
+  color: $primary-color;
+  display: block;
+  margin: 0;
+  padding: 0 25px 0 15px;
+  position: relative;
+
+  &:after {
+    top: 0px;
+    right: 0;
+  }
+}
+
+.activeDropdown {
+  @include activeDropdown();
+
+  padding: 0 0 0 50px;
+  display: flex;
+  flex-flow: column;
+
+  a {
+    padding: 10px 0;
+  }
+}
+
+.inactiveDropdown {
+  display: none;
+}
+
+.userActionItems {
+  display: flex;
+  flex-flow: column;
+  padding-left: 30px;
+}
+
+.profileLink {
+  margin: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

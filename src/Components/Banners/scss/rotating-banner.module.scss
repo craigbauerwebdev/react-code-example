@@ -1,0 +1,14 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.rotatingBannerHolder {
+  position: relative;
+  width: 100%;
+
+  img {
+    @include fixBlur;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+}

@@ -1,0 +1,38 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.title {
+  color: $primary-color;
+  font-family: $title-text-font;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeButton {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+
+  svg {
+    height: 16px;
+    width: 16px;
+
+    path {
+      fill: $primary-color;
+    }
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    border: none;
+    outline: none;
+    background-color: $light-blue;
+  }
+}

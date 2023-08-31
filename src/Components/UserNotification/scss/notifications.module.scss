@@ -1,0 +1,25 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.card {
+  @include basePageSetting;
+}
+
+.notificationsListHeaderWrapper {
+  @include accountPageHeaderSectionGrid;
+}
+
+.notificationsListHeader {
+  @include accountPageInnerHeaderDisplay;
+}
+
+.innerHeader {
+  @include basePageFonts;
+}
+
+.notificationsListHolder {
+  &:focus {
+    outline: 0;
+  }
+}

@@ -1,0 +1,134 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.popup {
+  background-color: $brand-white;
+  max-width: 350px;
+  max-height: 600px;
+  z-index: 100001;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 250px;
+  height: 500px;
+  bottom: 0;
+  right: 1em;
+
+  @include mq("tablet-small") {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popUpMainContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.pop {
+  background-color: $brand-white;
+  min-width: 300px;
+  max-height: 150px;
+  z-index: 100001;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.popoverContainer {
+  position: fixed;
+  bottom: 75px;
+  right: 1em;
+  z-index: 1;
+}
+
+.str-chat__list {
+  max-height: 400px;
+}
+
+.minimizedHolder {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 12rem;
+  right: 1rem;
+  background-color: $brand-white-2;
+}
+
+.minimizedBot {
+  right: 26rem !important;
+  background-color: $brand-white-2;
+}
+
+.minimizedNoBot {
+  right: 1rem;
+  background-color: $brand-white-2;
+}
+
+.minimizedHolderNoBanner {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  background-color: $brand-white-2;
+}
+
+.minimizedPopover {
+  width: 330px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.main {
+  display: flex;
+  min-width: 100%;
+}
+
+.nameContainer {
+  box-sizing: border-box;
+  width: 95%;
+  padding-left: 5px;
+}
+
+.boldWords {
+  font-weight: bold;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  min-width: 40px;
+}
+
+.title {
+  font-size: 11px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  max-height: 20px;
+
+  svg {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: $secondary-color;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotContainer {
+  padding-top: 5px;
+}

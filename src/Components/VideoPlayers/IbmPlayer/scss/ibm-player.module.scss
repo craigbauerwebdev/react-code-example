@@ -1,0 +1,22 @@
+.playerContainer {
+  /* this padding-bottom workaround is the 16:9 (9/16) ratio's value for responsive support */
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  margin: 0 0 20px;
+  display: block;
+}
+
+.mediaContainer {
+  float: left;
+  width: 60%;
+  margin-bottom: 100px;
+}
+
+.playerContainer iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}

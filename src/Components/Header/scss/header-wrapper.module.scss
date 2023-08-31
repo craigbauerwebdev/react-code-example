@@ -1,0 +1,25 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.preEvent {
+  &.header {
+    box-sizing: border-box;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+    background: $brand-white;
+    z-index: 1000;
+    border-bottom: 1px solid $primary-color;
+
+    @include mq("tablet-small") {
+      padding: 10px 30px;
+      position: fixed;
+      border: 0;
+      height: $desktopHeight;
+    }
+  }
+}

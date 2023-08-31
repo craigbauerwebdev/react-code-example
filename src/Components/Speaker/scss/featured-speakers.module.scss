@@ -1,0 +1,20 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./speaker-mixins";
+.title {
+  @include gridTitle();
+}
+
+.featuredSpeakers {
+  @include gridFlex();
+
+  margin-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+
+  > div,
+  > a {
+    @include speakerList();
+    @include speakerCardHover;
+  }
+}

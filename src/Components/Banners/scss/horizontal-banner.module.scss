@@ -1,0 +1,38 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.horizontalSponsorBannerContainer {
+  margin: 30px 0;
+  overflow: hidden;
+  grid-column: 1 / -1;
+
+  > div {
+    position: relative;
+    // Avoid content jumping but this value need to change depending on image size.
+    padding-top: 22.2%;
+  }
+
+  @include mq("midpoint") {
+    margin: 50px;
+  }
+
+  a {
+    display: block;
+    border: 2px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &:focus-visible {
+      border-color: $brand-black;
+    }
+  }
+
+  img {
+    @include fixBlur;
+    display: block;
+    width: 100%;
+  }
+}

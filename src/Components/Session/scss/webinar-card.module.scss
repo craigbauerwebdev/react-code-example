@@ -1,0 +1,253 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sessionTab {
+  box-sizing: border-box;
+  width: auto;
+  height: 287px;
+  margin: 20px;
+  padding: 10px 20px;
+  border: solid 1px $brand-grey-2;
+  background-color: $brand-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 130px;
+
+  @include mq("tablet-wide") {
+    margin-bottom: 180px;
+    padding: 25px 35px;
+  }
+}
+
+.iconOnly {
+  padding: 0 !important;
+  min-width: unset !important;
+  border: 0 transparent !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+
+  &.iconOnlyAtc {
+    margin: 0 !important;
+    min-width: 20px;
+    border-radius: 50%;
+    width: auto;
+
+    .iconOnlySVG {
+      width: auto !important;
+      margin: 0 !important;
+      padding: 5px;
+      height: 30px !important;
+      svg {
+        margin-right: 0;
+        min-width: 20px;
+        height: 20px;
+        width: auto;
+
+        path {
+          fill: $brand-black;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $primary-color;
+      .iconOnlySVG {
+        svg {
+          path {
+            fill: $brand-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sessionInfo {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin-top: 5px;
+  padding-right: 10px;
+
+  @include mq("tablet") {
+    width: 300px;
+  }
+
+  h1 {
+    font-family: $title-text-font-2;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 26px;
+    letter-spacing: normal;
+    color: $primary-color;
+    text-align: left;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    font-family: $title-text-font-2;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: $brand-gray;
+    text-align: left;
+
+    @include mq("tablet-wide") {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+.sessionContent {
+  width: 100%;
+}
+
+.webinarSessionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sessionMeta {
+  font-family: $title-text-font-2;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: $brand-black;
+  text-align: left;
+}
+
+.addToHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mq("tablet-small") {
+    flex-wrap: nowrap;
+  }
+}
+
+.sessionCardDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column;
+
+  @include mq("tablet") {
+    flex-flow: wrap;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  h2 {
+    display: block;
+    margin: 0 40px 20px 0;
+    font-size: 14px;
+    line-height: 19px;
+    color: $primary-color;
+    font-weight: 700;
+    font-family: $title-text-font;
+    text-align: left;
+
+    @include mq("tablet") {
+      margin-bottom: 0;
+      max-width: 65%;
+    }
+  }
+}
+
+.detailsButton {
+  @include primaryButton();
+
+  box-sizing: border-box;
+  padding: 10px 15px;
+  height: 46px;
+  line-height: 25px !important;
+  width: -webkit-fill-available;
+  // margin-bottom: 15px;
+  min-width: 143px;
+  width: auto;
+
+  // @include mq("tablet-small") {
+  //   width: 143px;
+  //   margin-bottom: initial;
+  // }
+}
+
+.watchButton {
+  @include alternateButton();
+  display: inline-block;
+  margin: 0;
+  line-height: 0px;
+  font-size: 0;
+  padding: 0;
+  color: $primary-color;
+  border: none;
+  min-width: unset;
+  width: auto;
+  padding: 5px;
+
+  svg {
+    height: 20px;
+    path {
+      fill: $primary-color;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-color;
+    svg {
+      path {
+        fill: $brand-white;
+      }
+    }
+  }
+}
+
+.webinarWatchNow {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 20px;
+  margin-top: 0;
+}
+
+.addToScheduleBtn {
+  @include alternateButton();
+
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 20px;
+  margin-top: 15px;
+}
+
+.clockIcon {
+  width: 13px;
+
+  pointer-events: none;
+  margin-right: 10px;
+  display: block;
+
+  svg {
+    width: 100%;
+
+    path {
+      fill: $brand-black;
+    }
+  }
+}

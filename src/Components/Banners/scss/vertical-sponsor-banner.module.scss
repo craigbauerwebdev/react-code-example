@@ -1,0 +1,51 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.verticalSponsorBanner {
+  margin: 40px auto 0;
+  width: 100%;
+  text-align: center;
+  min-width: 250px;
+  max-width: 300px;
+
+  > div {
+    position: relative;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    @include fixBlur;
+    max-width: 300px;
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+
+  @include mq("phone-wide") {
+    width: 70%;
+  }
+
+  @include mq("tablet-small") {
+    width: 100%;
+  }
+
+  @include mq("midpoint") {
+    margin: auto;
+  }
+}
+
+.loader {
+  max-width: 300px;
+  width: 100%;
+}
+
+.verticalSponsorBannerPadding {
+  padding-left: 30px;
+
+  @include mq("tablet-small", max) {
+    padding-left: 0;
+  }
+}

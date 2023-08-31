@@ -1,0 +1,81 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.clear {
+  position: absolute;
+  right: 10px;
+  border-radius: 15px;
+  border: 1px solid $primary-color;
+  padding: 5px 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $primary-color;
+  display: flex;
+  overflow: hidden;
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-color: $brand-black;
+  }
+
+  &.active {
+    background: $brand-white;
+  }
+}
+
+.contentHolder {
+  width: 100%;
+  position: relative;
+  min-width: 25px;
+  transition: min-width 0.3s $easeInOutCirc;
+
+  &.active {
+    min-width: 70px;
+
+    .copy {
+      max-width: 500px;
+    }
+  }
+}
+
+.svgHolder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+
+  &.active {
+    > svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  > svg {
+    transform: rotate(45deg);
+    width: 17px;
+    height: auto;
+    position: relative;
+    left: -4px;
+
+    path {
+      transition: fill 0.3s $easeInOutCirc;
+      fill: $brand-white;
+    }
+  }
+}
+
+.copy {
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  max-width: 0;
+  font-size: 14px;
+  font-family: $title-text-font;
+  color: $primary-color;
+  display: block;
+  transition: max-width 0.3s $easeInOutCirc;
+  padding-left: 10px;
+  box-sizing: border-box;
+}

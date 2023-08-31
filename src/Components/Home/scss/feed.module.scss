@@ -1,0 +1,20 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.holder {
+  min-height: 700px;
+}
+
+.tintUp {
+  box-sizing: border-box;
+  height: 700px;
+  width: 300px;
+  margin: 0 auto 20px auto;
+  border: 1px solid $primary-color;
+
+  @include mq("midpoint") {
+    height: 100%;
+    min-height: 200px;
+    margin-bottom: 0;
+  }
+}

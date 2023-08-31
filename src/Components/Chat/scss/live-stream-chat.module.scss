@@ -1,0 +1,14 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.liveStreamContainer {
+  height: 100%;
+
+  * {
+    font-family: $chat-text-font;
+  }
+
+  &.showcaseChat {
+    max-width: 300px;
+  }
+}

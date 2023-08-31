@@ -1,0 +1,213 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "./_account_profile_mixins";
+
+
+.profileDisplay {
+  //display: flex;
+  margin-right: 50px;
+  @include mq("tablet", max) {
+    display: block;
+  }
+}
+
+.profilePage {
+  .accountHeading {
+    color: $primary-color;
+    font-family: $title-text-font;
+    font-weight: 700;
+    text-align: center;
+
+    @include mq("midpoint") {
+      margin-top: 0;
+      margin-bottom: 45px;
+      text-align: left;
+    }
+  }
+}
+.header {
+  padding: 0 30px;
+  color: $primary-color;
+}
+
+.main {
+  @include mainPageSetting(0, 0, 0);
+  @include mq("midpoint") {
+    margin: 60px auto;
+    padding: 0 30px;
+  }
+}
+.pageGridForm {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  line-height: 25px;
+}
+.background {
+  overflow: auto;
+  background-color: $brand-white;
+  @include mq("midpoint") {
+    background-color: $brand-white-2;
+  }
+}
+
+.company {
+  @include spanColumns();
+  @include mq("midpoint") {
+    grid-column: col-start / span 6;
+    grid-row: 3;
+  }
+  @media screen and (max-width: 500px) {
+    //width: 50%
+  }
+  @media screen and (max-width: 320px) {
+    width: 30%;
+  }
+}
+
+.title {
+  @include spanColumns();
+  @include mq("midpoint") {
+    grid-column: col-start / span 6;
+    grid-row: 4;
+  }
+  @media screen and (max-width: 320px) {
+    width: 30%;
+  }
+}
+.showcaseTitle {
+  border-bottom: 1px solid #bdbdbd;
+  border-top: 1px solid #bdbdbd;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileDetails {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  @media screen and (max-width: 980px) {
+    display: block !important;
+    border-width: 0px;
+    padding: 20px;
+  }
+  .formGrid {
+    //display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+  .social {
+    background-color: #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    img {
+      margin: 4px;
+    }
+  }
+  .flex {
+    display: flex;
+  }
+  .formButtons {
+    margin-top: 3rem;
+    margin-bottom : 2rem
+    //margin-left: 20px;
+  }
+  .attendeeAvatar {
+    margin-right: 10rem;
+    margin-bottom: 2em;
+    float: right;
+    //margin-right: 10rem;
+    @media screen and (max-width: 320px) {
+      margin-right: 30px;
+    }
+    @include mq("midpoint", max) {
+      margin-right: initial;
+    }
+  }
+  .customContainer {
+    @include mq("midpoint", max) {
+      //display: grid;
+    }
+    //margin-top: 13rem;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    justify-content: center;
+  }
+
+  .customHeader {
+    margin-bottom: 0.5rem;
+    margin-top: initial;
+  }
+
+  .customLabel {
+    font-weight: lighter !important;
+    color: grey !important;
+  }
+
+  .customValue {
+    max-width: 300px;
+    word-break: break-word;
+  }
+
+  .attributes {
+    padding-left: 10px;
+    line-height: 30px;
+  }
+}
+
+.exhibitorLogo {
+  padding: 0 30px 30px 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq("phone-wide", max) {
+    justify-content: center;
+  }
+}
+
+.gridWrapper {
+  display: grid;
+  grid-gap: 2rem;
+
+  @include mq("desktop") {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.profileName {
+  display: grid !important;
+}
+
+.kBlockNoForm {
+  border-radius: 0;
+  @media screen and (max-width: 980px) {
+    //display: block !important;
+    border-width: 0px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 15px !important;
+  }
+}
+
+.pageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "avatar"
+    "form";
+
+  @include mq("midpoint") {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "header avatar"
+      "form avatar";
+  }
+}

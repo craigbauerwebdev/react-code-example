@@ -1,0 +1,54 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+// Mobile first implications
+
+.preEvent {
+  &.login,
+  &.logout,
+  &.register {
+    @include mq("tablet-small") {
+      width: 170px;
+      padding: 15px 0;
+    }
+  }
+
+  &.login {
+    @include mq("tablet-small") {
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+.logout,
+.register {
+  @include primaryButton();
+
+  max-width: 170px;
+  width: 100%;
+  padding: 20px 0;
+
+  @include mq("desktop") {
+    width: 140px;
+    padding: 15px 0;
+  }
+  @media screen and (min-width: 1380px) {
+    width: 170px;
+  }
+}
+
+.login {
+  @include alternateButton();
+
+  max-width: 170px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+
+  @include mq("desktop") {
+    margin-top: 0;
+    margin-left: 15px;
+    width: 170px;
+    padding: 15px 0;
+  }
+}

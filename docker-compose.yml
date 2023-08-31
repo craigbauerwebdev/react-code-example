@@ -1,0 +1,131 @@
+version: "3.7"
+
+services:
+  format:
+    entrypoint:
+      - "node"
+      - "node_modules/.bin/prettier"
+      - "**/*.{css,html,ejs,mjs,js,json,jsx,yml,yaml}"
+      - "--write"
+    image: node:12.16.0-stretch
+    init: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  lint:
+    entrypoint:
+      - "node"
+      - "node_modules/.bin/eslint"
+      - "."
+      - "--ext"
+      - ".ejs,.js,.jsx,.mjs"
+    image: node:12.16.0-stretch
+    init: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  node:
+    command:
+      - "node"
+      - "--require"
+      - "dotenv/config"
+      - "node_modules/.bin/react-scripts"
+      - "start"
+      - "--inspect=9222"
+    image: "node:12.16.0-stretch"
+    init: true
+    networks:
+      - default
+      - local-network
+    ports:
+      - target: ${PORT}
+        published: ${PORT}
+        protocol: tcp
+        mode: host
+      - target: 9222
+        published: 9222
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  npm:
+    entrypoint:
+      - "npm"
+    env_file: .env
+    image: node:12.16.0-stretch
+    init: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  secrets-to-env:
+    entrypoint:
+      - "node"
+      - "--require"
+      - "dotenv/config"
+      - "node_modules/.bin/secrets-to-env"
+    image: node:12.16.0-stretch
+    init: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  sb-init:
+    command:
+      - "node"
+      - "--require"
+      - "dotenv/config"
+      - "node_modules/.bin/sb"
+      - "init"
+    image: "node:12.16.0-stretch"
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+  storybook:
+    # command:
+    #   - "node"
+    #   - "--require"
+    #   - "dotenv/config"
+    #   - "node_modules/.bin/sb"
+    #   - "init"
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    # command: docker-compose run npm run storybook
+    command:
+      - "node"
+      - "--require"
+      - "dotenv/config"
+      - "node_modules/.bin/start-storybook"
+      # - "storybook"
+    # init: true
+    ports:
+      - "6006:6006"
+    image: "node:12.16.0-stretch"
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    working_dir: /usr/src/app
+
+networks:
+  local-network:
+    driver: bridge
+    external: true

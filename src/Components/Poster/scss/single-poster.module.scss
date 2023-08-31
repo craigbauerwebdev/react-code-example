@@ -1,0 +1,75 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Livestream/scss/livestream-mixins";
+
+.main {
+  @include mainPageSetting(80px);
+}
+
+.singlePosterNav {
+  display: flex;
+  width: 100%;
+
+  @include mq("tablet") {
+    padding: 0;
+  }
+}
+
+.customSessionContainer {
+  @include customSessionContainer;
+}
+
+.liveStreamPluginContainer {
+  @include liveStreamPluginContainer;
+
+  &.posterChat {
+    width: 100%;
+    height: 900px;
+  }
+}
+
+.posterInfo {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  padding-top: 0;
+  flex-flow: column;
+
+  @include mq("tablet") {
+    padding: 0 30px;
+  }
+}
+
+.posterVideo {
+  max-width: 630px;
+  width: 100%;
+}
+
+.posterTitle {
+  padding: 0 40px 0 0;
+  color: $primary-color;
+  font-size: 20px;
+  font-family: $title-text-font;
+  margin: 0 0 30px 0;
+  line-height: 29px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.posterButton {
+  @include primaryButton();
+
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+
+.docViewerPDF {
+  box-sizing: border-box;
+  height: 80%;
+  margin-bottom: 40px;
+  border: 1px solid $brand-gray;
+}

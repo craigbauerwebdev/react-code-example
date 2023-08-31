@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Fragment>
+  <div
+    className="container"
+  >
+    <OEPAnalytics
+      componentName="Share Menu Tray"
+      componentType="Button"
+      page="unit test"
+      url="Share Menu Tray"
+    >
+      <div
+        className="shareButton"
+        onClick={[Function]}
+      >
+        <img
+          alt="social share"
+          className="shareIcon"
+          src="/images/icons/social-share.svg"
+        />
+      </div>
+    </OEPAnalytics>
+    <div
+      className="dropdown false"
+    >
+      <OEPAnalytics
+        componentName="Twitter Share Button"
+        componentType="Button"
+        page="unit test"
+        url="Twitter Share Button"
+      >
+        <ForwardRef(ShareButton-twitter)
+          className="socialButton"
+          title="Unit Test"
+          url="http://localhost/"
+        >
+          <Icon
+            bgStyle={
+              Object {
+                "fill": "#0066b2",
+              }
+            }
+            borderRadius={0}
+            className="socialIcon"
+            iconFillColor="white"
+            size={40}
+          />
+        </ForwardRef(ShareButton-twitter)>
+      </OEPAnalytics>
+      <OEPAnalytics
+        componentName="Linkedin Share Button"
+        componentType="Button"
+        page="unit test"
+        url="Linkedin Share Button"
+      >
+        <ForwardRef(ShareButton-linkedin)
+          className="socialButton"
+          title="Unit Test"
+          url="http://localhost/"
+        >
+          <Icon
+            bgStyle={
+              Object {
+                "fill": "#0066b2",
+              }
+            }
+            borderRadius={0}
+            className="socialIcon"
+            iconFillColor="white"
+            size={40}
+          />
+        </ForwardRef(ShareButton-linkedin)>
+      </OEPAnalytics>
+    </div>
+  </div>
+</Fragment>
+`;

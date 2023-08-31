@@ -1,0 +1,40 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.disclosure {
+  display: flex;
+  color: $primary-color;
+  cursor: pointer;
+
+  img {
+    margin: 10px;
+    width: 30px !important;
+    height: 30px;
+  }
+
+  .spanText {
+    margin-top: 25px;
+  }
+
+  &:hover {
+    .defaultIcon {
+      display: none;
+    }
+
+    .hoverIcon {
+      display: inline-block;
+    }
+
+    .spanText {
+      color: #a9a9a9;
+    }
+  }
+
+  .defaultIcon {
+    display: inline-block;
+  }
+
+  .hoverIcon {
+    display: none;
+  }
+}

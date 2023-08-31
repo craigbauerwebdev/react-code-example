@@ -1,0 +1,106 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+@import "../../Profile/scss/_account_profile_mixins";
+
+.settingsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $title-text-font;
+}
+
+.settingsPageHeaderWrapper {
+  @include accountPageHeaderSectionGrid;
+}
+
+.settingsPageHeader {
+  @include accountPageInnerHeaderDisplay;
+}
+
+.innerHeader, .innerSubHeader {
+  @include basePageFonts;
+}
+
+.form {
+  @include formDisplay;
+}
+
+.fieldset {
+  @include fieldSet;
+}
+
+.manageUserWrapper {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    margin: 5px 0;
+
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.timeZoneHeaderWrapper {
+  display: flex;
+  align-items: baseline;
+
+  div {
+    display: inline;
+  }
+}
+
+.inlineHeader {
+  display: inline;
+}
+
+.timeZoneTooltipWrapper {
+  margin-left: 2em;
+
+  .timeZoneTooltip {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+  }
+}
+
+.tooltip {
+  background-color: $brand-white;
+  color: $brand-black;
+  border-radius: 0%;
+  padding: 1em;
+  box-shadow: 0 0 8px 0 rgba(46, 44, 45, 0.2);
+  max-width: 200px;
+}
+
+.radioGroup {
+  display: flex;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  div ~ div {
+    margin: 0 0 0 30px;
+  }
+
+  input {
+    margin: 0 5px 0 0;
+  }
+}
+
+.hint {
+  font-size: 12px;
+  font-family: $title-text-font;
+  margin: 5px 0 0 0;
+  line-height: 1.2;
+}

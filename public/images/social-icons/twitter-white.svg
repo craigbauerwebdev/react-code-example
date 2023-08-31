@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="24.453" viewBox="0 0 26 24.453">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="prefix__Twitter" transform="translate(2.2 .5)">
+        <path id="prefix__Rectangle_18" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 18" transform="translate(-1.502 -.318)"/>
+        <path id="prefix__Rectangle_19" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 19" transform="translate(-2.2 -.409)"/>
+        <path id="prefix__Path_26" d="M32.411 25.323a5.63 5.63 0 0 1-1.4.394 2.43 2.43 0 0 0 1.062-1.335 3.846 3.846 0 0 1-1.517.576 2.4 2.4 0 0 0-4.156 1.669 1.867 1.867 0 0 0 .061.576 6.819 6.819 0 0 1-4.915-2.579 2.4 2.4 0 0 0-.3 1.214 2.545 2.545 0 0 0 1.062 2.062 1.839 1.839 0 0 1-1.062-.334 2.409 2.409 0 0 0 1.881 2.366 2.272 2.272 0 0 1-.637.061 1.179 1.179 0 0 1-.455-.061A2.378 2.378 0 0 0 24.25 31.6a4.782 4.782 0 0 1-2.973 1.032 1.867 1.867 0 0 1-.576-.061 5.752 5.752 0 0 0 3.671 1.214A6.834 6.834 0 0 0 31.2 26.87v-.334a5.121 5.121 0 0 0 1.211-1.213z" data-name="Path 26" transform="translate(-15.953 -17.206)" style="fill:#fff"/>
+        <path id="prefix__Rectangle_20" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 20" transform="translate(-.926 -.5)"/>
+        <path id="prefix__Rectangle_21" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 21" transform="translate(-.471 -.379)"/>
+        <path id="prefix__Rectangle_22" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 22" transform="translate(-.653 -.318)"/>
+        <path id="prefix__Rectangle_23" d="M0 0H24.271V24.271H0z" class="prefix__cls-1" data-name="Rectangle 23" transform="translate(-1.381 -.318)"/>
+    </g>
+</svg>

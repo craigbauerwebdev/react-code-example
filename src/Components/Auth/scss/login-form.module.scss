@@ -1,0 +1,220 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.loginRectangle {
+  width: 100%;
+  max-width: 495px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.25);
+  background-color: $brand-white;
+
+  &.left {
+    align-self: flex-start;
+  }
+
+  &.center {
+    align-self: center;
+  }
+
+  &.transparentBg {
+    background: transparent;
+    box-shadow: none;
+
+    .loginTitle {
+      color: $brand-white;
+      text-align: left;
+      font-size: 60px;
+      line-height: 1;
+      letter-spacing: normal;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+
+    .loginFormNotes {
+      color: $brand-white;
+
+      a {
+        color: $brand-white;
+      }
+    }
+  }
+}
+
+.formLogo {
+  @include fixBlur;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+  img {
+    width: 100%;
+    max-width: 340px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 20px;
+
+    @include mq("phone-wide") {
+      height: 60px;
+    }
+  }
+}
+
+.loginTitle {
+  font-family: $title-text-font;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: $brand-black;
+}
+
+.multipleLoginError {
+  color: $brand-red;
+  font-size: 12px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.loginFormSection {
+  display: flex;
+  align-items: center;
+  margin: 20px 30px;
+
+  > div {
+    flex: 1;
+  }
+
+  @include mq("phone-wide") {
+    font-size: 24px;
+  }
+
+  &.errors {
+    font-family: $title-text-font;
+    color: $brand-red;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.loginFormFields {
+  margin: 20px 30px;
+}
+
+.loginFormLabel {
+  font-family: $title-text-font;
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loginFormInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: solid 1px $brand-black;
+  background-color: $brand-white;
+  line-height: 50px;
+
+  @include input-placeholder {
+    color: $brand-black;
+  }
+}
+
+.loginFormMessageError {
+  color: $brand-warning;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  p {
+    margin-top: 5px;
+  }
+}
+
+.loginButtons {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 30px;
+
+  > div {
+    &:first-child {
+      a,
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+
+  a,
+  button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    transition: border 0.2s, color 0.2s, background-color 0.2s, opacity 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $brand-white;
+    margin-top: 20px;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.loginSubmitButton {
+      @include secondaryButton();
+
+      font-weight: bold;
+
+      &:focus {
+        outline: -webkit-focus-ring-color auto 1px;
+      }
+    }
+
+    &.logoutLoginButton {
+      border: solid 1px $primary-color;
+      background-color: $primary-color;
+    }
+
+    &.loginFormRegister {
+      @include primaryButton();
+    }
+
+    &.loginFormForgot {
+      @include alternateButton();
+    }
+  }
+}
+
+.technicalSupport {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.forgotMessage {
+  margin: 0 30px;
+}
+
+.notes {
+  color: $brand-black;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 30px;
+  padding-bottom: 20px;
+
+  a {
+    color: $brand-black;
+    text-decoration: underline;
+  }
+}

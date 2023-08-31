@@ -1,0 +1,47 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.sitemap {
+  @include mainPageSetting;
+}
+
+.title {
+  @include gridTitle;
+
+  color: $primary-color;
+}
+
+.holder {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+
+  @include mq("midpoint") {
+    width: 100%;
+  }
+}
+
+.linkList {
+  width: 100%;
+
+  @include mq("phablet") {
+    width: 40%;
+  }
+
+  @include mq("midpoint") {
+    width: auto;
+  }
+
+  ul {
+    margin: 0 0 0 25px;
+
+    li {
+      margin-bottom: 5px;
+      padding: 0;
+      list-style: disc;
+    }
+  }
+}

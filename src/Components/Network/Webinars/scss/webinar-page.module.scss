@@ -1,0 +1,89 @@
+@import "../../../../css/core";
+@import "../../../Profile/scss/_account_profile_mixins";
+
+.main {
+  @include basePageSetting;
+
+  @include mq("phablet") {
+    padding: 40px;
+  }
+
+  @include mq("tableH") {
+    border: 1px solid #dee2e6;
+  }
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background-color: $brand-white;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 1px 3px $brand-off-white-2, 0px 0px 0px $brand-off-white-3;
+}
+
+.cardWrapper {
+  @include mq("phablet") {
+    padding: 0 15px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq("midpoint") {
+    flex-direction: row;
+  }
+}
+
+.timeSlot {
+  text-align: left;
+  color: $brand-gray-2;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+
+  span::before {
+    content: " -";
+  }
+
+  @include mq("midpoint") {
+    text-align: right;
+    padding-left: 10px;
+    flex-direction: column;
+    min-width: 140px;
+
+    span {
+      &:before {
+        content: "";
+      }
+    }
+  }
+  span {
+    color: $brand-grey-2;
+    font-size: 18px;
+    font-weight: normal;
+
+    @include mq("midpoint") {
+      font-size: 12px;
+    }
+  }
+}
+
+.date {
+  margin: 0 0 10px 0;
+
+  @include mq("midpoint") {
+    margin: 0 0 20px 20px;
+  }
+}
+
+.showcaseWrapper {
+  background-color: #fff;
+  padding: 0.75rem;
+
+  > div:first-child {
+    border: 0;
+  }
+}

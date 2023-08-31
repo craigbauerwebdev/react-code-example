@@ -1,0 +1,82 @@
+@import "../../css/core";
+
+.breadcrumbsContainer {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: $title-text-font;
+  line-height: 20px;
+  margin-bottom: 35px;
+
+  a {
+    color: $primary-color;
+    display: inline-flex;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  ol,
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.backButton {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: $title-text-font;
+  line-height: 20px;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+
+  svg {
+    height: 12px;
+    width: 12px;
+    margin: 4px 0;
+  }
+
+  @include mq("phone-wide") {
+    font-size: 16px;
+
+    svg {
+      height: 16px;
+      width: 16px;
+      margin: 2px 0;
+    }
+  }
+
+  @include mq("tablet") {
+    font-size: 18px;
+    margin-bottom: 0;
+
+    svg {
+      height: 20px;
+      width: 20px;
+      margin: 0;
+    }
+  }
+}
+
+.separator {
+  vertical-align: middle;
+  margin-top: 0;
+
+  @include mq("phone-wide") {
+    margin-top: 2px;
+  }
+}

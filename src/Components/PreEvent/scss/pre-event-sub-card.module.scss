@@ -1,0 +1,71 @@
+// https://github.com/Klowd/onlineeventpro-product-ui/wiki/Styles
+@import "../../../css/core";
+
+.smallCardSubSession {
+  @include smallCardSubSession;
+}
+
+.preEventLargeCardSubSession {
+  @include clickCardSetting();
+
+  box-sizing: border-box;
+  width: 47%;
+  min-height: 250px;
+  margin: 10px;
+  padding: 30px 30px 15px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  &:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-color: $brand-white-2;
+  }
+
+  h2 {
+    font-family: $title-text-font;
+    color: $primary-color;
+    padding: 0;
+    margin: 0 0 30px 0;
+
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+
+    @include mq("phone-wide") {
+      font-size: 16px;
+    }
+  }
+
+  p {
+    font-family: $title-text-font;
+    color: $brand-gray;
+    margin-bottom: 15px;
+    max-width: 600px;
+    font-size: 12px;
+
+    @include mq("phone-wide") {
+      font-size: 16px;
+    }
+  }
+
+  h3 {
+    font-family: $title-text-font;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: $secondary-color;
+
+    @include mq("phone-wide") {
+      font-size: 14px;
+    }
+  }
+}
